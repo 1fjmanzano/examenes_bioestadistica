@@ -1,0 +1,8 @@
+--- 
+title: "Bioestadística: ejercicios y exámenes resueltos"
+author: "Javier Manzano PhD"
+output: github_document
+
+---
+
+# Introducción
