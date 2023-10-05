@@ -1,4 +1,0 @@
-fig:unnamed-chunk-1
-inicios
-continuación
-final
