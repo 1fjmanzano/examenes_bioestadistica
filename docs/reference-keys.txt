@@ -1,7 +1,0 @@
-introducción
-planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación
-análisis-descriptivo-y-gráfico-de-datos-cuantitativos
-análisis-inferencial.-aplicaciones.
-regresión-y-correlación.
-tablas-de-contingencia.
-medidas-de-importancia-clínica.
