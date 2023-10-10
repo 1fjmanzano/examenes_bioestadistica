@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Análisis Descriptivo y Gráfico de datos cuantitativos | Bioestadística: preguntas y problemas resueltos</title>
+  <meta name="description" content="Capítulo 3 Análisis Descriptivo y Gráfico de datos cuantitativos | Bioestadística: preguntas y problemas resueltos" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Análisis Descriptivo y Gráfico de datos cuantitativos | Bioestadística: preguntas y problemas resueltos" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Análisis Descriptivo y Gráfico de datos cuantitativos | Bioestadística: preguntas y problemas resueltos" />
+  
+  
+  
+
+<meta name="author" content="Javier Manzano" />
+
+
+<meta name="date" content="2023-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"/>
+<link rel="next" href="análisis-inferencial.-aplicaciones..html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioestadística: problemas resueltos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><i class="fa fa-check"></i><b>2</b> Planteamiento de una investigación: Anatomía y Fisiología de la investigación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test"><i class="fa fa-check"></i><b>2.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-1"><i class="fa fa-check"></i><b>2.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.3" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-2"><i class="fa fa-check"></i><b>2.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.4" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-3"><i class="fa fa-check"></i><b>2.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.5" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema"><i class="fa fa-check"></i><b>2.5</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución"><i class="fa fa-check"></i><b>2.5.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-4"><i class="fa fa-check"></i><b>2.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.7" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-5"><i class="fa fa-check"></i><b>2.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.8" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-6"><i class="fa fa-check"></i><b>2.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.9" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-7"><i class="fa fa-check"></i><b>2.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.10" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-8"><i class="fa fa-check"></i><b>2.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.11" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-9"><i class="fa fa-check"></i><b>2.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.12" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-1"><i class="fa fa-check"></i><b>2.12</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.12.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-1"><i class="fa fa-check"></i><b>2.12.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.13" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-10"><i class="fa fa-check"></i><b>2.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.14" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-11"><i class="fa fa-check"></i><b>2.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.15" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-12"><i class="fa fa-check"></i><b>2.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.16" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-2"><i class="fa fa-check"></i><b>2.16</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-2"><i class="fa fa-check"></i><b>2.16.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-13"><i class="fa fa-check"></i><b>2.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.18" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-14"><i class="fa fa-check"></i><b>2.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.19" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-15"><i class="fa fa-check"></i><b>2.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.20" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-3"><i class="fa fa-check"></i><b>2.20</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.20.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-3"><i class="fa fa-check"></i><b>2.20.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.21" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-16"><i class="fa fa-check"></i><b>2.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.22" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-17"><i class="fa fa-check"></i><b>2.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.23" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-18"><i class="fa fa-check"></i><b>2.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.24" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-19"><i class="fa fa-check"></i><b>2.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.25" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-4"><i class="fa fa-check"></i><b>2.25</b> Problema</a></li>
+<li class="chapter" data-level="2.26" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-20"><i class="fa fa-check"></i><b>2.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.27" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-21"><i class="fa fa-check"></i><b>2.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.28" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-22"><i class="fa fa-check"></i><b>2.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.29" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-23"><i class="fa fa-check"></i><b>2.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.30" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-24"><i class="fa fa-check"></i><b>2.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.31" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-25"><i class="fa fa-check"></i><b>2.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.32" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-26"><i class="fa fa-check"></i><b>2.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.33" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-27"><i class="fa fa-check"></i><b>2.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.34" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-28"><i class="fa fa-check"></i><b>2.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.35" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-29"><i class="fa fa-check"></i><b>2.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.36" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-30"><i class="fa fa-check"></i><b>2.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.37" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-31"><i class="fa fa-check"></i><b>2.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.38" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-32"><i class="fa fa-check"></i><b>2.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.39" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-33"><i class="fa fa-check"></i><b>2.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.40" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-34"><i class="fa fa-check"></i><b>2.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.41" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-35"><i class="fa fa-check"></i><b>2.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.42" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-36"><i class="fa fa-check"></i><b>2.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.43" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-37"><i class="fa fa-check"></i><b>2.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.44" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-38"><i class="fa fa-check"></i><b>2.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.45" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-39"><i class="fa fa-check"></i><b>2.45</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><i class="fa fa-check"></i><b>3</b> Análisis Descriptivo y Gráfico de datos cuantitativos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-40"><i class="fa fa-check"></i><b>3.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.2" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-41"><i class="fa fa-check"></i><b>3.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-5"><i class="fa fa-check"></i><b>3.3</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-4"><i class="fa fa-check"></i><b>3.3.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-42"><i class="fa fa-check"></i><b>3.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.5" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-43"><i class="fa fa-check"></i><b>3.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.6" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-6"><i class="fa fa-check"></i><b>3.6</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-5"><i class="fa fa-check"></i><b>3.6.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-44"><i class="fa fa-check"></i><b>3.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.8" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-45"><i class="fa fa-check"></i><b>3.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.9" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-7"><i class="fa fa-check"></i><b>3.9</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-6"><i class="fa fa-check"></i><b>3.9.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-46"><i class="fa fa-check"></i><b>3.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.11" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-47"><i class="fa fa-check"></i><b>3.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.12" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-48"><i class="fa fa-check"></i><b>3.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.13" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-49"><i class="fa fa-check"></i><b>3.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.14" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-50"><i class="fa fa-check"></i><b>3.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.15" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-51"><i class="fa fa-check"></i><b>3.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.16" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-52"><i class="fa fa-check"></i><b>3.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.17" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-53"><i class="fa fa-check"></i><b>3.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.18" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-54"><i class="fa fa-check"></i><b>3.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.19" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-55"><i class="fa fa-check"></i><b>3.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.20" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-56"><i class="fa fa-check"></i><b>3.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.21" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-57"><i class="fa fa-check"></i><b>3.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.22" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-58"><i class="fa fa-check"></i><b>3.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.23" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-59"><i class="fa fa-check"></i><b>3.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.24" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-60"><i class="fa fa-check"></i><b>3.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.25" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-61"><i class="fa fa-check"></i><b>3.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.26" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-62"><i class="fa fa-check"></i><b>3.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.27" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-63"><i class="fa fa-check"></i><b>3.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.28" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-64"><i class="fa fa-check"></i><b>3.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.29" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-65"><i class="fa fa-check"></i><b>3.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.30" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-66"><i class="fa fa-check"></i><b>3.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.31" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-67"><i class="fa fa-check"></i><b>3.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.32" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-68"><i class="fa fa-check"></i><b>3.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.33" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-69"><i class="fa fa-check"></i><b>3.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.34" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-70"><i class="fa fa-check"></i><b>3.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.35" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-71"><i class="fa fa-check"></i><b>3.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.36" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-72"><i class="fa fa-check"></i><b>3.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.37" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-73"><i class="fa fa-check"></i><b>3.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.38" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-74"><i class="fa fa-check"></i><b>3.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.39" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-75"><i class="fa fa-check"></i><b>3.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.40" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-76"><i class="fa fa-check"></i><b>3.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.41" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-77"><i class="fa fa-check"></i><b>3.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.42" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-78"><i class="fa fa-check"></i><b>3.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.43" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-79"><i class="fa fa-check"></i><b>3.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.44" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-80"><i class="fa fa-check"></i><b>3.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.45" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-81"><i class="fa fa-check"></i><b>3.45</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html"><i class="fa fa-check"></i><b>4</b> Análisis Inferencial. Aplicaciones.</a></li>
+<li class="chapter" data-level="5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html"><i class="fa fa-check"></i><b>5</b> Regresión y correlación.</a></li>
+<li class="chapter" data-level="6" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html"><i class="fa fa-check"></i><b>6</b> Tablas de contingencia.</a></li>
+<li class="chapter" data-level="7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html"><i class="fa fa-check"></i><b>7</b> Medidas de importancia clínica.</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-82"><i class="fa fa-check"></i><b>7.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.2" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-83"><i class="fa fa-check"></i><b>7.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.3" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-84"><i class="fa fa-check"></i><b>7.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.4" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-85"><i class="fa fa-check"></i><b>7.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.5" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-86"><i class="fa fa-check"></i><b>7.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.6" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-87"><i class="fa fa-check"></i><b>7.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-88"><i class="fa fa-check"></i><b>7.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.8" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-89"><i class="fa fa-check"></i><b>7.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.9" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-90"><i class="fa fa-check"></i><b>7.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.10" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-91"><i class="fa fa-check"></i><b>7.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.11" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-92"><i class="fa fa-check"></i><b>7.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.12" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-93"><i class="fa fa-check"></i><b>7.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.13" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-94"><i class="fa fa-check"></i><b>7.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.14" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-95"><i class="fa fa-check"></i><b>7.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.15" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-96"><i class="fa fa-check"></i><b>7.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.16" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-97"><i class="fa fa-check"></i><b>7.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.17" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-98"><i class="fa fa-check"></i><b>7.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.18" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-99"><i class="fa fa-check"></i><b>7.18</b> Pregunta test</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística: preguntas y problemas resueltos</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="análisis-descriptivo-y-gráfico-de-datos-cuantitativos" class="section level1" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Análisis Descriptivo y Gráfico de datos cuantitativos</h1>
+<p>En este capítulo se resolverán problemas relativos a:</p>
+<ul>
+<li>Medidas de tendencia central: Media, Moda, Mediana.</li>
+<li>Medidas de dispersión: Recorrido, Varianza, Desviación típica, Coeficiente de variación, Recorrido intercuartílico. Error estándar.</li>
+<li>Representaciones gráficas: Diagrama de barras, Pictogramas, Cartogramas,</li>
+</ul>
+<div id="pregunta-test-40" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Pregunta test</h2>
+<p>Cuál de las siguientes medidas define mejor la tendencia central de los datos: 5 , 4, 42, 4, 6</p>
+<ol style="list-style-type: lower-alpha">
+<li>La mediana.</li>
+<li>La media.</li>
+<li>El sesgo</li>
+<li>El rango.</li>
+<li>La proporción.</li>
+</ol>
+<button onclick="f1()">
+Respuesta correcta
+</button>
+<p id="1">
+</p>
+<script>
+function f1() {
+  document.getElementById("1").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-41" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Pregunta test</h2>
+<p>Los diagramas de sectores son muy útiles para comparar:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Dos variables cualitativas en una población.</li>
+<li>Dos variables cuantitativas en una población.</li>
+<li>Una variable cualitativa en dos poblaciones.</li>
+<li>Una variable cuantitativa en dos poblaciones.</li>
+<li>Una variable cuantitativa con otra cualitativa.</li>
+</ol>
+<button onclick="f2()">
+Respuesta correcta
+</button>
+<p id="2">
+</p>
+<script>
+function f2() {
+  document.getElementById("2").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Explicación</a></p>
+</div>
+<div id="problema-5" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Problema</h2>
+<p>El siguiente polígono de frecuencias absolutas acumuladas corresponde a la distribución de frecuencias de la variable <span class="math inline">\(X\)</span> =“Duración en minutos de una consulta médica especializada.”</p>
+<p><img src="img/2_1.png" width="701" /></p>
+<p><strong>a)</strong> ¿Qué porcentaje de consultas han durado como máximo 30 minutos?</p>
+<p><strong>b)</strong> ¿Qué porcentaje de consultas han durado entre 25 y 30 minutos?</p>
+<div id="solución-4" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Solución</h3>
+<p>Al ser un polígono de frecuencias absolutas acumuladas, vemos que se han contabilizado un total de 350 consultas.</p>
+<p><strong>a)</strong> Vemos que hay 200 consultas que han durado como máximo 30 minutos. Como <span class="math inline">\(\frac{200}{350} \approx 0.57\)</span>, entonces <strong>un 57 % de las consultas han durado entre 25 y 30 minutos</strong>.</p>
+<p><strong>b)</strong> Entre 25 y 30 minutos, han habido <span class="math inline">\(200 - 150 = 50\)</span> consultas. Como <span class="math inline">\(\frac{50}{350} \approx 0.14\)</span>, <strong>un 14 % de las consultas han durado entre 25 y 30 minutos</strong></p>
+</div>
+</div>
+<div id="pregunta-test-42" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Pregunta test</h2>
+<p>En cuanto a la presentación ordenada del estudio de una variable aislada:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Lo más informativo es mostrar las medidas de tendencia central.</li>
+<li>Lo más informativo es mostrar las medidas de dispersión.</li>
+<li>Se deben presentar todos los valores observados de la variable, uno a uno, de menor a mayor.</li>
+<li>Las representaciones gráficas dan más información que las tablas de frecuencia.</li>
+<li>A veces no tiene sentido usar frecuencias acumuladas.</li>
+</ol>
+<button onclick="f3()">
+Respuesta correcta
+</button>
+<p id="3">
+</p>
+<script>
+function f3() {
+  document.getElementById("3").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/otros-gra%CC%81ficos.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-43" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Pregunta test</h2>
+<p>En las representaciones gráficas de variables cualitativas, la regla fundamental a tener en cuenta es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Las alturas en cada modalidad son proporcionales al valor de la variable.</li>
+<li>Las áreas para cada modalidad son proporcionales al valor de la variable.</li>
+<li>Las áreas para cada modalidad son proporcionales a las frecuencias acumuladas.</li>
+<li>Las áreas para cada modalidad son proporcionales a las frecuencias absolutas o relativas.</li>
+<li>Las alturas para cada modalidad son proporcionales a las frecuencias acumuladas.</li>
+</ol>
+<button onclick="f4()">
+Respuesta correcta
+</button>
+<p id="4">
+</p>
+<script>
+function f4() {
+  document.getElementById("4").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Explicación</a></p>
+</div>
+<div id="problema-6" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Problema</h2>
+<p>En un estudio para evaluar la eficacia de cierto programa educativo sobre salud bucodental, se preguntó a los asistentes con qué frecuencia acudían al dentista por razones preventivas. Dos años después del programa educativo se volvió a preguntar a los asistentes al programa la misma pregunta. En la tabla adjunta se describen los resultados obtenidos:</p>
+<p><img src="img/2_2.png" width="578" /></p>
+<p>Construya los diagramas de barras representando gráficamente las distribuciones del número de veces que fueron al dentista en el último año, antes y después del programa educativo. Compare los resultados.</p>
+<div id="solución-5" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> Solución</h3>
+<p><img src="img/2_3.png" width="361" /></p>
+<p>Gráfico construido siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Práctica con Excel© del Curso de Bioestadística</a></p>
+<p>Vemos que, antes de participar en el programa, la mayoría de participantes o no acudía al dentista o lo hacía una vez al año. Tras el programa, vemos que ha disminuido drásticamente el número de personas que no acuden al dentista pasando a ser la mayoría los que acuden 1 o 2 veces.</p>
+<p>Se observa que, tras el programa, bajan los participantes que acudían 3 o 4 veces.</p>
+</div>
+</div>
+<div id="pregunta-test-44" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Pregunta test</h2>
+<p>Entre las representaciones gráficas para variables cualitativas tenemos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Histogramas.</li>
+<li>Diagramas integrales.</li>
+<li>Diagramas diferenciales.</li>
+<li>Diagramas de cajas y bigotes.</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f5()">
+Respuesta correcta
+</button>
+<p id="5">
+</p>
+<script>
+function f5() {
+  document.getElementById("5").innerHTML = "d";
+}
+</script>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Explicación</a></li>
+</ol>
+</div>
+<div id="pregunta-test-45" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Pregunta test</h2>
+<p>De los siguientes conceptos indique el que no tenga sentido:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Diagrama de barras para la variable “Grupo sanguíneo”</li>
+<li>Pictograma para la variable “Altura”</li>
+<li>Diagrama integral para la variable “Nivel de colesterol”</li>
+<li>Diagrama de sectores para la variable “Sexo”</li>
+<li>Histograma para la variable “Peso”</li>
+</ol>
+<button onclick="f6()">
+Respuesta correcta
+</button>
+<p id="6">
+</p>
+<script>
+function f6() {
+  document.getElementById("6").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/otros-gra%CC%81ficos.html">Explicación</a></p>
+</div>
+<div id="problema-7" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> Problema</h2>
+<p>Investigadores de un centro hospitalario planificaron un estudio para determinar la eficacia de cierto complemento dietético en el tratamiento de la artritis reumatoide. El estudio se realizó sobre 50 pacientes con esta enfermedad, administrando a la mitad el complemento dietético y al resto un placebo durante veinte semanas. De los 25 pacientes que recibieron en complemento dietético, 18 presentaron mejoría, mientras que esto ocurrió en 10 de los que recibieron el placebo. Estructure los datos en una tabla de distribución de frecuencias conjuntas y calcule e interprete los porcentajes por filas y columnas.</p>
+<div id="solución-6" class="section level3" number="3.9.1">
+<h3><span class="header-section-number">3.9.1</span> Solución</h3>
+<p>Comenzamos escrbiendo la tabla de doble entrada con las variables y los datos proporcionados:</p>
+<p><img src="img/2_4.png" width="397" /></p>
+<p>Completamos los datos y añadimos los prcentajes por filas y columnas.</p>
+<p><img src="img/2_5.png" width="484" /></p>
+<p>A la vista de los datos por filas, vemos que se sumistró a la mitad de los participantes el complemento dietético y a la otra mitad el placebo (50 % vs 50 %). Por columnas, vemos que un 56 % de participantes mejoran frente a un 44 % que no lo hacen. Esta diferencia es debida, sobre todo, al grupo que recibió el complemento donde la mejoría es bastante mayor que en el grupo que recibió el placebo (18 vs 10).</p>
+</div>
+</div>
+<div id="pregunta-test-46" class="section level2" number="3.10">
+<h2><span class="header-section-number">3.10</span> Pregunta test</h2>
+<p>Si queremos representar gráficamente los porcentajes de una variable cuantitativa continua debemos usar:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pictogramas</li>
+<li>Diagrama de barras</li>
+<li>Diagrama diferencial acumulado</li>
+<li>Histograma</li>
+<li>No existe gráfica posible</li>
+</ol>
+<button onclick="f7()">
+Respuesta correcta
+</button>
+<p id="7">
+</p>
+<script>
+function f7() {
+  document.getElementById("7").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/histogramas.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-47" class="section level2" number="3.11">
+<h2><span class="header-section-number">3.11</span> Pregunta test</h2>
+<p>Los gráficos indicados para variables cualitativas son:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Los diagramas de barras y los histogramas</li>
+<li>Los diagramas de barras, los de sectores y los pictogramas</li>
+<li>Los histogramas y pictogramas</li>
+<li>Sólo los diagramas de barras</li>
+<li>Los diagramas integrales</li>
+</ol>
+<button onclick="f8()">
+Respuesta correcta
+</button>
+<p id="8">
+</p>
+<script>
+function f8() {
+  document.getElementById("8").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-48" class="section level2" number="3.12">
+<h2><span class="header-section-number">3.12</span> Pregunta test</h2>
+<p>¿Qué gráfico elegirías para representar una las respuestas a una encuesta sobre el número de hijos que tiene la población?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Histograma</li>
+<li>Diagrama de sectores</li>
+<li>Pictograma</li>
+<li>Diagrama de Barras</li>
+<li>Ninguna de las anteriores</li>
+</ol>
+<button onclick="f9()">
+Respuesta correcta
+</button>
+<p id="9">
+</p>
+<script>
+function f9() {
+  document.getElementById("9").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/diagramas-de-barras-y-sectores.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-49" class="section level2" number="3.13">
+<h2><span class="header-section-number">3.13</span> Pregunta test</h2>
+<p>Para comparar la variabilidad relativa de la tensión arterial diastólica y el nivel de colesterol en sangre de una serie de individuos, utilizamos</p>
+<ol style="list-style-type: lower-alpha">
+<li>Las desviaciones típicas.</li>
+<li>Los rangos.</li>
+<li>Los coeficientes de variación.</li>
+<li>La diferencia de las medias.</li>
+<li>La diferencia de las varianzas.</li>
+</ol>
+<button onclick="f10()">
+Respuesta correcta
+</button>
+<p id="10">
+</p>
+<script>
+function f10() {
+  document.getElementById("10").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-50" class="section level2" number="3.14">
+<h2><span class="header-section-number">3.14</span> Pregunta test</h2>
+<p>La media aritmética de una variable cuantitativa:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Es siempre un valor de la variable.</li>
+<li>No tiene sentido calcularla para variables discretas.</li>
+<li>Es el valor más representativo de una modalidad.</li>
+<li>Si la variable es discreta, puede no ser única.</li>
+<li>Existe siempre.</li>
+</ol>
+<button onclick="f11()">
+Respuesta correcta
+</button>
+<p id="11">
+</p>
+<script>
+function f11() {
+  document.getElementById("11").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-51" class="section level2" number="3.15">
+<h2><span class="header-section-number">3.15</span> Pregunta test</h2>
+<p>Las siguientes medidas son todas de centralización, excepto:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media.</li>
+<li>La moda.</li>
+<li>La mediana.</li>
+<li>Rango intercuartílico.</li>
+<li>El percentil 50.</li>
+</ol>
+<button onclick="f12()">
+Respuesta correcta
+</button>
+<p id="12">
+</p>
+<script>
+function f12() {
+  document.getElementById("12").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-52" class="section level2" number="3.16">
+<h2><span class="header-section-number">3.16</span> Pregunta test</h2>
+<p>En un estudio descriptivo se obtiene una que el peso tiene una media de 60 kg y una desviación típica de 20 kg., mientras que la media de las edades es 15 años, con una desviación típica de 5 años. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Hay más dispersión en pesos que en edades.</li>
+<li>Hay más dispersión en edades que en pesos.</li>
+<li>Peso y edad están dispersos de modo equivalente.</li>
+<li>No tiene sentido compararlos al no coincidir las unidades de medida.</li>
+<li>Para comparar ambas dispersiones debemos usar la covarianza.</li>
+</ol>
+<button onclick="f13()">
+Respuesta correcta
+</button>
+<p id="13">
+</p>
+<script>
+function f13() {
+  document.getElementById("13").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-53" class="section level2" number="3.17">
+<h2><span class="header-section-number">3.17</span> Pregunta test</h2>
+<p>¿Cuál de las siguientes características no se corresponde con el concepto de mediana?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Es el centro de gravedad de la distribución.</li>
+<li>No se ve afectada por los valores extremos.</li>
+<li>Deja por debajo el mismo número de datos que por encima.</li>
+<li>Es el segundo cuartil.</li>
+<li>Todo lo anterior se corresponde con la mediana.</li>
+</ol>
+<button onclick="f14()">
+Respuesta correcta
+</button>
+<p id="14">
+</p>
+<script>
+function f14() {
+  document.getElementById("14").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-54" class="section level2" number="3.18">
+<h2><span class="header-section-number">3.18</span> Pregunta test</h2>
+<p>Señale cuál de las siguientes afirmaciones es falsa:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media aritmética es siempre el centro de gravedad de la distribución.</li>
+<li>En una distribución continua simétrica, media y mediana coinciden.</li>
+<li>La media aritmética cambia cuando cambia algún dato.</li>
+<li>La mediana no siempre cambia cuando lo hace algún dato.</li>
+<li>En las distribuciones continuas simétricas todas las medidas de centralización coinciden.</li>
+</ol>
+<button onclick="f15()">
+Respuesta correcta
+</button>
+<p id="15">
+</p>
+<script>
+function f15() {
+  document.getElementById("15").innerHTML = "e";
+}
+</script>
+<p><a href="https://www.statisticshowto.com/what-is-a-bimodal-distribution/">Explicación</a></p>
+</div>
+<div id="pregunta-test-55" class="section level2" number="3.19">
+<h2><span class="header-section-number">3.19</span> Pregunta test</h2>
+<p>El coeficiente de variación:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Permite comparar la dispersión de dos poblaciones.</li>
+<li>Es menor que la media.</li>
+<li>Es menor que la desviación típica.</li>
+<li>No depende de la media ni la desviación típica.</li>
+<li>Depende de la escala que se use al medir la variable.</li>
+</ol>
+<button onclick="f16()">
+Respuesta correcta
+</button>
+<p id="16">
+</p>
+<script>
+function f16() {
+  document.getElementById("16").innerHTML = "a";
+}
+</script>
+<p><a href="https://en.wikipedia.org/wiki/Coefficient_of_variation">Explicación</a></p>
+</div>
+<div id="pregunta-test-56" class="section level2" number="3.20">
+<h2><span class="header-section-number">3.20</span> Pregunta test</h2>
+<p>Se pide a unos enfermos que valoren su grado de mejoría tras un tratamiento en una escala de 1 a 5. De la siguiente colección de posibilidades, cuál cree que resume mejor los mismos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Media, Mediana y Moda.</li>
+<li>Percentil 25, Percentil 50, Percentil 75.</li>
+<li>Media y desviación típica.</li>
+<li>Mediana y desviación típica.</li>
+<li>Rango</li>
+</ol>
+<button onclick="f17()">
+Respuesta correcta
+</button>
+<p id="17">
+</p>
+<script>
+function f17() {
+  document.getElementById("1").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-dispersio%CC%81n">Explicación</a></p>
+</div>
+<div id="pregunta-test-57" class="section level2" number="3.21">
+<h2><span class="header-section-number">3.21</span> Pregunta test</h2>
+<p>De las siguientes medidas, cuáles podria utilizar para argumentar en favor o en contra de la asimetría de la variable edad:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Percentil 25 y percentil 75.</li>
+<li>Media y Percentil 60.</li>
+<li>Media y mediana</li>
+<li>Media y desviación típica.</li>
+<li>Ninguna de las anteriores.</li>
+</ol>
+<button onclick="f18()">
+Respuesta correcta
+</button>
+<p id="18">
+</p>
+<script>
+function f18() {
+  document.getElementById("18").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-58" class="section level2" number="3.22">
+<h2><span class="header-section-number">3.22</span> Pregunta test</h2>
+<p>La pregunta: ¿qué nivel de colesterol sólo es superado por el 5% de los individuos?, tiene por respuesta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El percentil 95.</li>
+<li>El percentil 5.</li>
+<li>Los percentiles 2,5 y 97,5</li>
+<li>95%.</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f19()">
+Respuesta correcta
+</button>
+<p id="19">
+</p>
+<script>
+function f19() {
+  document.getElementById("19").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-no-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-59" class="section level2" number="3.23">
+<h2><span class="header-section-number">3.23</span> Pregunta test</h2>
+<p>Qué peso no llega a alcanzar el 40% de los individuos de una población:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El 40%.</li>
+<li>El 60%.</li>
+<li>El percentil 60.</li>
+<li>El percentil 40.</li>
+<li>Los percentiles 20 y 60.</li>
+</ol>
+<button onclick="f20()">
+Respuesta correcta
+</button>
+<p id="20">
+</p>
+<script>
+function f20() {
+  document.getElementById("20").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-no-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-60" class="section level2" number="3.24">
+<h2><span class="header-section-number">3.24</span> Pregunta test</h2>
+<p>La media aritmética de una variable discreta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Puede ser un valor de la variable.</li>
+<li>No debería ser utilizada como medida de centralización.</li>
+<li>Es lo mismo que el percentil 50.</li>
+<li>Puede no ser única.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f21()">
+Respuesta correcta
+</button>
+<p id="21">
+</p>
+<script>
+function f21() {
+  document.getElementById("21").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-61" class="section level2" number="3.25">
+<h2><span class="header-section-number">3.25</span> Pregunta test</h2>
+<p>Se pregunta a los individuos su opinión sobre una cuestión, pudiendo valorar estos su respuesta en términos de: en contra, en parte a favor, muy a favor, totalmente de acuerdo. Elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Podemos calcular la media.</li>
+<li>Podemos calcular el coeficiente de variación.</li>
+<li>La variable es de tipo ordinal</li>
+<li>La variable es de tipo cualitativo nominal.</li>
+<li>Nada de lo anterior es cierto.</li>
+</ol>
+<button onclick="f22()">
+Respuesta correcta
+</button>
+<p id="22">
+</p>
+<script>
+function f22() {
+  document.getElementById("22").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-62" class="section level2" number="3.26">
+<h2><span class="header-section-number">3.26</span> Pregunta test</h2>
+<p>En una población, el 70% de las alturas consideradas “más normales” se encuentran:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Por encima del percentil 70.</li>
+<li>Por debajo del cuantil 0,30</li>
+<li>Entre el percentil 30 y el 70</li>
+<li>Entre el percentil 15 y el 85.</li>
+<li>Entre la media y la mediana.</li>
+</ol>
+<button onclick="f23()">
+Respuesta correcta
+</button>
+<p id="23">
+</p>
+<script>
+function f23() {
+  document.getElementById("23").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/distribuciones-de-probabilidad.html#distribucio%CC%81n-normal">Explicación</a></p>
+</div>
+<div id="pregunta-test-63" class="section level2" number="3.27">
+<h2><span class="header-section-number">3.27</span> Pregunta test</h2>
+<p>Las medidas de centralización, en cuanto a la información que ofrecen sobre una variable numérica, preferimos (por orden, de peor a mejor):</p>
+<ol style="list-style-type: lower-alpha">
+<li>media, mediana, moda</li>
+<li>moda, media, mediana</li>
+<li>media, moda, mediana.</li>
+<li>No se puede en general recomendar una como mejor que las otras.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f24()">
+Respuesta correcta
+</button>
+<p id="24">
+</p>
+<script>
+function f24() {
+  document.getElementById("24").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-64" class="section level2" number="3.28">
+<h2><span class="header-section-number">3.28</span> Pregunta test</h2>
+<p>Si una muestra posee valores anómalos, de las siguientes cuál usarías como medida de dispersión:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Varianza.</li>
+<li>Desviación típica.</li>
+<li>Rango intercuartílico.</li>
+<li>Rango.</li>
+<li>Máximo y coeficiente de variación.</li>
+</ol>
+<button onclick="f25()">
+Respuesta correcta
+</button>
+<p id="25">
+</p>
+<script>
+function f25() {
+  document.getElementById("25").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-dispersio%CC%81n">Explicación</a></p>
+</div>
+<div id="pregunta-test-65" class="section level2" number="3.29">
+<h2><span class="header-section-number">3.29</span> Pregunta test</h2>
+<p>Si queremos saber cómo de disperso está una variable relativamente con respecto a la magnitud de los valores centrales de la misma, usaremos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Varianza.</li>
+<li>Desviación típica.</li>
+<li>Rango intercuartílico.</li>
+<li>Rango.</li>
+<li>Coeficiente de variación.</li>
+</ol>
+<button onclick="f26()">
+Respuesta correcta
+</button>
+<p id="26">
+</p>
+<script>
+function f26() {
+  document.getElementById("26").innerHTML = "e";
+}
+</script>
+<p><a href="https://en.wikipedia.org/wiki/Coefficient_of_variation">Explicación</a></p>
+</div>
+<div id="pregunta-test-66" class="section level2" number="3.30">
+<h2><span class="header-section-number">3.30</span> Pregunta test</h2>
+<p>Si el coeficiente de asimetría en una población presenta el valor 0,99 entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La distribución presenta una cola a la derecha.</li>
+<li>La distribución presenta una cola a la izquierda.</li>
+<li>La distribución es más apuntada que la normal.</li>
+<li>La distribución es menos apuntada que la normal.</li>
+<li>La distribución es prácticamente simétrica.</li>
+</ol>
+<button onclick="f27()">
+Respuesta correcta
+</button>
+<p id="27">
+</p>
+<script>
+function f27() {
+  document.getElementById("27").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-67" class="section level2" number="3.31">
+<h2><span class="header-section-number">3.31</span> Pregunta test</h2>
+<p>Si la media del peso en una población es 60 kg. y la mediana 65kg., entonces afirmamos que la distribución del peso en la población es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Platicúrtica.</li>
+<li>Mesocúrtica.</li>
+<li>Leptocúrtica.</li>
+<li>Asimétrica.</li>
+<li>Unimodal.</li>
+</ol>
+<button onclick="f28()">
+Respuesta correcta
+</button>
+<p id="28">
+</p>
+<script>
+function f28() {
+  document.getElementById("28").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-68" class="section level2" number="3.32">
+<h2><span class="header-section-number">3.32</span> Pregunta test</h2>
+<p>Si el coeficiente de asimetría en una población presenta el valor -5,22 entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La distribución presenta una cola a la derecha.</li>
+<li>La distribución presenta una cola a la izquierda.</li>
+<li>La distribución es más apuntada que la normal.</li>
+<li>La distribución es menos apuntada que la normal.</li>
+<li>Ese valor de asimetría es imposible.</li>
+</ol>
+<button onclick="f29()">
+Respuesta correcta
+</button>
+<p id="29">
+</p>
+<script>
+function f29() {
+  document.getElementById("29").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-69" class="section level2" number="3.33">
+<h2><span class="header-section-number">3.33</span> Pregunta test</h2>
+<p>Medimos el número de glóbulos rojos y el de blancos en cada individuo de una población. Se observa determinada variabilidad en esas cantidades. Queremos saber de qué tipo de célula se presenta mayor variabilidad</p>
+<ol style="list-style-type: lower-alpha">
+<li>Compararemos las desviaciones típicas.</li>
+<li>Compararemos los rangos.</li>
+<li>Estudiaremos la covarianza.</li>
+<li>Estudiaremos el coeficiente de correlación lineal de Pearson.</li>
+<li>Compararemos los coeficientes de variación.</li>
+</ol>
+<button onclick="f30()">
+Respuesta correcta
+</button>
+<p id="30">
+</p>
+<script>
+function f30() {
+  document.getElementById("30").innerHTML = "e";
+}
+</script>
+<ol start="5" style="list-style-type: lower-alpha">
+<li><a href="https://en.wikipedia.org/wiki/Coefficient_of_variation">Explicación</a></li>
+</ol>
+</div>
+<div id="pregunta-test-70" class="section level2" number="3.34">
+<h2><span class="header-section-number">3.34</span> Pregunta test</h2>
+<p>En una muestra de 1000 mujeres se estudia su número de hijos. Si quiero tener el máximo de información sobre la variable del estudio, preferimos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Media, Mediana y Moda.</li>
+<li>Percentil 25, Percentil 50, Percentil 75.</li>
+<li>Media y desviación típica.</li>
+<li>Media, mediana, cuartiles, asimetría, curtosis y desviación típica.</li>
+<li>Distribución de frecuencias</li>
+</ol>
+<button onclick="f31()">
+Respuesta correcta
+</button>
+<p id="31">
+</p>
+<script>
+function f31() {
+  document.getElementById("31").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-71" class="section level2" number="3.35">
+<h2><span class="header-section-number">3.35</span> Pregunta test</h2>
+<p>El 3% de los individuos tiene una altura superior a 190cm. El 5% mide menos de 150cm. Conocemos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El percentil 3</li>
+<li>El cuantil 0,06</li>
+<li>El percentil 95</li>
+<li>El percentil 97</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f32()">
+Respuesta correcta
+</button>
+<p id="32">
+</p>
+<script>
+function f32() {
+  document.getElementById("32").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-no-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-72" class="section level2" number="3.36">
+<h2><span class="header-section-number">3.36</span> Pregunta test</h2>
+<p>Respecto a las medidas de centralización:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media no debe usarse en distribuciones muy asimétricas.</li>
+<li>La moda puede no ser única.</li>
+<li>En distribuciones simétricas media, mediana y moda coinciden.</li>
+<li>Las tres anteriores son correctas.</li>
+<li>Sólo la a) y la b) son correctas</li>
+</ol>
+<button onclick="f33()">
+Respuesta correcta
+</button>
+<p id="33">
+</p>
+<script>
+function f33() {
+  document.getElementById("33").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación1</a> y <a href="https://www.statisticshowto.com/what-is-a-bimodal-distribution/">Explicación2</a></p>
+</div>
+<div id="pregunta-test-73" class="section level2" number="3.37">
+<h2><span class="header-section-number">3.37</span> Pregunta test</h2>
+<p>El coeficiente de asimetría en una población vale 3. Elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La distribución presenta una cola a la derecha.</li>
+<li>La distribución presenta una cola a la izquierda.</li>
+<li>La distribución es simétrica.</li>
+<li>La distribución es más apuntada que la normal</li>
+<li>La media es igual a la mediana.</li>
+</ol>
+<button onclick="f34()">
+Respuesta correcta
+</button>
+<p id="34">
+</p>
+<script>
+function f34() {
+  document.getElementById("34").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-74" class="section level2" number="3.38">
+<h2><span class="header-section-number">3.38</span> Pregunta test</h2>
+<p>¿Cuál de las siguientes medidas define mejor la tendencia central de los datos: 1, 2, 4, 5, 9, 1, 3, 9, 400?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Media.</li>
+<li>Cuantil 0,5.</li>
+<li>Moda</li>
+<li>Desviación típica.</li>
+<li>Ninguna de las anteriores.</li>
+</ol>
+<button onclick="f35()">
+Respuesta correcta
+</button>
+<p id="35">
+</p>
+<script>
+function f35() {
+  document.getElementById("35").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-no-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-75" class="section level2" number="3.39">
+<h2><span class="header-section-number">3.39</span> Pregunta test</h2>
+<p>De las siguientes variables ¿con cuáles NO puedo calcular la media?</p>
+<ol style="list-style-type: lower-alpha">
+<li>temperatura corporal</li>
+<li>pH del estómago</li>
+<li>grupo sanguíneo</li>
+<li>número de glóbulos rojos</li>
+<li>edad</li>
+</ol>
+<button onclick="f36()">
+Respuesta correcta
+</button>
+<p id="36">
+</p>
+<script>
+function f36() {
+  document.getElementById("36").innerHTML = "c";
+}
+</script>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></li>
+</ol>
+</div>
+<div id="pregunta-test-76" class="section level2" number="3.40">
+<h2><span class="header-section-number">3.40</span> Pregunta test</h2>
+<p>De las siguientes variables con cuál sería menos adecuado un diagrama de barras?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Número de hijos</li>
+<li>Número de coches que posee la familia</li>
+<li>Número de cigarros fumados al día</li>
+<li>Número de glóbulos rojos</li>
+<li>Número de mascotas.</li>
+</ol>
+<button onclick="f37()">
+Respuesta correcta
+</button>
+<p id="37">
+</p>
+<script>
+function f37() {
+  document.getElementById("37").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/representaciones-gra%CC%81ficas.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-77" class="section level2" number="3.41">
+<h2><span class="header-section-number">3.41</span> Pregunta test</h2>
+<p>Cuál es la mediana de los siguientes datos 22, 5, 9, 11, 10, 14, 7</p>
+<ol style="list-style-type: lower-alpha">
+<li>5</li>
+<li>9</li>
+<li>11</li>
+<li>10</li>
+<li>14</li>
+</ol>
+<button onclick="f38()">
+Respuesta correcta
+</button>
+<p id="38">
+</p>
+<script>
+function f38() {
+  document.getElementById("38").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-78" class="section level2" number="3.42">
+<h2><span class="header-section-number">3.42</span> Pregunta test</h2>
+<p>Si el cuantil 0,9 del peso es 70 kilogramos, quiere decir esto:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Que una frecuencia del 70% individuos pesa más de 70 kilogramos.</li>
+<li>Que una frecuencia del 90% de individuos pesa más de 70 kilogramos.</li>
+<li>Que una frecuencia del 90% individuos pesa menos de 70 kilogramos.</li>
+<li>Que una frecuencia de 70% de individuos pesa menos de 90 kilogramos.</li>
+<li>Todas son falsas.</li>
+</ol>
+<button onclick="f39()">
+Respuesta correcta
+</button>
+<p id="39">
+</p>
+<script>
+function f39() {
+  document.getElementById("39").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-posicio%CC%81n-centrales">Explicación</a></p>
+</div>
+<div id="pregunta-test-79" class="section level2" number="3.43">
+<h2><span class="header-section-number">3.43</span> Pregunta test</h2>
+<p>En una distribución: <span class="math inline">\(P_{25} = 40\)</span>, <span class="math inline">\(P_{50} =60\)</span> y <span class="math inline">\(P_{75} =70\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La distribución es simétrica</li>
+<li>La distribución sugiere asimetría negativa</li>
+<li>La distribución sugiere asimetría positiva</li>
+<li>La distribución es leptocúrtica</li>
+<li>Las opciones a) y d) son ciertas</li>
+</ol>
+<button onclick="f40()">
+Respuesta correcta
+</button>
+<p id="40">
+</p>
+<script>
+function f40() {
+  document.getElementById("40").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-80" class="section level2" number="3.44">
+<h2><span class="header-section-number">3.44</span> Pregunta test</h2>
+<p>En una distribución la mediana es 20 y la media es 26:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Con seguridad hay asimetría negativa</li>
+<li>Con seguridad hay asimetría positiva</li>
+<li>Hay colas hacia la derecha y hacia la izquierda.</li>
+<li>Los datos son simétricos.</li>
+<li>Los datos sugieren una cola hacia la derecha. Habría que estudiarlo con más detalle</li>
+</ol>
+<button onclick="f41()">
+Respuesta correcta
+</button>
+<p id="41">
+</p>
+<script>
+function f41() {
+  document.getElementById("41").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-forma.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-81" class="section level2" number="3.45">
+<h2><span class="header-section-number">3.45</span> Pregunta test</h2>
+<p>El Rango Intercuartílico:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Es sensible a los datos extremos.</li>
+<li>Es la distancia ente el primer y segundo cuartil.</li>
+<li>Es la raíz cuadrada de la varianza</li>
+<li>Sus unidades son el cuadrado de las variables.</li>
+<li>Mide el grado de dispersión de los datos, independientemente de su causa.</li>
+</ol>
+<button onclick="f42()">
+Respuesta correcta
+</button>
+<p id="42">
+</p>
+<script>
+function f42() {
+  document.getElementById("42").innerHTML = "e";
+}
+</script>
+<ol start="5" style="list-style-type: lower-alpha">
+<li><a href="https://1fjmanzano.github.io/bioestadistica/medidas-de-posicio%CC%81n-dispersio%CC%81n-y-forma.html#medidas-de-dispersio%CC%81n">Explicación</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="análisis-inferencial.-aplicaciones..html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02_descriptiva.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
