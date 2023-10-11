@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Planteamiento de una investigación: Anatomía y Fisiología de la investigación | Bioestadística: preguntas y problemas resueltos</title>
+  <meta name="description" content="Capítulo 2 Planteamiento de una investigación: Anatomía y Fisiología de la investigación | Bioestadística: preguntas y problemas resueltos" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Planteamiento de una investigación: Anatomía y Fisiología de la investigación | Bioestadística: preguntas y problemas resueltos" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Planteamiento de una investigación: Anatomía y Fisiología de la investigación | Bioestadística: preguntas y problemas resueltos" />
+  
+  
+  
+
+<meta name="author" content="Javier Manzano" />
+
+
+<meta name="date" content="2023-10-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioestadística: problemas resueltos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><i class="fa fa-check"></i><b>2</b> Planteamiento de una investigación: Anatomía y Fisiología de la investigación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test"><i class="fa fa-check"></i><b>2.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-1"><i class="fa fa-check"></i><b>2.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.3" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-2"><i class="fa fa-check"></i><b>2.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.4" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-3"><i class="fa fa-check"></i><b>2.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.5" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-4"><i class="fa fa-check"></i><b>2.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.6" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-5"><i class="fa fa-check"></i><b>2.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.7" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema"><i class="fa fa-check"></i><b>2.7</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución"><i class="fa fa-check"></i><b>2.7.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-6"><i class="fa fa-check"></i><b>2.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.9" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-7"><i class="fa fa-check"></i><b>2.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.10" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-8"><i class="fa fa-check"></i><b>2.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.11" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-9"><i class="fa fa-check"></i><b>2.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.12" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-10"><i class="fa fa-check"></i><b>2.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.13" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-11"><i class="fa fa-check"></i><b>2.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.14" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-12"><i class="fa fa-check"></i><b>2.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.15" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-1"><i class="fa fa-check"></i><b>2.15</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-1"><i class="fa fa-check"></i><b>2.15.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.16" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-13"><i class="fa fa-check"></i><b>2.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.17" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-14"><i class="fa fa-check"></i><b>2.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.18" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-15"><i class="fa fa-check"></i><b>2.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.19" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-16"><i class="fa fa-check"></i><b>2.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.20" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-2"><i class="fa fa-check"></i><b>2.20</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.20.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-2"><i class="fa fa-check"></i><b>2.20.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.21" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-17"><i class="fa fa-check"></i><b>2.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.22" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-18"><i class="fa fa-check"></i><b>2.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.23" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-19"><i class="fa fa-check"></i><b>2.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.24" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-3"><i class="fa fa-check"></i><b>2.24</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.24.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-3"><i class="fa fa-check"></i><b>2.24.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.25" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-20"><i class="fa fa-check"></i><b>2.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.26" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-21"><i class="fa fa-check"></i><b>2.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.27" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-22"><i class="fa fa-check"></i><b>2.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.28" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-23"><i class="fa fa-check"></i><b>2.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.29" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-24"><i class="fa fa-check"></i><b>2.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.30" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-4"><i class="fa fa-check"></i><b>2.30</b> Problema</a></li>
+<li class="chapter" data-level="2.31" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-25"><i class="fa fa-check"></i><b>2.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.32" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-26"><i class="fa fa-check"></i><b>2.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.33" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-27"><i class="fa fa-check"></i><b>2.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.34" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-28"><i class="fa fa-check"></i><b>2.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.35" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-29"><i class="fa fa-check"></i><b>2.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.36" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-30"><i class="fa fa-check"></i><b>2.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.37" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-31"><i class="fa fa-check"></i><b>2.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.38" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-32"><i class="fa fa-check"></i><b>2.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.39" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-33"><i class="fa fa-check"></i><b>2.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.40" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-34"><i class="fa fa-check"></i><b>2.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.41" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-35"><i class="fa fa-check"></i><b>2.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.42" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-36"><i class="fa fa-check"></i><b>2.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.43" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-37"><i class="fa fa-check"></i><b>2.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.44" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-38"><i class="fa fa-check"></i><b>2.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.45" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-39"><i class="fa fa-check"></i><b>2.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.46" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-40"><i class="fa fa-check"></i><b>2.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.47" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-41"><i class="fa fa-check"></i><b>2.47</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.48" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-42"><i class="fa fa-check"></i><b>2.48</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.49" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-43"><i class="fa fa-check"></i><b>2.49</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.50" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-44"><i class="fa fa-check"></i><b>2.50</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.51" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-45"><i class="fa fa-check"></i><b>2.51</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.52" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-46"><i class="fa fa-check"></i><b>2.52</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.53" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-47"><i class="fa fa-check"></i><b>2.53</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.54" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-48"><i class="fa fa-check"></i><b>2.54</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.55" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-49"><i class="fa fa-check"></i><b>2.55</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><i class="fa fa-check"></i><b>3</b> Análisis Descriptivo y Gráfico de datos cuantitativos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-50"><i class="fa fa-check"></i><b>3.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.2" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-51"><i class="fa fa-check"></i><b>3.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-5"><i class="fa fa-check"></i><b>3.3</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-4"><i class="fa fa-check"></i><b>3.3.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-52"><i class="fa fa-check"></i><b>3.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.5" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-53"><i class="fa fa-check"></i><b>3.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.6" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-54"><i class="fa fa-check"></i><b>3.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.7" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-55"><i class="fa fa-check"></i><b>3.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.8" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-6"><i class="fa fa-check"></i><b>3.8</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-5"><i class="fa fa-check"></i><b>3.8.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-56"><i class="fa fa-check"></i><b>3.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.10" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-57"><i class="fa fa-check"></i><b>3.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.11" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-7"><i class="fa fa-check"></i><b>3.11</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-6"><i class="fa fa-check"></i><b>3.11.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-58"><i class="fa fa-check"></i><b>3.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.13" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-59"><i class="fa fa-check"></i><b>3.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.14" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-60"><i class="fa fa-check"></i><b>3.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.15" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-61"><i class="fa fa-check"></i><b>3.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.16" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-62"><i class="fa fa-check"></i><b>3.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.17" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-63"><i class="fa fa-check"></i><b>3.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.18" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-64"><i class="fa fa-check"></i><b>3.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.19" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-65"><i class="fa fa-check"></i><b>3.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.20" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-66"><i class="fa fa-check"></i><b>3.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.21" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-67"><i class="fa fa-check"></i><b>3.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.22" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-68"><i class="fa fa-check"></i><b>3.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.23" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-69"><i class="fa fa-check"></i><b>3.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.24" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-70"><i class="fa fa-check"></i><b>3.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.25" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-71"><i class="fa fa-check"></i><b>3.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.26" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-72"><i class="fa fa-check"></i><b>3.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.27" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-73"><i class="fa fa-check"></i><b>3.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.28" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-74"><i class="fa fa-check"></i><b>3.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.29" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-75"><i class="fa fa-check"></i><b>3.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.30" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-76"><i class="fa fa-check"></i><b>3.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.31" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-77"><i class="fa fa-check"></i><b>3.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.32" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-78"><i class="fa fa-check"></i><b>3.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.33" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-79"><i class="fa fa-check"></i><b>3.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.34" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-80"><i class="fa fa-check"></i><b>3.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.35" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-81"><i class="fa fa-check"></i><b>3.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.36" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-82"><i class="fa fa-check"></i><b>3.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.37" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-83"><i class="fa fa-check"></i><b>3.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.38" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-84"><i class="fa fa-check"></i><b>3.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.39" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-85"><i class="fa fa-check"></i><b>3.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.40" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-86"><i class="fa fa-check"></i><b>3.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.41" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-87"><i class="fa fa-check"></i><b>3.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.42" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-88"><i class="fa fa-check"></i><b>3.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.43" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-89"><i class="fa fa-check"></i><b>3.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.44" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-90"><i class="fa fa-check"></i><b>3.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.45" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-91"><i class="fa fa-check"></i><b>3.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.46" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-92"><i class="fa fa-check"></i><b>3.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.47" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-93"><i class="fa fa-check"></i><b>3.47</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html"><i class="fa fa-check"></i><b>4</b> Análisis Inferencial. Aplicaciones.</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-94"><i class="fa fa-check"></i><b>4.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.2" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-95"><i class="fa fa-check"></i><b>4.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.3" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-96"><i class="fa fa-check"></i><b>4.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-97"><i class="fa fa-check"></i><b>4.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.5" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-98"><i class="fa fa-check"></i><b>4.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.6" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-99"><i class="fa fa-check"></i><b>4.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.7" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-100"><i class="fa fa-check"></i><b>4.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.8" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-101"><i class="fa fa-check"></i><b>4.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.9" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-102"><i class="fa fa-check"></i><b>4.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.10" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-103"><i class="fa fa-check"></i><b>4.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.11" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-104"><i class="fa fa-check"></i><b>4.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.12" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-105"><i class="fa fa-check"></i><b>4.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.13" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-8"><i class="fa fa-check"></i><b>4.13</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.13.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#explicación"><i class="fa fa-check"></i><b>4.13.1</b> Explicación</a></li>
+</ul></li>
+<li class="chapter" data-level="4.14" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-106"><i class="fa fa-check"></i><b>4.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.15" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-107"><i class="fa fa-check"></i><b>4.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.16" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-108"><i class="fa fa-check"></i><b>4.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.17" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-109"><i class="fa fa-check"></i><b>4.17</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html"><i class="fa fa-check"></i><b>5</b> Regresión y correlación.</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-110"><i class="fa fa-check"></i><b>5.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.2" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-111"><i class="fa fa-check"></i><b>5.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.3" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-112"><i class="fa fa-check"></i><b>5.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.4" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-113"><i class="fa fa-check"></i><b>5.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-114"><i class="fa fa-check"></i><b>5.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.6" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#prefunta-test"><i class="fa fa-check"></i><b>5.6</b> Prefunta test</a></li>
+<li class="chapter" data-level="5.7" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-115"><i class="fa fa-check"></i><b>5.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.8" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-116"><i class="fa fa-check"></i><b>5.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.9" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-117"><i class="fa fa-check"></i><b>5.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.10" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-118"><i class="fa fa-check"></i><b>5.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.11" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-119"><i class="fa fa-check"></i><b>5.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.12" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-120"><i class="fa fa-check"></i><b>5.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.13" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-121"><i class="fa fa-check"></i><b>5.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.14" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-122"><i class="fa fa-check"></i><b>5.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.15" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-123"><i class="fa fa-check"></i><b>5.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.16" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-124"><i class="fa fa-check"></i><b>5.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.17" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-125"><i class="fa fa-check"></i><b>5.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.18" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-126"><i class="fa fa-check"></i><b>5.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.19" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-127"><i class="fa fa-check"></i><b>5.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.20" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-128"><i class="fa fa-check"></i><b>5.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.21" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-129"><i class="fa fa-check"></i><b>5.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.22" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-130"><i class="fa fa-check"></i><b>5.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.23" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-131"><i class="fa fa-check"></i><b>5.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.24" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-132"><i class="fa fa-check"></i><b>5.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.25" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-133"><i class="fa fa-check"></i><b>5.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.26" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-134"><i class="fa fa-check"></i><b>5.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.27" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-135"><i class="fa fa-check"></i><b>5.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.28" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-136"><i class="fa fa-check"></i><b>5.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.29" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-137"><i class="fa fa-check"></i><b>5.29</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html"><i class="fa fa-check"></i><b>6</b> Tablas de contingencia.</a></li>
+<li class="chapter" data-level="7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html"><i class="fa fa-check"></i><b>7</b> Medidas de importancia clínica.</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-138"><i class="fa fa-check"></i><b>7.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.2" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-139"><i class="fa fa-check"></i><b>7.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.3" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-140"><i class="fa fa-check"></i><b>7.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.4" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-9"><i class="fa fa-check"></i><b>7.4</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-7"><i class="fa fa-check"></i><b>7.4.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-141"><i class="fa fa-check"></i><b>7.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.6" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-142"><i class="fa fa-check"></i><b>7.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-10"><i class="fa fa-check"></i><b>7.7</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-8"><i class="fa fa-check"></i><b>7.7.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-143"><i class="fa fa-check"></i><b>7.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.9" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-144"><i class="fa fa-check"></i><b>7.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.10" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-11"><i class="fa fa-check"></i><b>7.10</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-9"><i class="fa fa-check"></i><b>7.10.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-145"><i class="fa fa-check"></i><b>7.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.12" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-146"><i class="fa fa-check"></i><b>7.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.13" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-147"><i class="fa fa-check"></i><b>7.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.14" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-148"><i class="fa fa-check"></i><b>7.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.15" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-149"><i class="fa fa-check"></i><b>7.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.16" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-150"><i class="fa fa-check"></i><b>7.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.17" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-151"><i class="fa fa-check"></i><b>7.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.18" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-152"><i class="fa fa-check"></i><b>7.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.19" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-153"><i class="fa fa-check"></i><b>7.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.20" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-154"><i class="fa fa-check"></i><b>7.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.21" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-155"><i class="fa fa-check"></i><b>7.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.22" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-156"><i class="fa fa-check"></i><b>7.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.23" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-157"><i class="fa fa-check"></i><b>7.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.24" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-12"><i class="fa fa-check"></i><b>7.24</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.24.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-10"><i class="fa fa-check"></i><b>7.24.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.25" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-158"><i class="fa fa-check"></i><b>7.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.26" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-159"><i class="fa fa-check"></i><b>7.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.27" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-160"><i class="fa fa-check"></i><b>7.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.28" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-13"><i class="fa fa-check"></i><b>7.28</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.28.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-11"><i class="fa fa-check"></i><b>7.28.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.29" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-161"><i class="fa fa-check"></i><b>7.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.30" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-162"><i class="fa fa-check"></i><b>7.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.31" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-163"><i class="fa fa-check"></i><b>7.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.32" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-14"><i class="fa fa-check"></i><b>7.32</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.32.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-12"><i class="fa fa-check"></i><b>7.32.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.33" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-164"><i class="fa fa-check"></i><b>7.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.34" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-15"><i class="fa fa-check"></i><b>7.34</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.34.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-13"><i class="fa fa-check"></i><b>7.34.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.35" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-165"><i class="fa fa-check"></i><b>7.35</b> Pregunta test</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística: preguntas y problemas resueltos</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Planteamiento de una investigación: Anatomía y Fisiología de la investigación</h1>
+<p>En este capítulo se resolverán problemas relativos a:</p>
+<ul>
+<li>Diseño de una investigación</li>
+<li>Métodos de muestreo</li>
+<li>Métodos de recolección de datos</li>
+<li>Variables y Escalas de Medida</li>
+<li>Errores en la Investigación</li>
+</ul>
+<div id="pregunta-test" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Pregunta test</h2>
+<p>La proporción de individuos de una población que tiene una enfermedad en un momento dado de tiempo se denomina:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Incidencia acumulada</li>
+<li>Densidad de incidencia</li>
+<li>Fracción atribuible</li>
+<li>Prevalencia</li>
+<li>Odds ratio</li>
+</ol>
+<button onclick="f1()">
+Respuesta correcta
+</button>
+<p id="1">
+</p>
+<script>
+function f1() {
+  document.getElementById("1").innerHTML = "d";
+}
+</script>
+<p><a href="https://www.cancer.gov/espanol/publicaciones/diccionarios/diccionario-cancer/def/prevalencia">Explicación</a></p>
+</div>
+<div id="pregunta-test-1" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Pregunta test</h2>
+<p>Es una Variable Cualitativa Ordinal:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Sexo (M, F).</li>
+<li>Bebe (no, poco, mucho).</li>
+<li>Nº de muelas cariadas.</li>
+<li>Temperatura corporal.</li>
+<li>Raza (blanca, negra, amarilla).</li>
+</ol>
+<button onclick="f1_05()">
+Respuesta correcta
+</button>
+<p id="1_05">
+</p>
+<script>
+function f1_05() {
+  document.getElementById("1_05").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-2" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Pregunta test</h2>
+<p>¿Cuál es el mejor tipo de estudio epidemiológico para estimar la prevalencia de una enfermedad crónica en una comunidad determinada?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio ecológico</li>
+<li>Ensayo clínico aleatorio</li>
+<li>Estudio transversal de la población</li>
+<li>Estudio de casos y controles</li>
+<li>Estudio de cohortes</li>
+</ol>
+<button onclick="f1_1()">
+Respuesta correcta
+</button>
+<p id="1_1">
+</p>
+<script>
+function f1_1() {
+  document.getElementById("1_1").innerHTML = "c";
+}
+</script>
+<p><a href="https://escuelitamedica.com/2019/02/03/tipos-de-estudios-epidemiologicos-preguntas/">Explicación</a></p>
+</div>
+<div id="pregunta-test-3" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Pregunta test</h2>
+<p>Se realiza una auditoría de historias clínicas tomando una primeria historia al azar y después sucesivamente, la que ocupa la vigésima posición detrás de la anterior. Este procedimiento de muestreo se denomina:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Por conglomerados.</li>
+<li>Sistemático.</li>
+<li>Correlativo.</li>
+<li>Consecutivo.</li>
+<li>Equidistante.</li>
+</ol>
+<button onclick="f1_2()">
+Respuesta correcta
+</button>
+<p id="1_2">
+</p>
+<script>
+function f1_2() {
+  document.getElementById("1_2").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-muestreo.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-4" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Pregunta test</h2>
+<p>En una muestra de pacientes, el número de varones dividido entre el total de pacientes es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una frecuencia relativa.</li>
+<li>Una frecuencia absoluta.</li>
+<li>Una variable cuantitativa.</li>
+<li>Una variable cualitativa.</li>
+<li>Un valor de la variable.</li>
+</ol>
+<button onclick="f2()">
+Respuesta correcta
+</button>
+<p id="2">
+</p>
+<script>
+function f2() {
+  document.getElementById("2").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-5" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Pregunta test</h2>
+<p>Señale cuál de las siguientes afirmaciones es falsa:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La aparición o no de bacterias en un cultivo es una variable dicotómica</li>
+<li>La estatura de un individuo es una variable cuantitativa discreta.</li>
+<li>El lugar que ocupa una persona entre sus hermanos (de menor a mayor edad) es una variable ordinal.</li>
+<li>El estado civil es una variable cualitativa.</li>
+<li>La glucemia es continua.</li>
+</ol>
+<button onclick="f3()">
+Respuesta correcta
+</button>
+<p id="3">
+</p>
+<script>
+function f3() {
+  document.getElementById("3").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="problema" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Problema</h2>
+<p>En base a la siguiente distribución de frecuencias relativas acumuladas de la variable <span class="math inline">\(X\)</span> = “Número de contratos conseguidos en el mes de enero” obtenida de la observación de la actividad de 50 teleoperadores de
+una compañía de telefonía móvil, indique el número mínimo de contratos que tiene que haber conseguido un teleoperador para estar entre los 5 que han destacado más:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(X_i\)</span></th>
+<th align="center">58</th>
+<th align="center">60</th>
+<th align="center">62</th>
+<th align="center">65</th>
+<th align="center">68</th>
+<th align="center">70</th>
+<th align="center">71</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(H_i\)</span></td>
+<td align="center">0.06</td>
+<td align="center">0.2</td>
+<td align="center">0.4</td>
+<td align="center">0.64</td>
+<td align="center">0.8</td>
+<td align="center">0.92</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<div id="solución" class="section level3" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Solución</h3>
+<p>Al haber 50 teleoperadores, si tiene que estar entre los 5 que han destacado mas, debe dejar a 45 por detrás. Como <span class="math inline">\(\frac{45}{50}=0.9\)</span>, deberá superar al 90 %, es decir, estar por encima del 0.9 en la frecuencia relativa acumulada.</p>
+<p>En la tabla vemos que para el valor 70 se alcanza la frecuencia relativa acumulada de 0.92 por lo que <strong>para estar entre los 5 que más han destacado, deberá haber firmado, al menos, 70 contratos</strong>.</p>
+</div>
+</div>
+<div id="pregunta-test-6" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Pregunta test</h2>
+<p>¿A qué fase del proceso de investigación pertenece la recogida, análisis e interpretación de los resultados?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Fase conceptual.</li>
+<li>Fase Metodológica.</li>
+<li>Fase Empírica.</li>
+<li>Fase de análisis e interpretación de los datos.</li>
+</ol>
+<button onclick="f4()">
+Respuesta correcta
+</button>
+<p id="4">
+</p>
+<script>
+function f4() {
+  document.getElementById("4").innerHTML = "c";
+}
+</script>
+<p><a href="https://www.salusplay.com/apuntes/apuntes-metodologia-de-la-investigacion/tema-4-el-proceso-de-investigacion-fases-de-realizacion-de-una-investigacion-cientifica/2">Explicación</a></p>
+</div>
+<div id="pregunta-test-7" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Pregunta test</h2>
+<p>La incidencia de una enfermedad es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La relación entre enfermos y fallecidos</li>
+<li>La prevalencia multiplicada por la morbilidad</li>
+<li>Lo mismo que la prevalencia</li>
+<li>El no de casos nuevos de esa enfermedad</li>
+<li>Ninguna de las anteriores</li>
+</ol>
+<button onclick="f4_1()">
+Respuesta correcta
+</button>
+<p id="4_1">
+</p>
+<script>
+function f4_1() {
+  document.getElementById("4_1").innerHTML = "d";
+}
+</script>
+<p><a href="https://medlineplus.gov/spanish/ency/article/002387.htm">Explicación</a></p>
+</div>
+<div id="pregunta-test-8" class="section level2" number="2.10">
+<h2><span class="header-section-number">2.10</span> Pregunta test</h2>
+<p>En el caso de una variable ordinal, el número n de datos válidos es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La suma de las frecuencias absolutas.</li>
+<li>La frecuencia absoluta acumulada de la categoría más frecuente.</li>
+<li>La suma de las frecuencias relativas.</li>
+<li>La frecuencia relativa acumulada en la última categoría.</li>
+<li>La (a) y la (d) son ciertas.</li>
+</ol>
+<button onclick="f5()">
+Respuesta correcta
+</button>
+<p id="5">
+</p>
+<script>
+function f5() {
+  document.getElementById("5").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-9" class="section level2" number="2.11">
+<h2><span class="header-section-number">2.11</span> Pregunta test</h2>
+<p>El nº de casos nuevos de una enfermedad que se desarrolla en una población en un periodo de tiempo determinado se conoce como:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Densidad de incidencia</li>
+<li>Incidencia acumulada</li>
+<li>Prevalencia</li>
+<li>Fracción atribuible</li>
+<li>Riesgo relativo</li>
+</ol>
+<button onclick="f5_1()">
+Respuesta correcta
+</button>
+<p id="5_1">
+</p>
+<script>
+function f5_1() {
+  document.getElementById("5_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://www.conprueba.es/glosario/incidencia-acumulada">Explicación</a></p>
+</div>
+<div id="pregunta-test-10" class="section level2" number="2.12">
+<h2><span class="header-section-number">2.12</span> Pregunta test</h2>
+<p>Se realiza un estudio con objeto de determinar el tiempo de supervivencia en pacientes con cáncer. Para ello de los dos hospitales existentes en una ciudad, se selecciona aleatoriamente uno de ellos, y se elige una muestra aleatoria de pacientes, atendiendo al tipo de cáncer: El muestreo realizado es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Sistemático.</li>
+<li>Aleatorio.</li>
+<li>Por conglomerados.</li>
+<li>Estratificado.</li>
+<li>Por conglomerados y estratificado.</li>
+</ol>
+<button onclick="f5_2()">
+Respuesta correcta
+</button>
+<p id="5_2">
+</p>
+<script>
+function f5_2() {
+  document.getElementById("5_2").innerHTML = "e";
+}
+</script>
+</div>
+<div id="pregunta-test-11" class="section level2" number="2.13">
+<h2><span class="header-section-number">2.13</span> Pregunta test</h2>
+<p>En un estudio sobre problemas cervicales preguntamos a los pacientes acerca del tipo de almohada que usan. Las respuestas deberían ser consideradas como una variable:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Cualitativa nominal</li>
+<li>Numérica</li>
+<li>Discreta</li>
+<li>Continua.</li>
+<li>Ordinal</li>
+</ol>
+<button onclick="f6()">
+Respuesta correcta
+</button>
+<p id="6">
+</p>
+<script>
+function f6() {
+  document.getElementById("6").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-12" class="section level2" number="2.14">
+<h2><span class="header-section-number">2.14</span> Pregunta test</h2>
+<p>Al inicio de un estudio de cohortes ¿cómo está la población a estudiar?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Todos los efectos del proceso que se estudia</li>
+<li>Todos sanos</li>
+<li>La cohorte expuesta sana y la no expuesta enferma</li>
+<li>La cohorte expuesta enferma y la no expuesta sana</li>
+<li>Ninguna de las anteriores</li>
+</ol>
+<button onclick="f6_1()">
+Respuesta correcta
+</button>
+<p id="6_1">
+</p>
+<script>
+function f6_1() {
+  document.getElementById("6_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Estudio_de_cohorte">Explicación</a></p>
+</div>
+<div id="problema-1" class="section level2" number="2.15">
+<h2><span class="header-section-number">2.15</span> Problema</h2>
+<p>De la distribución de la variable <span class="math inline">\(X\)</span> = ‘Peso (en Kg)’ de un colectivo de adolescentes agrupada en 4 intervalos con límites superiores 60, 65, 70 y 75 se sabe que:</p>
+<ul>
+<li>la mitad del colectivo pesa entre 65 y 70 kg</li>
+<li>una cuarta parte pesa como máximo 65 kg</li>
+<li>9 adolescentes tiene un peso máximo de 60 kg</li>
+<li>18 pesan entre 70 y 75 kg.</li>
+</ul>
+<p>Calcula</p>
+<p><strong>a)</strong> El número n de adolescentes entrevistados</p>
+<p><strong>b)</strong> El porcentaje de adolescentes que pesan entre 55 y 60 kg</p>
+<p><strong>c)</strong> El peso mínimo de la mitad de adolescentes con mayor peso</p>
+<p><strong>d) </strong> Cuántos alumnos pesan como máximo, 65 kg</p>
+<div id="solución-1" class="section level3" number="2.15.1">
+<h3><span class="header-section-number">2.15.1</span> Solución</h3>
+<p>Vemos que tenemos mucha información que conviene organizar en forma de tabla. Empezamos escribiendo una tabla con los datos que tenemos:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Intervalo</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(h_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([55,60)\)</span></td>
+<td align="center">9</td>
+<td align="center"></td>
+<td align="center">9</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([60,65)\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">0.25</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([65,70)\)</span></td>
+<td align="center"></td>
+<td align="center">0.50</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([70,75)\)</span></td>
+<td align="center">18</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>A partir de estos datos, vamos a completar el resto.</p>
+<p>Como el 25 % pesan menos de 65 y el 50 % entre 65 y 70, entonces el 75 % pesarán menos de 70 kg y el 25 % pesarán más de 70 hg.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Intervalo</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(h_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([55,60)\)</span></td>
+<td align="center">9</td>
+<td align="center"></td>
+<td align="center">9</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([60,65)\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">0.25</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([65,70)\)</span></td>
+<td align="center"></td>
+<td align="center">0.50</td>
+<td align="center"></td>
+<td align="center">0.75</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([70,75)\)</span></td>
+<td align="center">18</td>
+<td align="center">0.25</td>
+<td align="center"></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Así, el 25 % (la cuarta parte) del número n de adolescentes entrevistados es 18 por lo que <span class="math inline">\(n = 18 \cdot 4 = 72\)</span>. El 50 % de 72 es 36 y, como hay 9 adolescentes entre 55 y 60 kg y como <span class="math inline">\(72 - 9 - 36 - 18 = 9\)</span>, tendremos</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Intervalo</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(h_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([55,60)\)</span></td>
+<td align="center">9</td>
+<td align="center">0.125</td>
+<td align="center">9</td>
+<td align="center">0.125</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([60,65)\)</span></td>
+<td align="center">9</td>
+<td align="center">0.125</td>
+<td align="center">18</td>
+<td align="center">0.25</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([65,70)\)</span></td>
+<td align="center">36</td>
+<td align="center">0.50</td>
+<td align="center">54</td>
+<td align="center">0.75</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([70,75)\)</span></td>
+<td align="center">18</td>
+<td align="center">0.25</td>
+<td align="center">72</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Y a la vista de la tabla, podemos responder a las preguntas:</p>
+<p><strong>a)</strong> Se entrevistaron a 72 adolescentes</p>
+<p><strong>b)</strong> El 25 % de adolescentes pesa entre 55 y 60 kg</p>
+<p><strong>c)</strong> El 50 % de los adolescentes con mayor peso están en los intervalos <span class="math inline">\([65,70)\)</span> y <span class="math inline">\([70,75)\)</span> y, como no podemos saber exactamente cuál es el peso menor de ese 50 %, <strong>el peso mínimo de la mitad de adolescentes con mayor peso es de, al menos, 65 kg</strong>.</p>
+<p><strong>d)</strong> 18 alumnos pesan como máximo 65 kg</p>
+</div>
+</div>
+<div id="pregunta-test-13" class="section level2" number="2.16">
+<h2><span class="header-section-number">2.16</span> Pregunta test</h2>
+<p>¿Cuál de las siguientes características pertenece al paradigma naturalista?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pretende buscar la objetividad.</li>
+<li>El investigador interactúa con los sujetos investigados y los resultados se crean de esa interacción.</li>
+<li>Utilización de procesos deductivos.</li>
+<li>Importancia en el análisis estadístico.</li>
+</ol>
+<button onclick="f7()">
+Respuesta correcta
+</button>
+<p id="7">
+</p>
+<script>
+function f7() {
+  document.getElementById("7").innerHTML = "b";
+}
+</script>
+<p><a href="https://www.encyclo.co.uk/meaning-of-Naturalistic_paradigm">Explicación</a></p>
+</div>
+<div id="pregunta-test-14" class="section level2" number="2.17">
+<h2><span class="header-section-number">2.17</span> Pregunta test</h2>
+<p>En un estudio sobre la enfermedad coronaria en la población española, se selecciona una muestra de individuos hipertensos y un grupo de control de no hipertensos. Se les sigue durante 5 años y se compara la incidencia de la enfermedad de ambos grupos ¿A qué tipo de diseño corresponde el estudio?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio de cohortes</li>
+<li>Estudio de casos y controles</li>
+<li>Estudio transversal</li>
+<li>Ensayo clínico</li>
+<li>Estudio ecológico</li>
+</ol>
+<button onclick="f7_1()">
+Respuesta correcta
+</button>
+<p id="7_1">
+</p>
+<script>
+function f7_1() {
+  document.getElementById("7_1").innerHTML = "a";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Estudio_de_cohorte">Explicación</a></p>
+</div>
+<div id="pregunta-test-15" class="section level2" number="2.18">
+<h2><span class="header-section-number">2.18</span> Pregunta test</h2>
+<p>Se desea estimar confidencialmente el número medio de veces que asiste a un servicio de salud los individuos de una población. Para ello se toman muestras aleatorias entre los individuos que asisten regularmente a los mismos. Esta técnica de muestreo es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Un muestreo aleatorio simple.</li>
+<li>Un muestreo aleatorio estratificado.</li>
+<li>Un muestreo aleatorio por conglomerados.</li>
+<li>Incorrecta.</li>
+<li>Ninguna de las anteriores.</li>
+</ol>
+<button onclick="f7_2()">
+Respuesta correcta
+</button>
+<p id="7_2">
+</p>
+<script>
+function f7_2() {
+  document.getElementById("7_2").innerHTML = "d";
+}
+</script>
+</div>
+<div id="pregunta-test-16" class="section level2" number="2.19">
+<h2><span class="header-section-number">2.19</span> Pregunta test</h2>
+<p>El estudio estadístico en el que se pretenden extrapolar los datos de una muestra a la población se denomina:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estadística descriptiva.</li>
+<li>Estadística inferencial.</li>
+<li>Medidas de tendencia central.</li>
+<li>Medidas de posición.</li>
+</ol>
+<button onclick="f8()">
+Respuesta correcta
+</button>
+<p id="8">
+</p>
+<script>
+function f8() {
+  document.getElementById("8").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/inferencia-estad%C3%ADstica.html">Explicación</a></p>
+</div>
+<div id="problema-2" class="section level2" number="2.20">
+<h2><span class="header-section-number">2.20</span> Problema</h2>
+<p>Con el objetivo de programar las actividades en un consultorio se obtiene información del número de consultas realizadas el año anterior:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">Mujeres</th>
+<th align="center">Hombres</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Intervalo</td>
+<td align="center">n</td>
+<td align="center">n</td>
+</tr>
+<tr class="even">
+<td align="center">1 - 3</td>
+<td align="center">18</td>
+<td align="center">22</td>
+</tr>
+<tr class="odd">
+<td align="center">4 - 6</td>
+<td align="center">39</td>
+<td align="center">31</td>
+</tr>
+<tr class="even">
+<td align="center">7 - 9</td>
+<td align="center">53</td>
+<td align="center">46</td>
+</tr>
+<tr class="odd">
+<td align="center">8 - 10</td>
+<td align="center">45</td>
+<td align="center">40</td>
+</tr>
+<tr class="even">
+<td align="center">11 - 13</td>
+<td align="center">53</td>
+<td align="center">35</td>
+</tr>
+<tr class="odd">
+<td align="center">14 - 16</td>
+<td align="center">39</td>
+<td align="center">29</td>
+</tr>
+<tr class="even">
+<td align="center">17 - 20</td>
+<td align="center">18</td>
+<td align="center">26</td>
+</tr>
+<tr class="odd">
+<td align="center">Total</td>
+<td align="center">265</td>
+<td align="center">229</td>
+</tr>
+</tbody>
+</table>
+<p><strong>a)</strong> Indique el (o los) nombre(s) de las(s) variables(s) de la tabla e identifique sus categorías.</p>
+<p><strong>b)</strong> Indique el tipo de escala de las(s) variables (s) de la tabla.</p>
+<p><strong>c)</strong> ¿Qué porcentaje de pacientes realiza, al menos, 8 consultas?</p>
+<div id="solución-2" class="section level3" number="2.20.1">
+<h3><span class="header-section-number">2.20.1</span> Solución</h3>
+<p><strong>a)</strong> La variable estudiada es <strong>número de consultas realizadas el año anterior con 2 categorías, Mujeres y Hombres</strong>.</p>
+<p><strong>b)</strong> Es una variable cualitativa discreta de escala ordinal con resultados agrupados en intervalos.</p>
+<p><strong>c)</strong> Para calcular el porcentaje pedido, vemos que:</p>
+<ul>
+<li><p>Mujeres con, al menos 8 consultas: <span class="math inline">\(45 + 53 + 39 + 18 = 155\)</span></p></li>
+<li><p>Hombres con, al menos 8 consultas: <span class="math inline">\(40 + 35 + 29 + 26 = 130\)</span></p></li>
+<li><p>Pacientes con, al menos 8 consultas: <span class="math inline">\(155 + 130 = 285\)</span></p></li>
+<li><p>Total de pacientes: <span class="math inline">\(265 + 229 = 494\)</span></p></li>
+</ul>
+<p>Como <span class="math inline">\(\dfrac{285}{494} \approx 0.577\)</span>, entonces <strong>el 57.7 % de pacientes realiza, al menos, 8 consultas</strong>.</p>
+</div>
+</div>
+<div id="pregunta-test-17" class="section level2" number="2.21">
+<h2><span class="header-section-number">2.21</span> Pregunta test</h2>
+<p>Elija la afirmación correcta sobre variables observadas en individuos:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Poseer vivienda propia es una variable numérica.</li>
+<li>Poseer animales de compañía es una variable cualitativa.</li>
+<li>La nacionalidad es una variable ordinal.</li>
+<li>El tipo de almohada que usa es variable ordinal.</li>
+<li>La longitud de la cama donde duerme es variable discreta.</li>
+</ol>
+<button onclick="f9()">
+Respuesta correcta
+</button>
+<p id="9">
+</p>
+<script>
+function f9() {
+  document.getElementById("9").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-18" class="section level2" number="2.22">
+<h2><span class="header-section-number">2.22</span> Pregunta test</h2>
+<p>La estadística en Ciencias de la Salud se utiliza para obtener información sobre situaciones de caracter:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Determinista.</li>
+<li>Sistemático.</li>
+<li>Exhaustivo.</li>
+<li>Aleatorio.</li>
+<li>Excluyente.</li>
+</ol>
+<button onclick="f10()">
+Respuesta correcta
+</button>
+<p id="10">
+</p>
+<script>
+function f10() {
+  document.getElementById("10").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/inferencia-estad%C3%ADstica.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-19" class="section level2" number="2.23">
+<h2><span class="header-section-number">2.23</span> Pregunta test</h2>
+<p>Elija la afirmación que pueda considerarse admisible al leer un estudio estadístico:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Se estudió a una muestra en vez de a la población, para mayor precisión.</li>
+<li>Se estudió a la población para obtener información sobre la muestra.</li>
+<li>Se estudió a una muestra representativa de la población.</li>
+<li>Se estudiaron todas las variables de la población.</li>
+<li>Se observó a un individuo de cada variable.</li>
+</ol>
+<button onclick="f11()">
+Respuesta correcta
+</button>
+<p id="11">
+</p>
+<script>
+function f11() {
+  document.getElementById("11").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-muestreo.html">Explicación</a></p>
+</div>
+<div id="problema-3" class="section level2" number="2.24">
+<h2><span class="header-section-number">2.24</span> Problema</h2>
+<p>En un estudio sobre supervivencia tras un tratamiento con quimioterapia para cierto tipo de cáncer ha sido registrado el tiempo transcurrido desde el inicio del tratamiento hasta el fallecimiento de los individuos. Los tiempos registrados se resumen en la tabla adjunta, agrupados por intervalos de 6 meses de amplitud:</p>
+<p><img src="img/1_1.png" width="376" /></p>
+<p><strong>a)</strong> Calcule las frecuencias relativas y porcentajes de los distintos intervalos.</p>
+<p><strong>b)</strong> Calcule los puntos medios de los intervalos.</p>
+<p><strong>c)</strong> Calcule las frecuencias absolutas y porcentajes acumulados</p>
+<p><strong>d)</strong> Construya el histograma, polígono de frecuencias y polígono acumulativo</p>
+<div id="solución-3" class="section level3" number="2.24.1">
+<h3><span class="header-section-number">2.24.1</span> Solución</h3>
+<p><strong>a), b) y c)</strong></p>
+<ul>
+<li>f: frecuencias absolutas</li>
+<li>h: frecuencias relativas (porcentajes)</li>
+<li>F: frecuencias absolutas acumuladas</li>
+<li>H: frecuencias relativas acumuladas (en porcentaje)</li>
+</ul>
+<p><img src="img/1_2.png" width="583" /></p>
+<p>Tabla construida siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html#tabla-de-frecuencias-pr%C3%A1ctica-con-excel">Práctica con Excel© del Curso de Bioestadística</a></p>
+<p><strong>d)</strong></p>
+<p><img src="img/1_3.png" width="360" /></p>
+<p>Gráfico construido siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/histogramas.html#histogramas-con-excel-pr%C3%A1cticas">Práctica con Excel© del Curso de Bioestadística</a></p>
+<p><img src="img/1_4.png" width="361" /></p>
+<p><img src="img/1_5.png" width="361" /></p>
+<p>Gráficos construidos siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/nu%CC%81meros-i%CC%81ndices.html#n%C3%BAmeros-%C3%ADndices-pr%C3%A1ctica-con-excel">Práctica con Excel© del Curso de Bioestadística</a></p>
+</div>
+</div>
+<div id="pregunta-test-20" class="section level2" number="2.25">
+<h2><span class="header-section-number">2.25</span> Pregunta test</h2>
+<p>Elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Los valores de cualquier variable deben ser agrupados en intervalos.</li>
+<li>Las variables deben ofrecer valores que no se repitan en los diferentes individuos.</li>
+<li>Las modalidades de una variable deben poder ser observadas en todos los individuos.</li>
+<li>Los individuos pueden poseer diferentes modalidades de la misma variable.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f12()">
+Respuesta correcta
+</button>
+<p id="12">
+</p>
+<script>
+function f12() {
+  document.getElementById("12").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-21" class="section level2" number="2.26">
+<h2><span class="header-section-number">2.26</span> Pregunta test</h2>
+<p>Elija la opción correcta.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Un parámetro es algo calculado sobre cada individuo.</li>
+<li>Un parámetro es calculado sobre la muestra.</li>
+<li>Una variable se calcula sobre los parámetros de una población.</li>
+<li>Un estadístico se calcula sobre la población.</li>
+<li>Nada de lo anterior es correcto.</li>
+</ol>
+<button onclick="f13()">
+Respuesta correcta
+</button>
+<p id="13">
+</p>
+<script>
+function f13() {
+  document.getElementById("13").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/conceptos-previos.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-22" class="section level2" number="2.27">
+<h2><span class="header-section-number">2.27</span> Pregunta test</h2>
+<p>Disponemos de la distribución de edades de los individuos de una población. El número de ellos que no es mayor de edad, es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una frecuencia relativa.</li>
+<li>Una frecuencia absoluta.</li>
+<li>Una frecuencia acumulada.</li>
+<li>Una variable numérica.</li>
+<li>Una variable cualitativa.</li>
+</ol>
+<button onclick="f14()">
+Respuesta correcta
+</button>
+<p id="14">
+</p>
+<script>
+function f14() {
+  document.getElementById("14").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-23" class="section level2" number="2.28">
+<h2><span class="header-section-number">2.28</span> Pregunta test</h2>
+<p>¿Cuál de las siguientes no es una característica de los estudios de cohortes?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Son estudios observacionales</li>
+<li>El criterio de selección de los sujetos es la presencia o no de cnfermedad</li>
+<li>Son estudios longitudinales</li>
+<li>Pueden ser prospectivos o retrospectivos</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>Tienen direccionalidad hacia delante</li>
+</ol>
+<button onclick="f14_1()">
+Respuesta correcta
+</button>
+<p id="14_1">
+</p>
+<script>
+function f14_1() {
+  document.getElementById("14_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Estudio_de_cohorte">Explicación</a></p>
+</div>
+<div id="pregunta-test-24" class="section level2" number="2.29">
+<h2><span class="header-section-number">2.29</span> Pregunta test</h2>
+<p>Para un estudio epidemiológico sobre dolencias de suelo pélvico en mujeres en la provincia de Albacete, se decide seguir la siguiente estrategia de muestreo: Se elige aleatoriamente 10 poblaciones de la provincia, y en cada una de ellas se elige aleatoriamente 10 calles. Allí se elige aleatoriamente 5 números de la calle y se estudia a las mujeres que aceptan participar. El muestreo es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Aleatorio simple</li>
+<li>Por conglomerados.</li>
+<li>Estratificado.</li>
+<li>Sistemático.</li>
+<li>Estratificado y por conglomerados.</li>
+</ol>
+<button onclick="f14_2()">
+Respuesta correcta
+</button>
+<p id="14_2">
+</p>
+<script>
+function f14_2() {
+  document.getElementById("14_2").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-muestreo.html">Explicación</a></p>
+</div>
+<div id="problema-4" class="section level2" number="2.30">
+<h2><span class="header-section-number">2.30</span> Problema</h2>
+<p>Los datos corresponden a las medidas de tensión arterial sistólica (en mm/Hg) registradas sobre 20 individuos fumadores de más de una cajetilla de cigarrillos diaria:</p>
+<p>145, 185, 120, 160, 165, 160, 175, 145, 145, 175, 130, 130, 120, 110, 145, 150, 155, 160, 145, 135</p>
+<p><strong>a)</strong> Construya la tabla de distribución de frecuencias para los datos originales.</p>
+<p><strong>b)</strong> Construya la tabla de distribución de frecuencias por intervalos de amplitud 10 mm/Hg.</p>
+<p><strong>c)</strong> Grafique la distribución de la variable.</p>
+<p>#Solución</p>
+<p><strong>a)</strong></p>
+<p>Contando <em>con papel y boli</em>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Tensión</th>
+<th align="center">110</th>
+<th align="center">120</th>
+<th align="center">130</th>
+<th align="center">135</th>
+<th align="center">145</th>
+<th align="center">150</th>
+<th align="center">155</th>
+<th align="center">160</th>
+<th align="center">165</th>
+<th align="center">175</th>
+<th align="center">185</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">f</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">5</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>b)</strong></p>
+<p>Se pide ahora considerar intervalos de amplitud 10 mm/Hg. Como el mínimo es 110 y el máximo 185, establecemos 8 intervalos:</p>
+<p><img src="img/1_6.png" width="190" /></p>
+<p>Tabla construida siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html#tablas-de-frecuencias-pr%C3%A1ctica-3-con-excel">Práctica con Excel© del Curso de Bioestadística</a></p>
+<p><strong>c)</strong> Al tener los datos en intervalos, utilizamos un histograma:</p>
+<p><img src="img/1_7.png" width="361" /></p>
+<p>Gráfico construido siguiendo esta <a href="https://1fjmanzano.github.io/bioestadistica/histogramas.html#histogramas-con-excel-pr%C3%A1cticas">Práctica con Excel© del Curso de Bioestadística</a></p>
+</div>
+<div id="pregunta-test-25" class="section level2" number="2.31">
+<h2><span class="header-section-number">2.31</span> Pregunta test</h2>
+<p>Conocemos la distribución de estudiantes entre las distintas facultades del campus Viriato. El número de estudiantes de Enfermería es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una frecuencia relativa.</li>
+<li>Una frecuencia absoluta.</li>
+<li>Una frecuencia acumulada.</li>
+<li>Un porcentaje.</li>
+<li>Una variable cualitativa.</li>
+</ol>
+<button onclick="f15()">
+Respuesta correcta
+</button>
+<p id="15">
+</p>
+<script>
+function f15() {
+  document.getElementById("15").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-26" class="section level2" number="2.32">
+<h2><span class="header-section-number">2.32</span> Pregunta test</h2>
+<p>Se llama parámetro a:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una función de valor numérico definida sobre alguna característica observable en los individuos de una población.</li>
+<li>Una función definida sobre los valores numéricos de una muestra.</li>
+<li>Cualquier variable observable de una población</li>
+<li>Las variables numéricas de la muestra</li>
+<li>Cualquier función sobre las variables observadas</li>
+</ol>
+<button onclick="f16()">
+Respuesta correcta
+</button>
+<p id="16">
+</p>
+<script>
+function f16() {
+  document.getElementById("16").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/conceptos-previos.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-27" class="section level2" number="2.33">
+<h2><span class="header-section-number">2.33</span> Pregunta test</h2>
+<p>Respecto a los estudios de casos y controles es cierto que:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Se analizan comparando la incidencia de una enfermedad o proceso en el grupo de casos respecto al grupo de controles</li>
+<li>Pueden escogerse varios controles para cada caso</li>
+<li>Una de las medidas de asociación que puede calcularse directamente en su análisis es el riesgo relativo</li>
+<li>Se denominan también estudios de prevalencia</li>
+<li>Es preferible seleccionar casos prevalentes en vez de casos incidentes de la enfermedad o proceso en estudio</li>
+</ol>
+<button onclick="f16_1()">
+Respuesta correcta
+</button>
+<p id="16_1">
+</p>
+<script>
+function f16_1() {
+  document.getElementById("16_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://dsp.facmed.unam.mx/wp-content/uploads/2022/02/Anexo-1C-U-9-Estudios-de-casos-y-controles.-Argimon-J.pdf">Explicación</a></p>
+</div>
+<div id="pregunta-test-28" class="section level2" number="2.34">
+<h2><span class="header-section-number">2.34</span> Pregunta test</h2>
+<p>Si se realiza un estudio para evaluar el rendimiento académico de los estudiantes en una universidad y se selecciona una muestra de estudiantes de manera que cada estudiante tenga la misma probabilidad de ser elegido, ¿qué tipo de muestreo se está utilizando?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Muestreo por conglomerados o por grupos</li>
+<li>Muestreo sistemático</li>
+<li>Muestreo aleatorio simple</li>
+<li>Muestreo no probabilístico</li>
+<li>Muestreo estratificado</li>
+</ol>
+<button onclick="f16_2()">
+Respuesta correcta
+</button>
+<p id="16_2">
+</p>
+<script>
+function f16_2() {
+  document.getElementById("16_2").innerHTML = "c";
+}
+</script>
+</div>
+<div id="pregunta-test-29" class="section level2" number="2.35">
+<h2><span class="header-section-number">2.35</span> Pregunta test</h2>
+<p>El grado de satisfacción (poco/regular/mucho) con la política española la trataría como:</p>
+<ol style="list-style-type: lower-alpha">
+<li>una variable cualitativa nominal.</li>
+<li>una variable cuantitativa discreta.</li>
+<li>una variable cualitativa ordinal.</li>
+<li>una variable numérica continua.</li>
+<li>ninguna de las anteriores es correcta.</li>
+</ol>
+<button onclick="f17()">
+Respuesta correcta
+</button>
+<p id="17">
+</p>
+<script>
+function f17() {
+  document.getElementById("17").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-30" class="section level2" number="2.36">
+<h2><span class="header-section-number">2.36</span> Pregunta test</h2>
+<p>Con respecto a la modalidades de una variable cualquiera:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pueden siempre agruparse en clases.</li>
+<li>Deben formar un sistema exhaustivo.</li>
+<li>No pueden agruparse en intervalos.</li>
+<li>No tienen porqué formar un sistema excluyente.</li>
+<li>Solo dos son correctas.</li>
+</ol>
+<button onclick="f18()">
+Respuesta correcta
+</button>
+<p id="18">
+</p>
+<script>
+function f18() {
+  document.getElementById("18").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-31" class="section level2" number="2.37">
+<h2><span class="header-section-number">2.37</span> Pregunta test</h2>
+<p>¿Cuál es el estudio de elección para evaluar la eficacia de un nuevo tratamiento?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio de casos y controles</li>
+<li>Ensayo clínico aleatorio</li>
+<li>Estudio transversal</li>
+<li>Estudio de morbilidad</li>
+<li>Estudio de cohortes</li>
+</ol>
+<button onclick="f18_1()">
+Respuesta correcta
+</button>
+<p id="18_!">
+</p>
+<script>
+function f18_1() {
+  document.getElementById("18_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://www.cancer.gov/espanol/publicaciones/diccionarios/diccionario-cancer/def/ensayo-clinico-aleatorizado">Explicación</a></p>
+</div>
+<div id="pregunta-test-32" class="section level2" number="2.38">
+<h2><span class="header-section-number">2.38</span> Pregunta test</h2>
+<p>Cuando hablamos de número de cumpleaños que ha tenido una persona estamos ante:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una variable cualitativa ordinal.</li>
+<li>Una variable cualitativa nominal.</li>
+<li>Una variable cuantitativa discreta.</li>
+<li>Una variable cuantitativa continua.</li>
+<li>El número de cumpleaños no es una variable.</li>
+</ol>
+<button onclick="f19()">
+Respuesta correcta
+</button>
+<p id="19">
+</p>
+<script>
+function f19() {
+  document.getElementById("19").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-33" class="section level2" number="2.39">
+<h2><span class="header-section-number">2.39</span> Pregunta test</h2>
+<p>Las pruebas de cribado son una actividad de:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Prevención primaria</li>
+<li>Prevención secundaria</li>
+<li>Prevención terciaria</li>
+<li>Promoción de la salud</li>
+<li>Prevención primaria y promoción de la salud</li>
+</ol>
+<button onclick="f19_1()">
+Respuesta correcta
+</button>
+<p id="19_1">
+</p>
+<script>
+function f19_1() {
+  document.getElementById("19_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Prevención_secundaria">Explicación</a></p>
+</div>
+<div id="pregunta-test-34" class="section level2" number="2.40">
+<h2><span class="header-section-number">2.40</span> Pregunta test</h2>
+<p>Las frecuencias acumuladas tienen sentido para:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Variables ordinales</li>
+<li>Variables numéricas</li>
+<li>Variables nominales</li>
+<li>Todas son correctas.</li>
+<li>Las opciones a) y b) son correctas.</li>
+</ol>
+<button onclick="f20()">
+Respuesta correcta
+</button>
+<p id="20">
+</p>
+<script>
+function f20() {
+  document.getElementById("20").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-35" class="section level2" number="2.41">
+<h2><span class="header-section-number">2.41</span> Pregunta test</h2>
+<p>Señale la respuesta INCORRECTA respecto a los estudios de cohortes:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pueden ser prospectivos y retrospectivos</li>
+<li>Son estudios observacionales y descriptivos</li>
+<li>Permiten establecer con claridad la secuencia temporal de los eventos de interés</li>
+<li>Permiten medir la incidencia de la enfermedad</li>
+<li>Permite medir los efectos de exposiciones infrecuentes en la población</li>
+</ol>
+<button onclick="f20_1()">
+Respuesta correcta
+</button>
+<p id="20_1">
+</p>
+<script>
+function f20_1() {
+  document.getElementById("20_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Estudio_de_cohorte">Explicación</a></p>
+</div>
+<div id="pregunta-test-36" class="section level2" number="2.42">
+<h2><span class="header-section-number">2.42</span> Pregunta test</h2>
+<p>Disponemos de la distribución de edades de los individuos de una población. El número de ellos que tiene dos o menos hijos es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una variable cualitativa.</li>
+<li>Una variable numérica.</li>
+<li>Una frecuencia acumulada.</li>
+<li>Son correctas a) y b)</li>
+<li>Ninguna es correcta.</li>
+</ol>
+<button onclick="f21()">
+Respuesta correcta
+</button>
+<p id="21">
+</p>
+<script>
+function f21() {
+  document.getElementById("21").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tablas-de-frecuencias.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-37" class="section level2" number="2.43">
+<h2><span class="header-section-number">2.43</span> Pregunta test</h2>
+<p>Deseamos conocer la opinión de los ciudadanos de Málaga sobre el sistema de salud pública. Para ello elegimos una muestra aleatoria de entre los abonados a telefónica. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La población de estudio es la de los ciudadanos de Málaga.</li>
+<li>La población de estudio es la de los abonados a telefónica.</li>
+<li>La población objetivo es la de los abonados a telefónica.</li>
+<li>El conjunto de abonados a telefónica son la muestra.</li>
+<li>Nada de lo anterior es cierto.</li>
+</ol>
+<button onclick="f21_!()">
+Respuesta correcta
+</button>
+<p id="21_1">
+</p>
+<script>
+function f21_1() {
+  document.getElementById("21_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/conceptos-previos.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-38" class="section level2" number="2.44">
+<h2><span class="header-section-number">2.44</span> Pregunta test</h2>
+<p>Los principales objetivos de la estadística descriptiva son:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Sintetizar la información contenida en los datos.</li>
+<li>Aportar resúmenes significativos de las distribuciones.</li>
+<li>Contribuye a la realización de los posteriores análisis estadísticos.</li>
+<li>Todos son correctos.</li>
+</ol>
+<button onclick="f22()">
+Respuesta correcta
+</button>
+<p id="22">
+</p>
+<script>
+function f22() {
+  document.getElementById("22").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/an%C3%A1lisis-exploratorio-de-datos.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-39" class="section level2" number="2.45">
+<h2><span class="header-section-number">2.45</span> Pregunta test</h2>
+<p>Se diseña un estudio para evaluar el efecto sobre la salud de la exposición a los teléfonos móviles en el que durante 10 años se sigue a una población inicialmente sana ¿Qué tipo de diseño tiene ese estudio?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio casos y controles</li>
+<li>Estudio de cohortes</li>
+<li>Estudio transversal</li>
+<li>Estudio de casos</li>
+<li>Ensayo controlado</li>
+</ol>
+<button onclick="f22_1()">
+Respuesta correcta
+</button>
+<p id="22_1">
+</p>
+<script>
+function f22_1() {
+  document.getElementById("22_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Estudio_de_cohorte">Explicación</a></p>
+</div>
+<div id="pregunta-test-40" class="section level2" number="2.46">
+<h2><span class="header-section-number">2.46</span> Pregunta test</h2>
+<p>En un estudio sobre las causas del cáncer de pulmón se compararon los antecedentes de tabaquismo en los pacientes que habían desarrollado esta enfermedad con los de un grupo de personas y en la enfermedad ¿de qué tipo de estudio epidemiológico se trata?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio de casos y controles</li>
+<li>Estudio de cohortes</li>
+<li>Ensayo clínico aleatorio</li>
+<li>Estudio ecológico</li>
+<li>Estudio transversal</li>
+</ol>
+<button onclick="f22_2()">
+Respuesta correcta
+</button>
+<p id="22_2">
+</p>
+<script>
+function f22_2() {
+  document.getElementById("22_2").innerHTML = "a";
+}
+</script>
+<p><a href="http://www.scielo.org.pe/scielo.php?script=sci_arttext&amp;pid=S2308-05312020000100138">Explicación</a></p>
+</div>
+<div id="pregunta-test-41" class="section level2" number="2.47">
+<h2><span class="header-section-number">2.47</span> Pregunta test</h2>
+<p>El tipo de variable cualitativa que sus valores o categorías no pueden ser ordenados, se denomina:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Variable ordinal.</li>
+<li>Variable discreta.</li>
+<li>Variable nominal.</li>
+<li>Variable continua.</li>
+</ol>
+<button onclick="f23()">
+Respuesta correcta
+</button>
+<p id="23">
+</p>
+<script>
+function f23() {
+  document.getElementById("23").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/tipos-de-variables.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-42" class="section level2" number="2.48">
+<h2><span class="header-section-number">2.48</span> Pregunta test</h2>
+<p>Se quiere hacer un estudio sobre el tabaquismo en la Comunidad de Cantabria. Queremos asegurarnos tener cierto número de individuos de la zona litoral, la capital y del interior, pues creemos que en cada una de esas zonas la incidencia es diferente. Haremos un muestreo:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Aleatorio simple.</li>
+<li>Estratificado.</li>
+<li>Sistemático.</li>
+<li>Por grupos.</li>
+<li>No probabilístico.</li>
+</ol>
+<button onclick="f23_1()">
+Respuesta correcta
+</button>
+<p id="23_1">
+</p>
+<script>
+function f23_1() {
+  document.getElementById("23_1").innerHTML = "b";
+}
+</script>
+</div>
+<div id="pregunta-test-43" class="section level2" number="2.49">
+<h2><span class="header-section-number">2.49</span> Pregunta test</h2>
+<p>¿A qué fase del proceso de investigación pertenece la relación de los objetivos e hipótesis de la investigación?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Fase conceptual.</li>
+<li>Fase Metodológica.</li>
+<li>Fase Empírica.</li>
+<li>Fase de análisis e interpretación de los datos.</li>
+</ol>
+<button onclick="f24()">
+Respuesta correcta
+</button>
+<p id="24">
+</p>
+<script>
+function f24() {
+  document.getElementById("24").innerHTML = "a";
+}
+</script>
+<p><a href="https://www.salusplay.com/apuntes/apuntes-metodologia-de-la-investigacion/tema-4-el-proceso-de-investigacion-fases-de-realizacion-de-una-investigacion-cientifica/2">Explicación</a></p>
+</div>
+<div id="pregunta-test-44" class="section level2" number="2.50">
+<h2><span class="header-section-number">2.50</span> Pregunta test</h2>
+<p>Cuál es el estudio de elección para evaluar si existe una relación causa-efecto entre un factor y una enfermedad poco frecuente?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Transversal</li>
+<li>Casos y controles</li>
+<li>Cohortes</li>
+<li>Serie de casos clínicos</li>
+<li>Correlaciones temporales</li>
+</ol>
+<button onclick="f24_1()">
+Respuesta correcta
+</button>
+<p id="24_1">
+</p>
+<script>
+function f24_1() {
+  document.getElementById("24_1").innerHTML = "b";
+}
+</script>
+<p><a href="http://www.scielo.org.pe/scielo.php?script=sci_arttext&amp;pid=S2308-05312020000100138">Explicación</a></p>
+</div>
+<div id="pregunta-test-45" class="section level2" number="2.51">
+<h2><span class="header-section-number">2.51</span> Pregunta test</h2>
+<p>Para tratar de establecer una relación causal entre el consumo de benzodiacepinas durante el embarazo y el riesgo de fisura palatina en el recién nacido se seleccionan madres de recién nacidos con fisura palatina y se compararon con madres de recién nacidos sanos en cuanto a los antecedentes de toma de benzodiacepinas ¿cuál es el tipo de diseño de estudio empleado?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Casos y controles</li>
+<li>Estudio de cohortes</li>
+<li>Ensayo clínico aleatorizado</li>
+<li>Estudio ecológico</li>
+<li>Ensayo clínico cruzado</li>
+</ol>
+<button onclick="f25()">
+Respuesta correcta
+</button>
+<p id="25">
+</p>
+<script>
+function f25() {
+  document.getElementById("25").innerHTML = "a";
+}
+</script>
+<p><a href="http://www.scielo.org.pe/scielo.php?script=sci_arttext&amp;pid=S2308-05312020000100138">Explicación</a></p>
+</div>
+<div id="pregunta-test-46" class="section level2" number="2.52">
+<h2><span class="header-section-number">2.52</span> Pregunta test</h2>
+<p>Cuando la población objetivo y de estudio en un muestreo difieren mucho, entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Debe usarse el método de respuestas aleatorizadas.</li>
+<li>Pueden existir sesgos.</li>
+<li>No pueden seleccionarse unidades de muestreo.</li>
+<li>Se debe usar un muestreo no probabilístico.</li>
+<li>Nada de lo anterior es correcto.</li>
+</ol>
+<button onclick="f25_1()">
+Respuesta correcta
+</button>
+<p id="25_1">
+</p>
+<script>
+function f25_1() {
+  document.getElementById("25_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://www.cancer.gov/espanol/publicaciones/diccionarios/diccionario-cancer/def/sesgo">Explicación</a></p>
+</div>
+<div id="pregunta-test-47" class="section level2" number="2.53">
+<h2><span class="header-section-number">2.53</span> Pregunta test</h2>
+<p>Un estudio en el que los participantes se asignan al azar para recibir un nuevo tratamiento o placebo se denomina:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Cohortes</li>
+<li>Casos y controles</li>
+<li>Transversal</li>
+<li>Ensayo clínico</li>
+<li>Serie de casos clínicos</li>
+</ol>
+<button onclick="f26()">
+Respuesta correcta
+</button>
+<p id="26">
+</p>
+<script>
+function f26() {
+  document.getElementById("26").innerHTML = "d";
+}
+</script>
+<p><a href="https://www.geicam.org/que-hacemos/ensayos-clinicos/que-es-un-ensayo-clinico">Explicación</a></p>
+</div>
+<div id="pregunta-test-48" class="section level2" number="2.54">
+<h2><span class="header-section-number">2.54</span> Pregunta test</h2>
+<p>¿Cómo se denomina el ensayo clínico en el que los pacientes, los investigadores y los profesionales sanitarios implicados sanitarios implicados en la atención de los pacientes desconocen el tratamiento asignado?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Enmascaramiento</li>
+<li>Triple ciego</li>
+<li>Abierto</li>
+<li>Simple ciego</li>
+<li>Doble ciego</li>
+</ol>
+<button onclick="f27()">
+Respuesta correcta
+</button>
+<p id="27">
+</p>
+<script>
+function f27() {
+  document.getElementById("27").innerHTML = "b";
+}
+</script>
+<p><a href="http://cv.uoc.edu/UOC/a/moduls/90/90_166d/web/main/m4/22d.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-49" class="section level2" number="2.55">
+<h2><span class="header-section-number">2.55</span> Pregunta test</h2>
+<p>¿A qué se debe el sesgo de selección?</p>
+<ol style="list-style-type: lower-alpha">
+<li>A falta de sinceridad en los individuos de la muestra.</li>
+<li>A las diferencia existente entre diversas muestras.</li>
+<li>A la diferencia entre la población de estudio y la población objetivo.</li>
+<li>A no usar la técnica de respuesta aleatorizada.</li>
+<li>A nada de lo anterior.</li>
+</ol>
+<button onclick="f28()">
+Respuesta correcta
+</button>
+<p id="28">
+</p>
+<script>
+function f28() {
+  document.getElementById("28").innerHTML = "c";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Sesgo_de_selección">Explicación</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01_investigacion.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 5 Regresión y correlación. | Bioestadística: preguntas y problemas resueltos</title>
+  <meta name="description" content="Capítulo 5 Regresión y correlación. | Bioestadística: preguntas y problemas resueltos" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 5 Regresión y correlación. | Bioestadística: preguntas y problemas resueltos" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 5 Regresión y correlación. | Bioestadística: preguntas y problemas resueltos" />
+  
+  
+  
+
+<meta name="author" content="Javier Manzano" />
+
+
+<meta name="date" content="2023-10-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="análisis-inferencial.-aplicaciones..html"/>
+<link rel="next" href="tablas-de-contingencia..html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioestadística: problemas resueltos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><i class="fa fa-check"></i><b>2</b> Planteamiento de una investigación: Anatomía y Fisiología de la investigación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test"><i class="fa fa-check"></i><b>2.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-1"><i class="fa fa-check"></i><b>2.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.3" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-2"><i class="fa fa-check"></i><b>2.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.4" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-3"><i class="fa fa-check"></i><b>2.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.5" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-4"><i class="fa fa-check"></i><b>2.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.6" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-5"><i class="fa fa-check"></i><b>2.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.7" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema"><i class="fa fa-check"></i><b>2.7</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución"><i class="fa fa-check"></i><b>2.7.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-6"><i class="fa fa-check"></i><b>2.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.9" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-7"><i class="fa fa-check"></i><b>2.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.10" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-8"><i class="fa fa-check"></i><b>2.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.11" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-9"><i class="fa fa-check"></i><b>2.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.12" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-10"><i class="fa fa-check"></i><b>2.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.13" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-11"><i class="fa fa-check"></i><b>2.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.14" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-12"><i class="fa fa-check"></i><b>2.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.15" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-1"><i class="fa fa-check"></i><b>2.15</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-1"><i class="fa fa-check"></i><b>2.15.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.16" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-13"><i class="fa fa-check"></i><b>2.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.17" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-14"><i class="fa fa-check"></i><b>2.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.18" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-15"><i class="fa fa-check"></i><b>2.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.19" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-16"><i class="fa fa-check"></i><b>2.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.20" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-2"><i class="fa fa-check"></i><b>2.20</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.20.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-2"><i class="fa fa-check"></i><b>2.20.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.21" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-17"><i class="fa fa-check"></i><b>2.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.22" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-18"><i class="fa fa-check"></i><b>2.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.23" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-19"><i class="fa fa-check"></i><b>2.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.24" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-3"><i class="fa fa-check"></i><b>2.24</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.24.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-3"><i class="fa fa-check"></i><b>2.24.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.25" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-20"><i class="fa fa-check"></i><b>2.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.26" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-21"><i class="fa fa-check"></i><b>2.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.27" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-22"><i class="fa fa-check"></i><b>2.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.28" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-23"><i class="fa fa-check"></i><b>2.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.29" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-24"><i class="fa fa-check"></i><b>2.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.30" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-4"><i class="fa fa-check"></i><b>2.30</b> Problema</a></li>
+<li class="chapter" data-level="2.31" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-25"><i class="fa fa-check"></i><b>2.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.32" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-26"><i class="fa fa-check"></i><b>2.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.33" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-27"><i class="fa fa-check"></i><b>2.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.34" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-28"><i class="fa fa-check"></i><b>2.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.35" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-29"><i class="fa fa-check"></i><b>2.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.36" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-30"><i class="fa fa-check"></i><b>2.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.37" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-31"><i class="fa fa-check"></i><b>2.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.38" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-32"><i class="fa fa-check"></i><b>2.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.39" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-33"><i class="fa fa-check"></i><b>2.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.40" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-34"><i class="fa fa-check"></i><b>2.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.41" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-35"><i class="fa fa-check"></i><b>2.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.42" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-36"><i class="fa fa-check"></i><b>2.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.43" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-37"><i class="fa fa-check"></i><b>2.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.44" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-38"><i class="fa fa-check"></i><b>2.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.45" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-39"><i class="fa fa-check"></i><b>2.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.46" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-40"><i class="fa fa-check"></i><b>2.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.47" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-41"><i class="fa fa-check"></i><b>2.47</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.48" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-42"><i class="fa fa-check"></i><b>2.48</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.49" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-43"><i class="fa fa-check"></i><b>2.49</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.50" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-44"><i class="fa fa-check"></i><b>2.50</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.51" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-45"><i class="fa fa-check"></i><b>2.51</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.52" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-46"><i class="fa fa-check"></i><b>2.52</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.53" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-47"><i class="fa fa-check"></i><b>2.53</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.54" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-48"><i class="fa fa-check"></i><b>2.54</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.55" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-49"><i class="fa fa-check"></i><b>2.55</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><i class="fa fa-check"></i><b>3</b> Análisis Descriptivo y Gráfico de datos cuantitativos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-50"><i class="fa fa-check"></i><b>3.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.2" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-51"><i class="fa fa-check"></i><b>3.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-5"><i class="fa fa-check"></i><b>3.3</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-4"><i class="fa fa-check"></i><b>3.3.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-52"><i class="fa fa-check"></i><b>3.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.5" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-53"><i class="fa fa-check"></i><b>3.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.6" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-54"><i class="fa fa-check"></i><b>3.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.7" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-55"><i class="fa fa-check"></i><b>3.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.8" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-6"><i class="fa fa-check"></i><b>3.8</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-5"><i class="fa fa-check"></i><b>3.8.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-56"><i class="fa fa-check"></i><b>3.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.10" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-57"><i class="fa fa-check"></i><b>3.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.11" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-7"><i class="fa fa-check"></i><b>3.11</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-6"><i class="fa fa-check"></i><b>3.11.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-58"><i class="fa fa-check"></i><b>3.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.13" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-59"><i class="fa fa-check"></i><b>3.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.14" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-60"><i class="fa fa-check"></i><b>3.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.15" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-61"><i class="fa fa-check"></i><b>3.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.16" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-62"><i class="fa fa-check"></i><b>3.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.17" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-63"><i class="fa fa-check"></i><b>3.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.18" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-64"><i class="fa fa-check"></i><b>3.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.19" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-65"><i class="fa fa-check"></i><b>3.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.20" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-66"><i class="fa fa-check"></i><b>3.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.21" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-67"><i class="fa fa-check"></i><b>3.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.22" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-68"><i class="fa fa-check"></i><b>3.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.23" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-69"><i class="fa fa-check"></i><b>3.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.24" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-70"><i class="fa fa-check"></i><b>3.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.25" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-71"><i class="fa fa-check"></i><b>3.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.26" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-72"><i class="fa fa-check"></i><b>3.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.27" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-73"><i class="fa fa-check"></i><b>3.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.28" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-74"><i class="fa fa-check"></i><b>3.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.29" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-75"><i class="fa fa-check"></i><b>3.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.30" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-76"><i class="fa fa-check"></i><b>3.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.31" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-77"><i class="fa fa-check"></i><b>3.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.32" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-78"><i class="fa fa-check"></i><b>3.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.33" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-79"><i class="fa fa-check"></i><b>3.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.34" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-80"><i class="fa fa-check"></i><b>3.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.35" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-81"><i class="fa fa-check"></i><b>3.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.36" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-82"><i class="fa fa-check"></i><b>3.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.37" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-83"><i class="fa fa-check"></i><b>3.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.38" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-84"><i class="fa fa-check"></i><b>3.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.39" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-85"><i class="fa fa-check"></i><b>3.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.40" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-86"><i class="fa fa-check"></i><b>3.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.41" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-87"><i class="fa fa-check"></i><b>3.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.42" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-88"><i class="fa fa-check"></i><b>3.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.43" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-89"><i class="fa fa-check"></i><b>3.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.44" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-90"><i class="fa fa-check"></i><b>3.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.45" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-91"><i class="fa fa-check"></i><b>3.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.46" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-92"><i class="fa fa-check"></i><b>3.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.47" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-93"><i class="fa fa-check"></i><b>3.47</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html"><i class="fa fa-check"></i><b>4</b> Análisis Inferencial. Aplicaciones.</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-94"><i class="fa fa-check"></i><b>4.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.2" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-95"><i class="fa fa-check"></i><b>4.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.3" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-96"><i class="fa fa-check"></i><b>4.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-97"><i class="fa fa-check"></i><b>4.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.5" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-98"><i class="fa fa-check"></i><b>4.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.6" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-99"><i class="fa fa-check"></i><b>4.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.7" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-100"><i class="fa fa-check"></i><b>4.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.8" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-101"><i class="fa fa-check"></i><b>4.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.9" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-102"><i class="fa fa-check"></i><b>4.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.10" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-103"><i class="fa fa-check"></i><b>4.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.11" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-104"><i class="fa fa-check"></i><b>4.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.12" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-105"><i class="fa fa-check"></i><b>4.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.13" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-8"><i class="fa fa-check"></i><b>4.13</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.13.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#explicación"><i class="fa fa-check"></i><b>4.13.1</b> Explicación</a></li>
+</ul></li>
+<li class="chapter" data-level="4.14" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-106"><i class="fa fa-check"></i><b>4.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.15" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-107"><i class="fa fa-check"></i><b>4.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.16" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-108"><i class="fa fa-check"></i><b>4.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.17" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-109"><i class="fa fa-check"></i><b>4.17</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html"><i class="fa fa-check"></i><b>5</b> Regresión y correlación.</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-110"><i class="fa fa-check"></i><b>5.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.2" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-111"><i class="fa fa-check"></i><b>5.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.3" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-112"><i class="fa fa-check"></i><b>5.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.4" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-113"><i class="fa fa-check"></i><b>5.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-114"><i class="fa fa-check"></i><b>5.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.6" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#prefunta-test"><i class="fa fa-check"></i><b>5.6</b> Prefunta test</a></li>
+<li class="chapter" data-level="5.7" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-115"><i class="fa fa-check"></i><b>5.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.8" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-116"><i class="fa fa-check"></i><b>5.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.9" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-117"><i class="fa fa-check"></i><b>5.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.10" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-118"><i class="fa fa-check"></i><b>5.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.11" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-119"><i class="fa fa-check"></i><b>5.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.12" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-120"><i class="fa fa-check"></i><b>5.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.13" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-121"><i class="fa fa-check"></i><b>5.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.14" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-122"><i class="fa fa-check"></i><b>5.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.15" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-123"><i class="fa fa-check"></i><b>5.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.16" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-124"><i class="fa fa-check"></i><b>5.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.17" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-125"><i class="fa fa-check"></i><b>5.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.18" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-126"><i class="fa fa-check"></i><b>5.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.19" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-127"><i class="fa fa-check"></i><b>5.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.20" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-128"><i class="fa fa-check"></i><b>5.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.21" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-129"><i class="fa fa-check"></i><b>5.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.22" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-130"><i class="fa fa-check"></i><b>5.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.23" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-131"><i class="fa fa-check"></i><b>5.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.24" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-132"><i class="fa fa-check"></i><b>5.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.25" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-133"><i class="fa fa-check"></i><b>5.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.26" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-134"><i class="fa fa-check"></i><b>5.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.27" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-135"><i class="fa fa-check"></i><b>5.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.28" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-136"><i class="fa fa-check"></i><b>5.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.29" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-137"><i class="fa fa-check"></i><b>5.29</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html"><i class="fa fa-check"></i><b>6</b> Tablas de contingencia.</a></li>
+<li class="chapter" data-level="7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html"><i class="fa fa-check"></i><b>7</b> Medidas de importancia clínica.</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-138"><i class="fa fa-check"></i><b>7.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.2" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-139"><i class="fa fa-check"></i><b>7.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.3" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-140"><i class="fa fa-check"></i><b>7.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.4" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-9"><i class="fa fa-check"></i><b>7.4</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-7"><i class="fa fa-check"></i><b>7.4.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-141"><i class="fa fa-check"></i><b>7.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.6" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-142"><i class="fa fa-check"></i><b>7.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-10"><i class="fa fa-check"></i><b>7.7</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-8"><i class="fa fa-check"></i><b>7.7.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-143"><i class="fa fa-check"></i><b>7.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.9" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-144"><i class="fa fa-check"></i><b>7.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.10" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-11"><i class="fa fa-check"></i><b>7.10</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-9"><i class="fa fa-check"></i><b>7.10.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-145"><i class="fa fa-check"></i><b>7.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.12" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-146"><i class="fa fa-check"></i><b>7.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.13" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-147"><i class="fa fa-check"></i><b>7.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.14" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-148"><i class="fa fa-check"></i><b>7.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.15" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-149"><i class="fa fa-check"></i><b>7.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.16" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-150"><i class="fa fa-check"></i><b>7.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.17" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-151"><i class="fa fa-check"></i><b>7.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.18" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-152"><i class="fa fa-check"></i><b>7.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.19" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-153"><i class="fa fa-check"></i><b>7.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.20" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-154"><i class="fa fa-check"></i><b>7.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.21" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-155"><i class="fa fa-check"></i><b>7.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.22" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-156"><i class="fa fa-check"></i><b>7.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.23" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-157"><i class="fa fa-check"></i><b>7.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.24" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-12"><i class="fa fa-check"></i><b>7.24</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.24.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-10"><i class="fa fa-check"></i><b>7.24.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.25" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-158"><i class="fa fa-check"></i><b>7.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.26" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-159"><i class="fa fa-check"></i><b>7.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.27" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-160"><i class="fa fa-check"></i><b>7.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.28" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-13"><i class="fa fa-check"></i><b>7.28</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.28.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-11"><i class="fa fa-check"></i><b>7.28.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.29" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-161"><i class="fa fa-check"></i><b>7.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.30" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-162"><i class="fa fa-check"></i><b>7.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.31" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-163"><i class="fa fa-check"></i><b>7.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.32" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-14"><i class="fa fa-check"></i><b>7.32</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.32.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-12"><i class="fa fa-check"></i><b>7.32.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.33" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-164"><i class="fa fa-check"></i><b>7.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.34" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-15"><i class="fa fa-check"></i><b>7.34</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.34.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-13"><i class="fa fa-check"></i><b>7.34.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.35" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-165"><i class="fa fa-check"></i><b>7.35</b> Pregunta test</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística: preguntas y problemas resueltos</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regresión-y-correlación." class="section level1" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> Regresión y correlación.</h1>
+<p>En este capítulo se resolverán problemas relativos a:</p>
+<ul>
+<li>Introducción a la regresión y correlación</li>
+<li>Estudio de la representatividad de la recta de regresión</li>
+<li>Otros modelos de regresión</li>
+<li>Correlación</li>
+</ul>
+<div id="pregunta-test-110" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Pregunta test</h2>
+<p>Si al calcular el coeficiente de correlación de dos variables X e Y, se tiene r=-0.20 ocurre que:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La pendiente de la recta de regresión es pequeña.</li>
+<li>La pendiente de la recta de regresión es grande.</li>
+<li>X e Y están poco relacionadas, aunque cuando X decrece, Y tiene tendencia a crecer.</li>
+<li>El modelo lineal de regresión explica el 20% de la varianza de una variable cualquiera en función de la otra.</li>
+<li>El modelo lineal de regresión explica el 80% de la varianza de una variable cualquiera en función de la otra.</li>
+</ol>
+<button onclick="f1()">
+Respuesta correcta
+</button>
+<p id="1">
+</p>
+<script>
+function f1() {
+  document.getElementById("1").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-111" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Pregunta test</h2>
+<p>La recta de regresión de Y sobre X se muestra como un buen modelo para explicar la relación entre dos variables numéricas. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Y se puede calcular exactamente como una función matemática de X.</li>
+<li>Y es independiente de X.</li>
+<li>La covarianza de X e Y no es nula.</li>
+<li>La media de X coincide con la media de Y.</li>
+<li>Sólo dos de las afirmaciones anteriores son correctas.</li>
+</ol>
+<button onclick="f2()">
+Respuesta correcta
+</button>
+<p id="2">
+</p>
+<script>
+function f2() {
+  document.getElementById("2").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#covarianza">Explicación</a></p>
+</div>
+<div id="pregunta-test-112" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Pregunta test</h2>
+<p>En una población se obtiene con una bondad de ajuste de 0,9 que la relación entre nivel de glucemia (Y) y nivel de colesterol (X) es de <span class="math inline">\(Y=20 + \dfrac{X}{4}\)</span>. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Todos los individuos con un valor de colesterol 100, presentan glucemia 45.</li>
+<li>Existe tendencia a que a mayor nivel de glucemia, mayor nivel de colesterol.</li>
+<li>Hay mas individuos con colesterol alto que con glucemia baja.</li>
+<li>Las observaciones se muestran como una nube de puntos creciente.</li>
+<li>Sólo dos de las afirmaciones anteriores son correctas.</li>
+</ol>
+<button onclick="f3()">
+Respuesta correcta
+</button>
+<p id="3">
+</p>
+<script>
+function f3() {
+  document.getElementById("3").innerHTML = "e";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p>Tenemos que <span class="math inline">\(r = 0.9\)</span> lo que indica una correlacion lineal positiva y fuerte entre las 2 variables.</p>
+<p>Además, tenemos la ecuación de la recta de regresión de <span class="math inline">\(Y\)</span> (nivel de glucemia) sobre <span class="math inline">\(X\)</span> (nivel de colesterol), <span class="math inline">\(Y=20 + \dfrac{X}{4}\)</span></p>
+<p>Veamos cada apartado:</p>
+<p><strong>a)</strong> Efectivamente, para un valor de colesterol 100, como <span class="math inline">\(Y=20 + \dfrac{100}{4}= 20 + 25 = 45\)</span>, se estima que el valor de glucemia es de 45. Pero eso no implica que <em>todos los individuos</em> con un valor de colesterol 100, presentan glucemia 45.</p>
+<p><strong>b)</strong> Al haber correlación lineal positiva y fuerte (<span class="math inline">\(r^2=0.9 \Rightarrow r \approx 0.95\)</span>), se cumple que existe tendencia a que a mayor nivel de glucemia, mayor nivel de colesterol.</p>
+<p><strong>c)</strong> Con los datos del problema, no podemos saber si hay mas individuos con colesterol alto que con glucemia baja.</p>
+<p><strong>d)</strong> Como la nube de puntos se ajusta bastante bien a la recta de regresión cuya gráfica (obtenida con <a href="https://www.desmos.com/calculator?lang=es">Desmos</a>) es:</p>
+<p><img src="img/4_1.png" width="951" /></p>
+<p>se cumple que las observaciones se muestran como una nube de puntos creciente.</p>
+</div>
+<div id="pregunta-test-113" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Pregunta test</h2>
+<p>Dos variables numéricas son incorreladas. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(r = 0\)</span></li>
+<li>El modelo lineal de regresión sólo propone un valor como predicción de <span class="math inline">\(Y\)</span>.</li>
+<li>La nube de puntos no presenta aspecto creciente.</li>
+<li>La varianza residual en el modelo de regresión de Y sobre X es igual a la varianza de Y.</li>
+<li>Todo lo anterior es cierto.</li>
+</ol>
+<button onclick="f4()">
+Respuesta correcta
+</button>
+<p id="4">
+</p>
+<script>
+function f4() {
+  document.getElementById("4").innerHTML = "e";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p><strong>a)</strong> Si no existe correlación entre las variables (incorreladas), <span class="math inline">\(r=0\)</span>. Al mínimo de correlación que haya, <span class="math inline">\(r \neq 0\)</span>, tanto positiva como negativa.</p>
+<p><strong>b)</strong> Siempre se cumple que el modelo lineal de regresión sólo propone un valor como predicción de <span class="math inline">\(Y\)</span>. Al obtener la ecuación de la recta de regresión (modelo), para un valor de <span class="math inline">\(X\)</span> únicamente tenemos un valor de <span class="math inline">\(Y\)</span>.</p>
+<p><strong>c)</strong> Al no haber correlación, la nube de puntos no presenta tendencia alguna por lo que la nube de puntos no presenta aspecto creciente (ni decreciente).</p>
+<p><strong>d)</strong> Recordamos que, modelo de regresión de Y sobre X, los residuos son las direfencias (en vertical) de los puntos a la recta de regresión, es decir las medidas del los segmentos de la imagen:</p>
+<p><img src="img/4_2.png" width="854" /></p>
+<p>Así, la varianza residual en el modelo de regresión de Y sobre X es la media de los cuadrados de esos valores (residuos). Si la recta es oblicua, esos residuos dependen de esa inclinación, esto es, dependen de <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</p>
+<p>En nuestro caso, las variables son incorreladas por lo que la recta de regresión del modelo de regresión de Y sobre X es horizontal:</p>
+<p><img src="img/4_3.png" width="555" /></p>
+<p>De este modo, los residuos dependen únicamente de <span class="math inline">\(Y\)</span>. Al pasar la recta de regresión por el punto <span class="math inline">\((\overline{x}, \overline{y})\)</span>, la media de los cuadrados de los residuos coincide con la varianza de <span class="math inline">\(Y\)</span> por lo que, cuando las variables son incorreladas, la varianza residual en el modelo de regresión de Y sobre X es igual a la varianza de Y.</p>
+</div>
+<div id="pregunta-test-114" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Pregunta test</h2>
+<p>De las siguientes parejas de variables, en cuáles crees que puede ser útil un análisis de regresión lineal:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La presión sanguínea y el grupo sanguíneo.</li>
+<li>El nivel de colesterol y la concentración de bilirrubina.</li>
+<li>El grupos sanguíneo y el factor Rh.</li>
+<li>El género y la edad.</li>
+<li>Poseer ideología racista y el factor RH.</li>
+</ol>
+<button onclick="f5()">
+Respuesta correcta
+</button>
+<p id="5">
+</p>
+<script>
+function f5() {
+  document.getElementById("5").innerHTML = "b";
+}
+</script>
+<p><a href="https://smiba.org.ar/curso_medico_especialista/lecturas_2021/e%29.%204%20Correlación%20y%20regresión.pdf">Explicación</a></p>
+</div>
+<div id="prefunta-test" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Prefunta test</h2>
+<p>Si el coeficiente de correlación lineal de Pearson entre dos variables es <span class="math inline">\(-0,8\)</span> podemos decir:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza es negativa.</li>
+<li>La relación entre las variables es directa.</li>
+<li>Hay poca relación lineal entre las variables.</li>
+<li>Hay un error de cálculo.</li>
+<li>El 80% de las predicciones son correctas.</li>
+</ol>
+<button onclick="f6()">
+Respuesta correcta
+</button>
+<p id="6">
+</p>
+<script>
+function f6() {
+  document.getElementById("6").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicación</a></p>
+</div>
+<div id="pregunta-test-115" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Pregunta test</h2>
+<p>En un estudio de regresión lineal, donde el peso se estudie conjuntamente con otras variables, en qué casos lo usarías como variable dependiente:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Al estudiarlo con la altura.</li>
+<li>Al estudiarlo con el nivel del colesterol.</li>
+<li>Al estudiarlo con la presión sanguínea.</li>
+<li>Al estudiarlo con el grupo sanguíneo.</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f7()">
+Respuesta correcta
+</button>
+<p id="7">
+</p>
+<script>
+function f7() {
+  document.getElementById("7").innerHTML = "a";
+}
+</script>
+<p><a href="https://www.cdc.gov/healthyweight/spanish/assessing/bmi/adult_bmi/index.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-116" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Pregunta test</h2>
+<p>En una población formada por unidades familiares, la altura media del padre en la familia se comporta como una distribución normal de media 170 cm con desviación típica 5 cm. La altura del primer hijo varón es otra variable con distribución similar. Con estos datos podemos afirmar:</p>
+<ol style="list-style-type: lower-alpha">
+<li>No hay relación entre ambas variables.</li>
+<li>Hay relación inversa entre las variables.</li>
+<li>No debemos intentar predecir la altura del hijo de un padre que mide 140 cm.</li>
+<li>Hay relación directa entre las variables.</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f8()">
+Respuesta correcta
+</button>
+<p id="8">
+</p>
+<script>
+function f8() {
+  document.getElementById("8").innerHTML = "c";
+}
+</script>
+<p><a href="https://www.feedingthemachine.ai/regresion-lineal-y-los-outliers/">Explicación</a></p>
+</div>
+<div id="pregunta-test-117" class="section level2" number="5.9">
+<h2><span class="header-section-number">5.9</span> Pregunta test</h2>
+<p>Se observa que al aumentar el consumo de estanol, disminuye el nivel de colesterol en sangre. Se utiliza un modelo de regresión lineal donde el nivel de colesterol es la variable independiente y el consumo de estanol es la dependiente. Se calcula una bondad de ajuste para el modelo del 25%. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El 25% de las predicciones del modelo son correctas.</li>
+<li><span class="math inline">\(r= 0.5\)</span></li>
+<li><span class="math inline">\(r= 0.25\)</span></li>
+<li><span class="math inline">\(r= -0.25\)</span></li>
+<li><span class="math inline">\(r= -0.5\)</span></li>
+</ol>
+<button onclick="f9()">
+Respuesta correcta
+</button>
+<p id="9">
+</p>
+<script>
+function f9() {
+  document.getElementById("9").innerHTML = "e";
+}
+</script>
+<p><a href="https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste">Explicación</a></p>
+</div>
+<div id="pregunta-test-118" class="section level2" number="5.10">
+<h2><span class="header-section-number">5.10</span> Pregunta test</h2>
+<p>Si el coeficiente de correlación lineal de Pearson entre dos variables es -0,1 podemos decir:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza es pequeña.</li>
+<li>Hay fuerte relación inversa entre las variables.</li>
+<li>Hay poca relación lineal entre las variables.</li>
+<li>Hay un error de cálculo.</li>
+<li>El 10% de las predicciones son correctas.</li>
+</ol>
+<button onclick="f10()">
+Respuesta correcta
+</button>
+<p id="10">
+</p>
+<script>
+function f10() {
+  document.getElementById("10").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicación</a></p>
+</div>
+<div id="pregunta-test-119" class="section level2" number="5.11">
+<h2><span class="header-section-number">5.11</span> Pregunta test</h2>
+<p>Se estudia la asociación lineal entre dos variables numéricas. El coeficiente de determinación vale <span class="math inline">\(0,95\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Hay poca asociación.</li>
+<li>Hay asociación directa.</li>
+<li>Hay asociación inversa.</li>
+<li>Hay una buena asociación</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f11()">
+Respuesta correcta
+</button>
+<p id="11">
+</p>
+<script>
+function f11() {
+  document.getElementById("11").innerHTML = "d";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Coeficiente_de_determinación">Explicacion</a></p>
+</div>
+<div id="pregunta-test-120" class="section level2" number="5.12">
+<h2><span class="header-section-number">5.12</span> Pregunta test</h2>
+<p>Se observa que al disminuir el consumo de comida rápida, disminuye el nivel de colesterol en sangre. Se usa un modelo de regresión entre ambas que ofrece una bondad de ajuste del 36%. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El 36% de las predicciones del modelo son correctas.</li>
+<li><span class="math inline">\(r= +0.60\)</span></li>
+<li><span class="math inline">\(r= +0.36\)</span></li>
+<li><span class="math inline">\(r= -0.60\)</span></li>
+<li><span class="math inline">\(r= -0.36\)</span></li>
+</ol>
+<button onclick="f12()">
+Respuesta correcta
+</button>
+<p id="12">
+</p>
+<script>
+function f12() {
+  document.getElementById("12").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Coeficiente_de_determinación">Explicacion</a></p>
+</div>
+<div id="pregunta-test-121" class="section level2" number="5.13">
+<h2><span class="header-section-number">5.13</span> Pregunta test</h2>
+<p>Un modelo de regresión lineal para calcular la glucemia (sangre) a partir de la de la orina (glucosuria) es“glucemia = 20 + 0.5 glucosuria.” Si dos personas se diferencian en 10 unidades de glucosuria, cual es la mejor estimación que puede hacer para la diferencia en glucemia:</p>
+<ol style="list-style-type: lower-alpha">
+<li>5</li>
+<li>10</li>
+<li>15</li>
+<li>20</li>
+<li>25</li>
+</ol>
+<button onclick="f13()">
+Respuesta correcta
+</button>
+<p id="13">
+</p>
+<script>
+function f13() {
+  document.getElementById("13").innerHTML = "a";
+}
+</script>
+<p><strong>Explicacion</strong></p>
+<p>El modelo establece que “glucemia = 20 + 0.5 glucosuria.” Así, la pendiente (o inclinación) de la recta de regresión es <span class="math inline">\(0.5 = \frac{1}{2}\)</span></p>
+<p><img src="img/4_2.png" width="854" /></p>
+<p>De este modo, si dos personas se diferencian en 10 unidades de glucosuria (en horizontal), la variación en glucemia (en vertical según el modelo) será la mitad, es decir, 5.</p>
+</div>
+<div id="pregunta-test-122" class="section level2" number="5.14">
+<h2><span class="header-section-number">5.14</span> Pregunta test</h2>
+<p>Qué afirmación sobre la covarianza es falsa:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza es una medida de la variabilidad conjunta de dos variables numéricas.</li>
+<li>Si la covarianza es positiva implica una relación creciente entre las variables.</li>
+<li>A partir de ella se obtiene el coeficiente de correlació lineal de Pearson.</li>
+<li>Posee dimensiones.</li>
+<li>Si es 0 podemos afirmar que no existe relación posible entre las variables.</li>
+</ol>
+<button onclick="f14()">
+Respuesta correcta
+</button>
+<p id="14">
+</p>
+<script>
+function f14() {
+  document.getElementById("14").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#covarianza">Explicacion</a></p>
+</div>
+<div id="pregunta-test-123" class="section level2" number="5.15">
+<h2><span class="header-section-number">5.15</span> Pregunta test</h2>
+<p>La pendiente de una recta de una función de regresión lineal es <span class="math inline">\(Y = b_0 + b_1 \cdot X\)</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Representa el incremento de <span class="math inline">\(Y\)</span> por cada unidad de incremento de <span class="math inline">\(X\)</span>.</li>
+<li>Tiene el mismo signo que la covarianza.</li>
+<li>Es el valor de la variable <span class="math inline">\(Y\)</span> cuando <span class="math inline">\(X=0\)</span>.</li>
+<li>Todas las anteriores son correctas.</li>
+<li>Sólo la a) y la b) son correctas.</li>
+</ol>
+<button onclick="f15()">
+Respuesta correcta
+</button>
+<p id="15">
+</p>
+<script>
+function f15() {
+  document.getElementById("15").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#regresio%CC%81n-lineal">Explicacion</a></p>
+</div>
+<div id="pregunta-test-124" class="section level2" number="5.16">
+<h2><span class="header-section-number">5.16</span> Pregunta test</h2>
+<p>De los siguiente estudios de relación entre variables, en cuál crees que no sería oportuno usar la técnica de regresión lineal.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La presión sanguínea y la acidez (ph).</li>
+<li>El número de glóbulos rojos y el grupo sanguíneo</li>
+<li>La altura y las horas de sueño.</li>
+<li>La edad y el conteo de plaquetas.</li>
+<li>El nivel de colesterol y la concentración de bilirrubina.</li>
+</ol>
+<button onclick="f16()">
+Respuesta correcta
+</button>
+<p id="16">
+</p>
+<script>
+function f16() {
+  document.getElementById("16").innerHTML = "b";
+}
+</script>
+<p><a href="https://es.cochrane.org/es/divulgacion/pensamiento-critico/correlacion-no-implica-causalidad">Explicacion</a></p>
+</div>
+<div id="pregunta-test-125" class="section level2" number="5.17">
+<h2><span class="header-section-number">5.17</span> Pregunta test</h2>
+<p>Después de estudiar la relación existente entre la flexión y la extensión de cuello de los alumnos de la USAL, obtenemos que el valor de la covarianza es <span class="math inline">\(-0,57\)</span>. ¿El valor de r saldrá positivo o negativo?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Saldrá positivo porque la relación es inversa.</li>
+<li>Saldrá negativo también porque el signo de la covarianza y del coeficiente de correlación lineal de Pearson siempre coinciden.</li>
+<li>No podemos saber el signo de r sabiendo la covarianza porque no están relacionados.</li>
+<li>Todas las anteriores son falsas.</li>
+<li>Necesitamos conocer <span class="math inline">\(R^2\)</span> para saber el signo de r</li>
+</ol>
+<button onclick="f17()">
+Respuesta correcta
+</button>
+<p id="17">
+</p>
+<script>
+function f17() {
+  document.getElementById("17").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#covarianza">Explicacion</a></p>
+</div>
+<div id="pregunta-test-126" class="section level2" number="5.18">
+<h2><span class="header-section-number">5.18</span> Pregunta test</h2>
+<p>Si el coeficiente de correlación lineal de Pearson entre dos variables es <span class="math inline">\(-0,9\)</span> podemos decir que:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza será positiva.</li>
+<li>La relación lineal es buena.</li>
+<li>Al ser inferior a 1, la relación lineal es pequeña.</li>
+<li>Tenemos una relación lineal inversa, pero no buena.</li>
+<li>Sólo dos son correctas.</li>
+</ol>
+<button onclick="f18()">
+Respuesta correcta
+</button>
+<p id="18">
+</p>
+<script>
+function f18() {
+  document.getElementById("18").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-127" class="section level2" number="5.19">
+<h2><span class="header-section-number">5.19</span> Pregunta test</h2>
+<p>Cual de las siguientes propiedades de r son correctas:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Es adimensional</li>
+<li>Cuanto más cerca esté r de de +1 o -1 mejor será el grado de relación lineal</li>
+<li>Las variables son incorreladas cuando r=0</li>
+<li>Todas las anteriores son correctas</li>
+<li>Son todas incorrectas</li>
+</ol>
+<button onclick="f19()">
+Respuesta correcta
+</button>
+<p id="19">
+</p>
+<script>
+function f19() {
+  document.getElementById("19").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-128" class="section level2" number="5.20">
+<h2><span class="header-section-number">5.20</span> Pregunta test</h2>
+<p>Se dice que la relación entre dos variables es directa cuando:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza es igual a cero</li>
+<li>La covarianza es negativa</li>
+<li>La covarianza es mayor que cero</li>
+<li>El coeficiente de correlación lineal es positivo</li>
+<li>Las respuestas c) y d) son correctas</li>
+</ol>
+<button onclick="f20()">
+Respuesta correcta
+</button>
+<p id="20">
+</p>
+<script>
+function f120() {
+  document.getElementById("20").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-129" class="section level2" number="5.21">
+<h2><span class="header-section-number">5.21</span> Pregunta test</h2>
+<p>Sabiendo que <span class="math inline">\(r=+0.7\)</span> elija la afirmación falsa.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La covarianza es positiva</li>
+<li>Hay cierta relación lineal entre las variables</li>
+<li>La bondad de ajuste es 0.14</li>
+<li>La nube de puntos es creciente</li>
+<li>Existe una relación directa</li>
+</ol>
+<button onclick="f21()">
+Respuesta correcta
+</button>
+<p id="21">
+</p>
+<script>
+function f21() {
+  document.getElementById("21").innerHTML = "c";
+}
+</script>
+<p><a href="https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste">Explicacion</a></p>
+</div>
+<div id="pregunta-test-130" class="section level2" number="5.22">
+<h2><span class="header-section-number">5.22</span> Pregunta test</h2>
+<p>En un estudio de regresión, ¿cuándo coincidirán los valores de la variable dependiente con los propuestos por el modelo lineal de regresión?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Cuando r tenga un valor positivo</li>
+<li>Cuando r sea igual a cero</li>
+<li>Nunca, aunque el modelo sea perfecto</li>
+<li>Cuando r valga 1 ó -1</li>
+<li>Las opciones c) y d) son correctas</li>
+</ol>
+<button onclick="f22()">
+Respuesta correcta
+</button>
+<p id="22">
+</p>
+<script>
+function f22() {
+  document.getElementById("2").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-131" class="section level2" number="5.23">
+<h2><span class="header-section-number">5.23</span> Pregunta test</h2>
+<p>Si el coeficiente de correlación lineal de Pearson entre dos variables es <span class="math inline">\(-0,82\)</span>, podemos afirmar que:</p>
+<ol style="list-style-type: lower-alpha">
+<li>la relación entre las dos variables es casi nula</li>
+<li>la relación que hay entre las variables es muy buena y directa</li>
+<li>la covarianza es positiva</li>
+<li>la relación que hay entre las variables es muy buena e inversa</li>
+<li>sólo dos de las afirmaciones anteriores son correctas</li>
+</ol>
+<button onclick="f23()">
+Respuesta correcta
+</button>
+<p id="23">
+</p>
+<script>
+function f23() {
+  document.getElementById("23").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-132" class="section level2" number="5.24">
+<h2><span class="header-section-number">5.24</span> Pregunta test</h2>
+<p>¿Qué otro nombre reciben los diagramas de dispersión?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Diagrama de regresión</li>
+<li>Nube de puntos</li>
+<li>Diagrama lineal</li>
+<li>Diagrama de relación inversa</li>
+<li>Diagrama simple</li>
+</ol>
+<button onclick="f24()">
+Respuesta correcta
+</button>
+<p id="24">
+</p>
+<script>
+function f24() {
+  document.getElementById("24").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#diagramas-de-dispersio%CC%81n">Explicacion</a></p>
+</div>
+<div id="pregunta-test-133" class="section level2" number="5.25">
+<h2><span class="header-section-number">5.25</span> Pregunta test</h2>
+<p>Un modelo de regresión lineal para calcular “Fatty liver Index” (<span class="math inline">\(FLI\)</span>) a partir del consumo de <span class="math inline">\(aceite\)</span> de oliva es “<span class="math inline">\(FLI=70- 4 \cdot aceite\)</span>.” Si dos personas se diferencian en 5 unidades de consumo de aceite, cual es la mejor estimación que puede hacer para la diferencia en <span class="math inline">\(FLI\)</span>:</p>
+<ol style="list-style-type: lower-alpha">
+<li>5</li>
+<li>10</li>
+<li>15</li>
+<li>20</li>
+<li>60</li>
+</ol>
+<button onclick="f25()">
+Respuesta correcta
+</button>
+<p id="25">
+</p>
+<script>
+function f25() {
+  document.getElementById("25").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#regresio%CC%81n-lineal">Explicacion</a></p>
+</div>
+<div id="pregunta-test-134" class="section level2" number="5.26">
+<h2><span class="header-section-number">5.26</span> Pregunta test</h2>
+<p>El porcentaje de variabilidad explicada por un modelo lineal de regresión es 3%.</p>
+<ol style="list-style-type: lower-alpha">
+<li>El modelo lineal de regresión es insuficiente para explicar la variable dependiente.</li>
+<li>Las variables son incorreladas.</li>
+<li>El error cometido por el modelo lineal de regresión es pequeño, por tanto el ajuste lineal es bueno.</li>
+<li>Hay una relación creciente entre las variables.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f26()">
+Respuesta correcta
+</button>
+<p id="26">
+</p>
+<script>
+function f26() {
+  document.getElementById("26").innerHTML = "a";
+}
+</script>
+<p><a href="https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste">Explicacion</a></p>
+</div>
+<div id="pregunta-test-135" class="section level2" number="5.27">
+<h2><span class="header-section-number">5.27</span> Pregunta test</h2>
+<p>Si en un experimento realizado sobre estudiantes voluntarios a los que se coloca en situación de estrés se observa que los cambios en ritmo cardíaco <span class="math inline">\(RC\)</span> (latidos por minuto) se asocian a cambios en la frecuencia de la voz <span class="math inline">\(FV\)</span> (Hz) con una bondad de ajuste del 15% según el modelo <span class="math inline">\(FV = -5 + 3 \cdot RC\)</span>, marque la afirmación verdadera.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La relación entre las variables es inversa.</li>
+<li>Las variables no presentan ninguna relación.</li>
+<li>La voz disminuye su frecuencia en 5Hz.</li>
+<li>Por cada aumento de 1 latido por minuto cardíaco, se produce un aumento de 3 Hz en frecuencia de la voz,</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f27()">
+Respuesta correcta
+</button>
+<p id="27">
+</p>
+<script>
+function f27() {
+  document.getElementById("27").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#regresio%CC%81n-lineal">Explicacion</a></p>
+</div>
+<div id="pregunta-test-136" class="section level2" number="5.28">
+<h2><span class="header-section-number">5.28</span> Pregunta test</h2>
+<p>Un modelo de regresión lineal que relaciona el tiempo de estudio con el promedio obtenido en una prueba tiene una bondad de ajuste del 36%. ¿Qué significa esto en términos de la relación entre el tiempo de estudio y el promedio obtenido?</p>
+<ol style="list-style-type: lower-alpha">
+<li>La relación es muy fuerte y positiva</li>
+<li>La relación es muy débil y negativa</li>
+<li>La relación es muy fuerte y negativa</li>
+<li>La relación es muy débil y positiva</li>
+<li>No se puede inferir la relación entre ambas variables a partir de la bondad de ajuste.</li>
+</ol>
+<button onclick="f28()">
+Respuesta correcta
+</button>
+<p id="28">
+</p>
+<script>
+function f28() {
+  document.getElementById("28").innerHTML = "e";
+}
+</script>
+<p><a href="https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste">Explicacion</a></p>
+</div>
+<div id="pregunta-test-137" class="section level2" number="5.29">
+<h2><span class="header-section-number">5.29</span> Pregunta test</h2>
+<p>¿Cuál de las siguientes medidas estadísticas es la más adecuada para medir la relación entre el peso y la estatura de un grupo de personas?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Rango intercuartílico</li>
+<li>Desviación estándar</li>
+<li>Coeficiente de variación</li>
+<li>Coeficiente de correlación de Pearson</li>
+<li>Coeficiente de asimetría</li>
+</ol>
+<button onclick="f29()">
+Respuesta correcta
+</button>
+<p id="29">
+</p>
+<script>
+function f29() {
+  document.getElementById("29").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/relaci%C3%B3n-entre-variables-nume%CC%81ricas.html#coeficiente-de-correlacio%CC%81n">Explicacion</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="análisis-inferencial.-aplicaciones..html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tablas-de-contingencia..html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04_regresion.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
