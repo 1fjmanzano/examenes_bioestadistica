@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Análisis Inferencial. Aplicaciones. | Bioestadística: preguntas y problemas resueltos</title>
+  <meta name="description" content="Capítulo 4 Análisis Inferencial. Aplicaciones. | Bioestadística: preguntas y problemas resueltos" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Análisis Inferencial. Aplicaciones. | Bioestadística: preguntas y problemas resueltos" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Análisis Inferencial. Aplicaciones. | Bioestadística: preguntas y problemas resueltos" />
+  
+  
+  
+
+<meta name="author" content="Javier Manzano" />
+
+
+<meta name="date" content="2023-10-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"/>
+<link rel="next" href="regresión-y-correlación..html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioestadística: preguntas y problemas resueltos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><i class="fa fa-check"></i><b>2</b> Planteamiento de una investigación: Anatomía y Fisiología de la investigación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test"><i class="fa fa-check"></i><b>2.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.2" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-1"><i class="fa fa-check"></i><b>2.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.3" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-2"><i class="fa fa-check"></i><b>2.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.4" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema"><i class="fa fa-check"></i><b>2.4</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución"><i class="fa fa-check"></i><b>2.4.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-3"><i class="fa fa-check"></i><b>2.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.6" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-4"><i class="fa fa-check"></i><b>2.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.7" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-5"><i class="fa fa-check"></i><b>2.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.8" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-1"><i class="fa fa-check"></i><b>2.8</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-1"><i class="fa fa-check"></i><b>2.8.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-6"><i class="fa fa-check"></i><b>2.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.10" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-7"><i class="fa fa-check"></i><b>2.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.11" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-8"><i class="fa fa-check"></i><b>2.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.12" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-9"><i class="fa fa-check"></i><b>2.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.13" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-10"><i class="fa fa-check"></i><b>2.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.14" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-11"><i class="fa fa-check"></i><b>2.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.15" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-12"><i class="fa fa-check"></i><b>2.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.16" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-2"><i class="fa fa-check"></i><b>2.16</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-2"><i class="fa fa-check"></i><b>2.16.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-13"><i class="fa fa-check"></i><b>2.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.18" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-14"><i class="fa fa-check"></i><b>2.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.19" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-15"><i class="fa fa-check"></i><b>2.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.20" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-16"><i class="fa fa-check"></i><b>2.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.21" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-3"><i class="fa fa-check"></i><b>2.21</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-3"><i class="fa fa-check"></i><b>2.21.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.22" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-17"><i class="fa fa-check"></i><b>2.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.23" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-18"><i class="fa fa-check"></i><b>2.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.24" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-19"><i class="fa fa-check"></i><b>2.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.25" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-4"><i class="fa fa-check"></i><b>2.25</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.25.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-4"><i class="fa fa-check"></i><b>2.25.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.26" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-20"><i class="fa fa-check"></i><b>2.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.27" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-21"><i class="fa fa-check"></i><b>2.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.28" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-22"><i class="fa fa-check"></i><b>2.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.29" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-23"><i class="fa fa-check"></i><b>2.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.30" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-24"><i class="fa fa-check"></i><b>2.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.31" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-5"><i class="fa fa-check"></i><b>2.31</b> Problema</a></li>
+<li class="chapter" data-level="2.32" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-25"><i class="fa fa-check"></i><b>2.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.33" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-26"><i class="fa fa-check"></i><b>2.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.34" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-27"><i class="fa fa-check"></i><b>2.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.35" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-28"><i class="fa fa-check"></i><b>2.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.36" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-29"><i class="fa fa-check"></i><b>2.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.37" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-30"><i class="fa fa-check"></i><b>2.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.38" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-31"><i class="fa fa-check"></i><b>2.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.39" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-32"><i class="fa fa-check"></i><b>2.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.40" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-33"><i class="fa fa-check"></i><b>2.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.41" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-34"><i class="fa fa-check"></i><b>2.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.42" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-35"><i class="fa fa-check"></i><b>2.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.43" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-36"><i class="fa fa-check"></i><b>2.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.44" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-37"><i class="fa fa-check"></i><b>2.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.45" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-38"><i class="fa fa-check"></i><b>2.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.46" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-39"><i class="fa fa-check"></i><b>2.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.47" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#problema-6"><i class="fa fa-check"></i><b>2.47</b> Problema</a>
+<ul>
+<li class="chapter" data-level="2.47.1" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#solución-5"><i class="fa fa-check"></i><b>2.47.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="2.48" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-40"><i class="fa fa-check"></i><b>2.48</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.49" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-41"><i class="fa fa-check"></i><b>2.49</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.50" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-42"><i class="fa fa-check"></i><b>2.50</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.51" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-43"><i class="fa fa-check"></i><b>2.51</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.52" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-44"><i class="fa fa-check"></i><b>2.52</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.53" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-45"><i class="fa fa-check"></i><b>2.53</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.54" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-46"><i class="fa fa-check"></i><b>2.54</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.55" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-47"><i class="fa fa-check"></i><b>2.55</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.56" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-48"><i class="fa fa-check"></i><b>2.56</b> Pregunta test</a></li>
+<li class="chapter" data-level="2.57" data-path="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html"><a href="planteamiento-de-una-investigación-anatomía-y-fisiología-de-la-investigación.html#pregunta-test-49"><i class="fa fa-check"></i><b>2.57</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><i class="fa fa-check"></i><b>3</b> Análisis Descriptivo y Gráfico de datos cuantitativos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-50"><i class="fa fa-check"></i><b>3.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.2" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-51"><i class="fa fa-check"></i><b>3.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.3" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-7"><i class="fa fa-check"></i><b>3.3</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-6"><i class="fa fa-check"></i><b>3.3.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-52"><i class="fa fa-check"></i><b>3.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.5" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-53"><i class="fa fa-check"></i><b>3.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.6" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-54"><i class="fa fa-check"></i><b>3.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.7" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-55"><i class="fa fa-check"></i><b>3.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.8" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-8"><i class="fa fa-check"></i><b>3.8</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-7"><i class="fa fa-check"></i><b>3.8.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-56"><i class="fa fa-check"></i><b>3.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.10" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-57"><i class="fa fa-check"></i><b>3.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.11" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-58"><i class="fa fa-check"></i><b>3.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.12" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-9"><i class="fa fa-check"></i><b>3.12</b> Problema</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#solución-8"><i class="fa fa-check"></i><b>3.12.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="3.13" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-59"><i class="fa fa-check"></i><b>3.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.14" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-60"><i class="fa fa-check"></i><b>3.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.15" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#problema-10"><i class="fa fa-check"></i><b>3.15</b> Problema</a></li>
+<li class="chapter" data-level="3.16" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-61"><i class="fa fa-check"></i><b>3.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.17" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-62"><i class="fa fa-check"></i><b>3.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.18" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-63"><i class="fa fa-check"></i><b>3.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.19" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-64"><i class="fa fa-check"></i><b>3.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.20" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-65"><i class="fa fa-check"></i><b>3.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.21" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-66"><i class="fa fa-check"></i><b>3.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.22" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-67"><i class="fa fa-check"></i><b>3.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.23" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-68"><i class="fa fa-check"></i><b>3.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.24" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-69"><i class="fa fa-check"></i><b>3.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.25" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-70"><i class="fa fa-check"></i><b>3.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.26" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-71"><i class="fa fa-check"></i><b>3.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.27" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-72"><i class="fa fa-check"></i><b>3.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.28" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-73"><i class="fa fa-check"></i><b>3.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.29" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-74"><i class="fa fa-check"></i><b>3.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.30" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-75"><i class="fa fa-check"></i><b>3.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.31" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-76"><i class="fa fa-check"></i><b>3.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.32" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-77"><i class="fa fa-check"></i><b>3.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.33" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-78"><i class="fa fa-check"></i><b>3.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.34" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-79"><i class="fa fa-check"></i><b>3.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.35" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-80"><i class="fa fa-check"></i><b>3.35</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.36" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-81"><i class="fa fa-check"></i><b>3.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.37" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-82"><i class="fa fa-check"></i><b>3.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.38" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-83"><i class="fa fa-check"></i><b>3.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.39" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-84"><i class="fa fa-check"></i><b>3.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.40" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-85"><i class="fa fa-check"></i><b>3.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.41" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-86"><i class="fa fa-check"></i><b>3.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.42" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-87"><i class="fa fa-check"></i><b>3.42</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.43" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-88"><i class="fa fa-check"></i><b>3.43</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.44" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-89"><i class="fa fa-check"></i><b>3.44</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.45" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-90"><i class="fa fa-check"></i><b>3.45</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.46" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-91"><i class="fa fa-check"></i><b>3.46</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.47" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-92"><i class="fa fa-check"></i><b>3.47</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.48" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-93"><i class="fa fa-check"></i><b>3.48</b> Pregunta test</a></li>
+<li class="chapter" data-level="3.49" data-path="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html"><a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html#pregunta-test-94"><i class="fa fa-check"></i><b>3.49</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html"><i class="fa fa-check"></i><b>4</b> Análisis Inferencial. Aplicaciones.</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-95"><i class="fa fa-check"></i><b>4.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.2" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-96"><i class="fa fa-check"></i><b>4.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.3" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-97"><i class="fa fa-check"></i><b>4.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.4" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-98"><i class="fa fa-check"></i><b>4.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.5" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-11"><i class="fa fa-check"></i><b>4.5</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-9"><i class="fa fa-check"></i><b>4.5.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-99"><i class="fa fa-check"></i><b>4.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.7" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-100"><i class="fa fa-check"></i><b>4.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.8" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-101"><i class="fa fa-check"></i><b>4.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.9" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-102"><i class="fa fa-check"></i><b>4.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.10" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-12"><i class="fa fa-check"></i><b>4.10</b> Problema</a></li>
+<li class="chapter" data-level="4.11" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-103"><i class="fa fa-check"></i><b>4.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.12" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-104"><i class="fa fa-check"></i><b>4.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.13" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-105"><i class="fa fa-check"></i><b>4.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.14" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-13"><i class="fa fa-check"></i><b>4.14</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.14.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-10"><i class="fa fa-check"></i><b>4.14.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.15" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-106"><i class="fa fa-check"></i><b>4.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.16" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-14"><i class="fa fa-check"></i><b>4.16</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.16.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-11"><i class="fa fa-check"></i><b>4.16.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.17" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-107"><i class="fa fa-check"></i><b>4.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.18" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-15"><i class="fa fa-check"></i><b>4.18</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.18.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-12"><i class="fa fa-check"></i><b>4.18.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.19" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-108"><i class="fa fa-check"></i><b>4.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.20" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-109"><i class="fa fa-check"></i><b>4.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.21" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-110"><i class="fa fa-check"></i><b>4.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.22" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-111"><i class="fa fa-check"></i><b>4.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.23" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-112"><i class="fa fa-check"></i><b>4.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.24" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-113"><i class="fa fa-check"></i><b>4.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.25" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-16"><i class="fa fa-check"></i><b>4.25</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.25.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-13"><i class="fa fa-check"></i><b>4.25.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.26" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-114"><i class="fa fa-check"></i><b>4.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.27" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-115"><i class="fa fa-check"></i><b>4.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.28" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-17"><i class="fa fa-check"></i><b>4.28</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.28.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#explicación"><i class="fa fa-check"></i><b>4.28.1</b> Explicación</a></li>
+</ul></li>
+<li class="chapter" data-level="4.29" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-116"><i class="fa fa-check"></i><b>4.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.30" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-117"><i class="fa fa-check"></i><b>4.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.31" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-18"><i class="fa fa-check"></i><b>4.31</b> Problema</a>
+<ul>
+<li class="chapter" data-level="4.31.1" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#solución-14"><i class="fa fa-check"></i><b>4.31.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="4.32" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-118"><i class="fa fa-check"></i><b>4.32</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.33" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-119"><i class="fa fa-check"></i><b>4.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.34" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-120"><i class="fa fa-check"></i><b>4.34</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.35" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#problema-19"><i class="fa fa-check"></i><b>4.35</b> Problema</a></li>
+<li class="chapter" data-level="4.36" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-121"><i class="fa fa-check"></i><b>4.36</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.37" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-122"><i class="fa fa-check"></i><b>4.37</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.38" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-123"><i class="fa fa-check"></i><b>4.38</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.39" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-124"><i class="fa fa-check"></i><b>4.39</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.40" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-125"><i class="fa fa-check"></i><b>4.40</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.41" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-126"><i class="fa fa-check"></i><b>4.41</b> Pregunta test</a></li>
+<li class="chapter" data-level="4.42" data-path="análisis-inferencial.-aplicaciones..html"><a href="análisis-inferencial.-aplicaciones..html#pregunta-test-127"><i class="fa fa-check"></i><b>4.42</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html"><i class="fa fa-check"></i><b>5</b> Regresión y correlación.</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-128"><i class="fa fa-check"></i><b>5.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.2" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-129"><i class="fa fa-check"></i><b>5.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.3" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-130"><i class="fa fa-check"></i><b>5.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.4" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-131"><i class="fa fa-check"></i><b>5.4</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.5" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-132"><i class="fa fa-check"></i><b>5.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.6" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-133"><i class="fa fa-check"></i><b>5.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.7" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-134"><i class="fa fa-check"></i><b>5.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.8" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-135"><i class="fa fa-check"></i><b>5.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.9" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-136"><i class="fa fa-check"></i><b>5.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.10" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-137"><i class="fa fa-check"></i><b>5.10</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.11" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-138"><i class="fa fa-check"></i><b>5.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.12" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-139"><i class="fa fa-check"></i><b>5.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.13" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-140"><i class="fa fa-check"></i><b>5.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.14" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-141"><i class="fa fa-check"></i><b>5.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.15" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-142"><i class="fa fa-check"></i><b>5.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.16" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-143"><i class="fa fa-check"></i><b>5.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.17" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-144"><i class="fa fa-check"></i><b>5.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.18" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-145"><i class="fa fa-check"></i><b>5.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.19" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-146"><i class="fa fa-check"></i><b>5.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.20" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-147"><i class="fa fa-check"></i><b>5.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.21" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-148"><i class="fa fa-check"></i><b>5.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.22" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-149"><i class="fa fa-check"></i><b>5.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.23" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-150"><i class="fa fa-check"></i><b>5.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.24" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-151"><i class="fa fa-check"></i><b>5.24</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.25" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-152"><i class="fa fa-check"></i><b>5.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.26" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-153"><i class="fa fa-check"></i><b>5.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.27" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-154"><i class="fa fa-check"></i><b>5.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.28" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-155"><i class="fa fa-check"></i><b>5.28</b> Pregunta test</a></li>
+<li class="chapter" data-level="5.29" data-path="regresión-y-correlación..html"><a href="regresión-y-correlación..html#pregunta-test-156"><i class="fa fa-check"></i><b>5.29</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html"><i class="fa fa-check"></i><b>6</b> Tablas de contingencia.</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#problema-20"><i class="fa fa-check"></i><b>6.1</b> Problema</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#solución-15"><i class="fa fa-check"></i><b>6.1.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-157"><i class="fa fa-check"></i><b>6.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="6.3" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-158"><i class="fa fa-check"></i><b>6.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="6.4" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#problema-21"><i class="fa fa-check"></i><b>6.4</b> Problema</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#solución-16"><i class="fa fa-check"></i><b>6.4.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-159"><i class="fa fa-check"></i><b>6.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="6.6" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-160"><i class="fa fa-check"></i><b>6.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="6.7" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-161"><i class="fa fa-check"></i><b>6.7</b> Pregunta test</a></li>
+<li class="chapter" data-level="6.8" data-path="tablas-de-contingencia..html"><a href="tablas-de-contingencia..html#pregunta-test-162"><i class="fa fa-check"></i><b>6.8</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html"><i class="fa fa-check"></i><b>7</b> Medidas de importancia clínica.</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-163"><i class="fa fa-check"></i><b>7.1</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.2" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-164"><i class="fa fa-check"></i><b>7.2</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.3" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-165"><i class="fa fa-check"></i><b>7.3</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.4" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-22"><i class="fa fa-check"></i><b>7.4</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-17"><i class="fa fa-check"></i><b>7.4.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-166"><i class="fa fa-check"></i><b>7.5</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.6" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-167"><i class="fa fa-check"></i><b>7.6</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.7" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-23"><i class="fa fa-check"></i><b>7.7</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-18"><i class="fa fa-check"></i><b>7.7.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-168"><i class="fa fa-check"></i><b>7.8</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.9" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-169"><i class="fa fa-check"></i><b>7.9</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.10" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-24"><i class="fa fa-check"></i><b>7.10</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-19"><i class="fa fa-check"></i><b>7.10.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-170"><i class="fa fa-check"></i><b>7.11</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.12" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-171"><i class="fa fa-check"></i><b>7.12</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.13" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-172"><i class="fa fa-check"></i><b>7.13</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.14" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-173"><i class="fa fa-check"></i><b>7.14</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.15" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-174"><i class="fa fa-check"></i><b>7.15</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.16" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-175"><i class="fa fa-check"></i><b>7.16</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.17" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-176"><i class="fa fa-check"></i><b>7.17</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.18" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-177"><i class="fa fa-check"></i><b>7.18</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.19" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-178"><i class="fa fa-check"></i><b>7.19</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.20" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-179"><i class="fa fa-check"></i><b>7.20</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.21" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-180"><i class="fa fa-check"></i><b>7.21</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.22" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-181"><i class="fa fa-check"></i><b>7.22</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.23" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-182"><i class="fa fa-check"></i><b>7.23</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.24" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-25"><i class="fa fa-check"></i><b>7.24</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.24.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-20"><i class="fa fa-check"></i><b>7.24.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.25" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-183"><i class="fa fa-check"></i><b>7.25</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.26" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-184"><i class="fa fa-check"></i><b>7.26</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.27" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-185"><i class="fa fa-check"></i><b>7.27</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.28" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-26"><i class="fa fa-check"></i><b>7.28</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.28.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-21"><i class="fa fa-check"></i><b>7.28.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.29" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-186"><i class="fa fa-check"></i><b>7.29</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.30" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-187"><i class="fa fa-check"></i><b>7.30</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.31" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-188"><i class="fa fa-check"></i><b>7.31</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.32" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-27"><i class="fa fa-check"></i><b>7.32</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.32.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-22"><i class="fa fa-check"></i><b>7.32.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.33" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-189"><i class="fa fa-check"></i><b>7.33</b> Pregunta test</a></li>
+<li class="chapter" data-level="7.34" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#problema-28"><i class="fa fa-check"></i><b>7.34</b> Problema</a>
+<ul>
+<li class="chapter" data-level="7.34.1" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#solución-23"><i class="fa fa-check"></i><b>7.34.1</b> Solución</a></li>
+</ul></li>
+<li class="chapter" data-level="7.35" data-path="medidas-de-importancia-clínica..html"><a href="medidas-de-importancia-clínica..html#pregunta-test-190"><i class="fa fa-check"></i><b>7.35</b> Pregunta test</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>8</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística: preguntas y problemas resueltos</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="análisis-inferencial.-aplicaciones." class="section level1" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Análisis Inferencial. Aplicaciones.</h1>
+<p>En este capítulo se resolverán problemas relativos a:</p>
+<ul>
+<li>Objetivos del estudio, hipótesis de trabajo e hipótesis estadísticas</li>
+<li>Importancia de las distribuciones de probabilidad en el trabajo práctico</li>
+<li>Estimación puntual y por intervalo</li>
+<li>Verificación de las hipótesis de trabajo: contraste de hipótesis</li>
+</ul>
+<div id="pregunta-test-95" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pregunta test</h2>
+<p>En relación a las técnicas de inferencia estadística, elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media poblacional es una estimación puntual.</li>
+<li>La media muestral es un parámetro.</li>
+<li>Sólo se rechaza una hipótesis nula si esta es falsa.</li>
+<li>Un intervalo de confianza es una estimación confidencial de un parámetro.</li>
+<li>Todo lo anterior es falso</li>
+</ol>
+<button onclick="f1()">
+Respuesta correcta
+</button>
+<p id="1">
+</p>
+<script>
+function f1() {
+  document.getElementById("1").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/estimacio%CC%81n-de-para%CC%81metros.-intervalos-de-confianza.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-96" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Pregunta test</h2>
+<p>Un estudio sobre la efectividad de un fármaco llega a la conclusión de que éste es mejor que el placebo con p&lt;0,05 ¿Cuál es la interpretación correcta de este resultado?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Con toda seguridad, el tratamiento es mejor que el placebo.</li>
+<li>La probabilidad de que el nuevo tratamiento sea mejor que el placebo es superior al 95%.</li>
+<li>El tratamiento es un 95% más efectivo que el placebo.</li>
+<li>La probabilidad de que el placebo sea mejor que el nuevo fármaco es menor de 5%.</li>
+<li>Si el tratamiento no fuese efectivo, existe menos del 5% de probabilidad de observar unas muestras tan contrarias a dicha hipótesis como las obtenidas.</li>
+</ol>
+<button onclick="f1_05()">
+Respuesta correcta
+</button>
+<p id="1_05">
+</p>
+<script>
+function f1_05() {
+  document.getElementById("1_05").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/valor-p.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-97" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Pregunta test</h2>
+<p>En la Distribución Normal:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El intervalo <span class="math inline">\(\mu \pm \sigma\)</span> abarca el 68% del área total.</li>
+<li>El intervalo <span class="math inline">\(\mu \pm 1.96 \sigma\)</span> abarca el 95% del área.</li>
+<li>El intervalo <span class="math inline">\(\mu \pm 2.6\sigma\)</span> abarca el 99% del área.</li>
+<li>El intervalo <span class="math inline">\(\mu \pm 2.6\sigma\)</span> NO abarca el 5% del área.</li>
+<li>Todas son ciertas.</li>
+</ol>
+<button onclick="f1_1()">
+Respuesta correcta
+</button>
+<p id="1_1">
+</p>
+<script>
+function f1_1() {
+  document.getElementById("1_1").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/distribuciones-de-probabilidad.html#distribucio%CC%81n-normal">Explicación1</a></p>
+<p><a href="https://youtu.be/wWeogWp_bO8">Explicación2</a></p>
+</div>
+<div id="pregunta-test-98" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Pregunta test</h2>
+<p>¿Cuáles de los siguientes pares de sucesos son mutuamente excluyentes?</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>A: El hijo de Maria tiene hemofilia.
+B: La hija de Maria es portadora de hemofilia.</p></li>
+<li><p>A: El 65% de las semillas de guisante que han sido plantadas germinarán.
+B: El 50% de las semillas de guisante que han sido plantadas no germinarán.</p></li>
+<li><p>A: Jorge sufre hipotermia.
+B: La temperatura de Jorge es de 39º C.</p></li>
+<li><p>A: Un paciente tiene SIDA.
+B: El paciente ha recibido una transfusión de sangre.</p></li>
+<li><p>A: El animal es un mamífero.
+B: El animal es un delfín.
+C: El animal está cubierto de pelo.</p></li>
+<li><p>A: El bosque es una extensión virgen.
+B: El bosque fue talado hace 10 años.</p></li>
+</ol>
+<button onclick="f1_2()">
+Respuesta correcta
+</button>
+<p id="1_2">
+</p>
+<script>
+function f1_2() {
+  document.getElementById("1_2").innerHTML = "b, c y f";
+}
+</script>
+<p><a href="https://es.wikipedia.org/wiki/Mutuamente_excluyentes">Explicación</a></p>
+</div>
+<div id="problema-11" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Problema</h2>
+<p>Sea Z una variable aleatoria normal estándar. Calcula:</p>
+<p><strong>a)</strong> El área encerrada por la función de densidad entre <span class="math inline">\(z=0\)</span> y <span class="math inline">\(z=1.35\)</span></p>
+<p><strong>b)</strong> <span class="math inline">\(P(Z \leq 2)\)</span></p>
+<p><strong>c)</strong> <span class="math inline">\(P(-0:5 \leq Z \leq 2.65)\)</span></p>
+<p><strong>d)</strong> El valor de z (z &gt; 0) de manera que el área encerrada entre 0 y z sea 0.2.</p>
+<p><strong>e)</strong> El valor de z tal que la probabilidad de obtener un valor mayor que z sea 0.1.</p>
+<div id="solución-9" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Solución</h3>
+<p>Para resolver estas cuestiones, se puede hacer uso de <a href="https://youtu.be/xCBUdpIUx18">la tabla de la Normal Tipificada</a>, o programas como <a href="https://youtu.be/bTnVHL9yG8o?si=I3fjGEwCmzLlbQrI">Excel© y la app Probability Distributions</a>.</p>
+<p>En este caso, vamos a utilizar el recurso <a href="https://www.geogebra.org/calculator">Geogebra: Calculadora de Probabilidad</a>. No tenemos más que introducir los datos y obtendremos las soluciones pedidas. Como el problema hace referencia a la distribución <span class="math inline">\(Z \equiv N(0,1)\)</span>, usamos la distribución Normal, como parámetro <span class="math inline">\(\mu\)</span> pondremos 0 y como parámetro $$ pondremos 1.</p>
+<p><strong>a)</strong> Solución: <span class="math inline">\(P(0 \leq Z \leq 1.35) = 0.4115\)</span></p>
+<p><img src="img/3_4.png" width="1024" /></p>
+<p><strong>b)</strong> Solución: <span class="math inline">\(P(Z \leq 2) = 0.9772\)</span></p>
+<p><img src="img/3_5.png" width="1024" /></p>
+<p><strong>c)</strong> Solución: <span class="math inline">\(P(-0.5 \leq Z \leq 2.65) = 0.6874\)</span></p>
+<p><img src="img/3_6.png" width="1024" /></p>
+<p><strong>d)</strong> Solución: <span class="math inline">\(P(0 \leq Z \leq 0.5244) = 0.2\)</span></p>
+<p><img src="img/3_7.png" width="1024" /></p>
+<p>En este caso, hemos ido aproximando a 4 decimales hasta obtener el valor más próximo a 0.2.</p>
+<p><strong>e)</strong> Solución: <span class="math inline">\(P(Z \geq 1.2816) = 0.1\)</span></p>
+<p><img src="img/3_8.png" width="1024" /></p>
+</div>
+</div>
+<div id="pregunta-test-99" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Pregunta test</h2>
+<p>Una estimación confidencial para un nivel de confianza fijado, da por respuesta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una aproximación de la media.</li>
+<li>Una aproximación de una proporción.</li>
+<li>Una probabilidad.</li>
+<li>Un intervalo.</li>
+<li>Un nivel de significación.</li>
+</ol>
+<button onclick="f2()">
+Respuesta correcta
+</button>
+<p id="2">
+</p>
+<script>
+function f2() {
+  document.getElementById("2").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/estimacio%CC%81n-de-para%CC%81metros.-intervalos-de-confianza.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-100" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Pregunta test</h2>
+<p>En un contraste de hipótesis la cantidad p es:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Un número pequeño.</li>
+<li>Fijada antes de realizar el contraste.</li>
+<li>La probabilidad de rechazar la hipótesis nula.</li>
+<li>La probabilidad de error al rechazar la hipótesis alternativa.</li>
+<li>Conocida al extraer la muestra y calcular el estadístico experimental.</li>
+</ol>
+<button onclick="f2_1()">
+Respuesta correcta
+</button>
+<p id="2_1">
+</p>
+<script>
+function f2_1() {
+  document.getElementById("2_1").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/valor-p.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-101" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> Pregunta test</h2>
+<p>El perímetro torácico en un grupo de militares presenta distribución gaussiana con 95 cm de media y 5 cm de desviación típica. Elegimos a una muestra de 100 indivíduos y calculamos la media de la misma. Elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media de la muestra valdrá 95 cm.</li>
+<li>La media de la muestra sería un valor comprendido entre 90 y 100 cm con confianza del 68%.</li>
+<li>La media de la muestra será un valor comprendido entre 95 y 100 cm con confianza del 95%.</li>
+<li>La media de la muestra será un valor comprendido entre 94 y 96 cm con confianza del 95%.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f3()">
+Respuesta correcta
+</button>
+<p id="3">
+</p>
+<script>
+function f3() {
+  document.getElementById("3").innerHTML = "d";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p>Consideramos la variable aleatoria</p>
+<p><span class="math inline">\(X\)</span> = perímetro torácico en un grupo de militares <span class="math inline">\(X \equiv N(95, 5)\)</span></p>
+<p>El intervalo de confianza para la media muestral <span class="math inline">\(\overline{x}\)</span> al 95% será:</p>
+<p><span class="math inline">\(\mu \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\)</span></p>
+<p>Para una confianza del 95%, <span class="math inline">\(z_{\alpha/2} = 1.96\)</span> (<a href="https://youtu.be/wWeogWp_bO8">ver vídeo</a>) de donde:</p>
+<p><span class="math inline">\(\mu \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}= 95 = 95 \pm 1.95 \cdot \frac{5}{\sqrt{100}}= (94.02002,95.97998) \approx (94, 96)\)</span></p>
+<p>Se puede comprobar el resultado utilizando el applet <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/mu.raw.html">Probability Distributios: Statistical Inference for <span class="math inline">\(\mu\)</span></a> introduciendo los valores <span class="math inline">\(n=100\)</span>, <span class="math inline">\(\overline{x}=95\)</span> y <span class="math inline">\(\sigma = 5\)</span> con <span class="math inline">\(95\)</span> % de CI (confidence Interval) y activando la opción <em>Show equations</em>.</p>
+</div>
+<div id="pregunta-test-102" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> Pregunta test</h2>
+<p>El consumo diario de Calorías se distribuye en una población de forma normal, con media 2500 y desviación típica 100. Si elijo una muestra de tamaño 100, entre qué valores espero encontrar su media (con una probabilidad del 95% de acertar):</p>
+<ol style="list-style-type: lower-alpha">
+<li>Entre 2400 y 2600.</li>
+<li>Entre 2300 y 2700.</li>
+<li>Entre 2490 y 2510.</li>
+<li>Entre 2480 y 2520.</li>
+<li>Entre 2498 y 2502.</li>
+</ol>
+<button onclick="f4()">
+Respuesta correcta
+</button>
+<p id="4">
+</p>
+<script>
+function f4() {
+  document.getElementById("4").innerHTML = "d";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/">Explicación</a></p>
+</div>
+<div id="problema-12" class="section level2" number="4.10">
+<h2><span class="header-section-number">4.10</span> Problema</h2>
+<p>El nivel de colesterol en la sangre se mide de acuerdo a un índice llamado LDL. Para el caso de personas adultas, la distribución del colesterol en la sangre es aproximadamente normal y en el caso de los hombres tiene una media de <span class="math inline">\(4.8\)</span> unidades LDL con una desviación estándar igual a <span class="math inline">\(0.6\)</span> unidades. El nivel normal (o riesgo normal) de colesterol se considera aquel que queda entre los límites <span class="math inline">\(\mu \pm \sigma\)</span> en unidades LDL. Una persona con más de <span class="math inline">\(\mu + \sigma\)</span> pero menos de $+ 2$ unidades LDL tiene un nivel de riesgo moderado. Si tiene un nivel de $+ 2$ o superior se considera de alto riesgo y se hace propenso a sufrir un infarto. Por otra parte, si el nivel de colesterol en la sangre de un adulto está por debajo de <span class="math inline">\(\mu - \sigma\)</span> unidades, se considera de riesgo bajo.</p>
+<p><strong>a)</strong> ¿Cuáles son los porcentajes de población de hombres adultos que están incluidos en cada uno de los 4 niveles de riesgo descritos?</p>
+<p><strong>b)</strong> ¿A partir de qué nivel de colesterol se encuentra el 10 % de la población de hombres adultos con mayor riesgo?</p>
+<p><strong>a)</strong> Los niveles son:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Riesgo</th>
+<th align="center">Nivel de LDL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Bajo</td>
+<td align="center"><span class="math inline">\(&lt; 4.2\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Normal</td>
+<td align="center"><span class="math inline">\(4.2 -5.4\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Moderado</td>
+<td align="center"><span class="math inline">\(5.4 -6\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Alto</td>
+<td align="center"><span class="math inline">\(&gt; 6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Utilizando la <a href="https://www.geogebra.org/calculator">calculadora de Probabilidad de Geogebra</a> obtenemos los porcentajes de poblacion:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Riesgo</th>
+<th align="center">Nivel de LDL</th>
+<th align="center">% población</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Bajo</td>
+<td align="center"><span class="math inline">\(&lt; 4.2\)</span></td>
+<td align="center"><span class="math inline">\(15.9 \%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Normal</td>
+<td align="center"><span class="math inline">\(4.2 - 5.4\)</span></td>
+<td align="center"><span class="math inline">\(68.3 \%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Moderado</td>
+<td align="center"><span class="math inline">\(5.4 - 6\)</span></td>
+<td align="center"><span class="math inline">\(13.6 \%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Alto</td>
+<td align="center"><span class="math inline">\(&gt; 6\)</span></td>
+<td align="center"><span class="math inline">\(2.2 \%\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img src="img/3_9.png" width="1024" /></p>
+<p><img src="img/3_10.png" width="1024" /></p>
+<p><img src="img/3_11.png" width="1024" /></p>
+<p><img src="img/3_12.png" width="1024" /></p>
+<p><strong>b)</strong> Siendo <span class="math inline">\(X\)</span> = nivel de colesterol en la sangre, tenemos que calcular el valor de <span class="math inline">\(x\)</span> para el que <span class="math inline">\(P(X &gt; x) = 0.10\)</span> (normal inversa). Con Geogebra, obtenemos que ese valor es <span class="math inline">\(5.57\)</span>.</p>
+<p><img src="img/3_13.png" width="1024" /></p>
+</div>
+<div id="pregunta-test-103" class="section level2" number="4.11">
+<h2><span class="header-section-number">4.11</span> Pregunta test</h2>
+<p>Un contraste de hipótesis se considera significativo si:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una muestra aleatoria es coherente con la hipótesis nula.</li>
+<li>Una muestra aleatoria no es coherente con la hipótesis nula.</li>
+<li>La hipótesis alternativa es más probable que la nula.</li>
+<li>Todo lo anterior es cierto.</li>
+<li>Son ciertas (b) y (c).</li>
+</ol>
+<button onclick="f4_1()">
+Respuesta correcta
+</button>
+<p id="4_1">
+</p>
+<script>
+function f4_1() {
+  document.getElementById("4_1").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-104" class="section level2" number="4.12">
+<h2><span class="header-section-number">4.12</span> Pregunta test</h2>
+<p>En una muestra aleatoria de 100 individuos se obtiene una media muestral de 50, la desviación típica es 20. Elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El 68% de los individuos de la muestra tiene sus valores comprendidos entre 48 y 52.</li>
+<li>El 95% de los individuos de la muestra tiene sus valores comprendidos entre 46 y 54.</li>
+<li>Hay una probabilidad del 68% de que la media de la población esté comprendida entre 30 y 70.</li>
+<li>Hay una probabilidad del 95% de que la media de la población esté entre 46 y 54.</li>
+<li>Todo lo anterior es falso.</li>
+</ol>
+<button onclick="f5()">
+Respuesta correcta
+</button>
+<p id="5">
+</p>
+<script>
+function f5() {
+  document.getElementById("5").innerHTML = "d";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/">Explicación</a></p>
+</div>
+<div id="pregunta-test-105" class="section level2" number="4.13">
+<h2><span class="header-section-number">4.13</span> Pregunta test</h2>
+<p>Un contraste de hipótesis se considera no significativo si:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Una muestra aleatoria es coherente con la hipótesis nula.</li>
+<li>Una muestra aleatoria no es coherente con la hipótesis nula.</li>
+<li>La hipótesis nula es más probable que la alternativa.</li>
+<li>Todo lo anterior es cierto.</li>
+<li>Son ciertas (a) y (c).</li>
+</ol>
+<button onclick="f5_1()">
+Respuesta correcta
+</button>
+<p id="5_1">
+</p>
+<script>
+function f5_1() {
+  document.getElementById("5_1").innerHTML = "a";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="problema-13" class="section level2" number="4.14">
+<h2><span class="header-section-number">4.14</span> Problema</h2>
+<p>La nicotina contenida en 5 cigarrillos de cierta clase dio una media de 21.2 miligramos y una desviación típica de 2.05 miligramos. Suponiendo que la distribución es normal, contrastar la hipótesis de que la nicotina media en esta clase de cigarrillos no excede de 19.7 miligramos al nivel <span class="math inline">\(\alpha\)</span> = 0.05.</p>
+<div id="solución-10" class="section level3" number="4.14.1">
+<h3><span class="header-section-number">4.14.1</span> Solución</h3>
+<p>Tenomos una muestra con <span class="math inline">\(n = 5\)</span>, <span class="math inline">\(\overline{x}=21.2\)</span> y <span class="math inline">\(s = 2.05\)</span> ya que la desviación típica es la de la muestra.</p>
+<p>Establecemos las hipótesis nula y alternativa:</p>
+<ul>
+<li><span class="math inline">\(H_0:\)</span> la nicotina media <span class="math inline">\(\mu\)</span> en esta clase de cigarrillos no excede de 19.7 miligramos</li>
+<li><span class="math inline">\(H_1:\)</span> la nicotina media <span class="math inline">\(\mu\)</span> en esta clase de cigarrillos excede de 19.7 miligramos</li>
+</ul>
+<p>Vamos a resolver el problema encontrando el intervalo de confianza al 95% de <span class="math inline">\(\mu\)</span>. Debemos teenr en cuenta que es un <a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html#contrastes-bilaterales-y-unilaterales">contraste unilateral</a> ya que nos preguntan si excede o no cierto valor.</p>
+<p>Utilizando la aplicación <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/mu.raw.html">Probability Distributions: Statistical Inference for <span class="math inline">\(\mu\)</span></a> obtenemos un CI = <span class="math inline">\((19.24555,\infty)\)</span></p>
+<p><img src="img/3_14.png" width="740" /></p>
+<p>Como el valor 19.7 está en ese intervalo, podemos concluir que, con los datos de la muestra y con una confianza del 95%, la nicotina media en esta clase de cigarrillos <span class="math inline">\(\mu\)</span> no excede de 19.7 miligramos.</p>
+</div>
+</div>
+<div id="pregunta-test-106" class="section level2" number="4.15">
+<h2><span class="header-section-number">4.15</span> Pregunta test</h2>
+<p>Una muestra aleatoria de 64 pacientes refleja que el presión arterial diastólica media es 150 (DT 16), con distribución aproximadamente normal. Elija la afirmación correcta.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media de la población está con confianza del 95% entre 134 y 166</li>
+<li>La media de la población está con confianza del 68% entre 142 y 158</li>
+<li>La media de la población está con confianza del 95% entre 148 y 152</li>
+<li>La media de la población está con confianza del 95% entre 146 y 154</li>
+<li>El error típico es de 1 punto.</li>
+</ol>
+<button onclick="f6()">
+Respuesta correcta
+</button>
+<p id="6">
+</p>
+<script>
+function f6() {
+  document.getElementById("6").innerHTML = "d";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/">Explicación</a></p>
+</div>
+<div id="problema-14" class="section level2" number="4.16">
+<h2><span class="header-section-number">4.16</span> Problema</h2>
+<p>Para ayudar a la evaluación del pronóstico de pacientes con una determinada enfermedad pulmonar se calculan dos índices, independientes entre sí. Se asume que el primero de los índices se distribuye según una normal <span class="math inline">\(N(120,10)\)</span> y que el segundo se distribuye según una normal <span class="math inline">\(N(15,3)\)</span>. Se consideran susceptibles de una revisión más profunda aquellos pacientes que en el primer índice superen el valor 142. También son susceptibles de una revisión más profunda aquellos pacientes que en el segundo índice presenten un valor inferior a 8. ¿Qué porcentaje de pacientes son susceptibles de una revisión más profunda?</p>
+<div id="solución-11" class="section level3" number="4.16.1">
+<h3><span class="header-section-number">4.16.1</span> Solución</h3>
+<p>Definimos los sucesos y calculamos sus probabilidades con <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Probability Distributions: Normal Distribution</a>:</p>
+<ul>
+<li><span class="math inline">\(A\)</span> = valor superior a 142 en el primer índice <span class="math inline">\(P(A)=0.0139\)</span></li>
+<li><span class="math inline">\(B\)</span> = valor inferior a 8 en el segundo índice <span class="math inline">\(P(B)=0.00982\)</span></li>
+</ul>
+<p>De este modo, los pacientes susceptible de una revisión más profunda serán los del suceso <span class="math inline">\(A \cup B\)</span>.</p>
+<p>Sabemos que <span class="math inline">\(P(A \cup B)= P(A) + P(B) - P(A \cap B)\)</span>. Así, nos falta saber el valor de <span class="math inline">\(P(A \cap B)\)</span> (probabilidad de ser susceptible de una revisión más profunda por los 2 índices).</p>
+<p>Nos dicen que los índices son independientes. Entonces</p>
+<p><span class="math inline">\(P(A \cap B) = P(A) \cdot P(B) = 0.0139 \cdot 0.00982 = 0.000136498\)</span>, probabilidad prácticamente nula.</p>
+<p>Así, <span class="math inline">\(P(A \cup B)= P(A) + P(B) - P(A \cap B) = 0.0139 + 00982 - 0.000136498 = 0.0235835\)</span>.</p>
+<p>Entonces, <strong>́el 2.36 % de pacientes son susceptibles de una revisión más profunda</strong></p>
+</div>
+</div>
+<div id="pregunta-test-107" class="section level2" number="4.17">
+<h2><span class="header-section-number">4.17</span> Pregunta test</h2>
+<p>Qúe propiedad o propiedades caracterizan a una distribución normal tipificada frente a una distribución normal cualquiera:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El área bajo su función de densidad es igual a 1.</li>
+<li>Su media es 1 y su desviación típica es 0.</li>
+<li>Su rango de valores oscila entre 0 y 3.</li>
+<li>Su media es 0 y su desviación típica es 1.</li>
+<li>Son ciertas (c) y (d)</li>
+</ol>
+<button onclick="f7()">
+Respuesta correcta
+</button>
+<p id="7">
+</p>
+<script>
+function f7() {
+  document.getElementById("7").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/distribuciones-de-probabilidad.html#distribucio%CC%81n-z">Explicación</a></p>
+</div>
+<div id="problema-15" class="section level2" number="4.18">
+<h2><span class="header-section-number">4.18</span> Problema</h2>
+<p>El calcio se presenta normalmente en la sangre de los mamíferos en concentraciones de alrededor de 6 mg/100ml de sangre total. La desviación típica normal de esta variable es 1 mg. de Calcio por cada 100 ml de sangre total. Una variabilidad mayor que ésta puede ocasionar graves trastornos en la coagulación de la sangre. Una serie de nueve pruebas realizadas sobre un paciente revelaron una media muestral de 6.2 mg de Calcio por 100 ml de sangre total y una desviación típica muestral de 2 mg de calcio por cada 100 ml de sangre.</p>
+<p><strong>a)</strong> ¿Hay alguna evidencia con <span class="math inline">\(\alpha = 0.05\)</span> de que el nivel medio de calcio para este paciente sea más alto de lo normal?</p>
+<p><strong>b)</strong> ¿Hay alguna evidencia, a un nivel <span class="math inline">\(\alpha = 0.05\)</span>, de que la desviación típica del nivel de calcio sea más alta de la normal?</p>
+<div id="solución-12" class="section level3" number="4.18.1">
+<h3><span class="header-section-number">4.18.1</span> Solución</h3>
+<p><strong>a)</strong> Sea <span class="math inline">\(X\)</span> = nivel de concentración de calcio <span class="math inline">\(X \equiv N(6, 1)\)</span></p>
+<p>Para el paciente, tenemos <span class="math inline">\(n=9\)</span>, <span class="math inline">\(\overline{x}=6.2\)</span> y <span class="math inline">\(s=2\)</span></p>
+<p>Un videl más alto de lo normal implica un valor mayor que 7 (<span class="math inline">\(\mu + \sigma = 6+1=7\)</span>).</p>
+<p>Así, para los datos del paciente, establecemos:</p>
+<ul>
+<li><span class="math inline">\(H_0:\)</span> <span class="math inline">\(\mu \leq 7\)</span></li>
+<li><span class="math inline">\(H_1:\)</span> <span class="math inline">\(\mu &gt; 7\)</span></li>
+</ul>
+<p>Con la aplicación <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/mu.raw.html">Probability Distributions: Statistical inference for <span class="math inline">\(\mu\)</span></a> obtenemos:</p>
+<p><img src="img/3_15.png" width="751" /></p>
+<p>Como el valor p &gt; 0.05, no podemos rechazar la hipótesis nula y concluimos que <strong>no hay evidencia de que el nivel medio de calcio sea más alto de lo normal</strong>.</p>
+<p><strong>b)</strong> En este caso no preguntan si la desviación típica de la muestra <span class="math inline">\(s\)</span> es más alta de lo normal. Así,</p>
+<ul>
+<li><span class="math inline">\(H_0:\)</span> la desviación típica de la muestra no es más alta de lo normal</li>
+<li><span class="math inline">\(H_1:\)</span> la desviación típica de la muestra es más alta de lo normal</li>
+</ul>
+<p>y utilizando <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/sigma2.html">Probability Distributions: Statistical Inference for <span class="math inline">\(\sigma^2\)</span></a> teniendo en cuenta que <span class="math inline">\(s^2=4\)</span> y que <span class="math inline">\(\sigma^2=1\)</span>:</p>
+<p><img src="img/3_15.png" width="751" /></p>
+<p>obtenemos un valor p &lt; 0.05 por lo que <strong>hay evidencia de que la desviación típica del nivel de calcio es más alta de la normal</strong>.</p>
+</div>
+</div>
+<div id="pregunta-test-108" class="section level2" number="4.19">
+<h2><span class="header-section-number">4.19</span> Pregunta test</h2>
+<p>En relación con los contrastes de hipótesis, elija la afirmación correcta:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La hipótesis nula es la correcta.</li>
+<li>La hipótesis nula es la falsa.</li>
+<li>Si la hipótesis alternativa es cierta, seguro que se rechaza la nula.</li>
+<li>El contraste es significativo cuando los datos muestrales no son los esperados si la hipótesis nula fuese cierta,</li>
+<li>Si es más probable que sea cierta la hipótesis alternativa que la nula, el contraste es significativo.</li>
+</ol>
+<button onclick="f7_1()">
+Respuesta correcta
+</button>
+<p id="7_1">
+</p>
+<script>
+function f7_1() {
+  document.getElementById("7_1").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-109" class="section level2" number="4.20">
+<h2><span class="header-section-number">4.20</span> Pregunta test</h2>
+<p>En una población, el peso tiene media 60 kg y desviación típica 6 Kg. La altura tiene de media 170 cm y desviación 6 cm. Cierto individuo tiene un peso de 70 Kg y altura 180 cm.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La altura tiene un valor más extremo que el peso.</li>
+<li>El peso es menos extremo que la altura.</li>
+<li>Peso y altura son valores igualmente extremos.</li>
+<li>El peso es más extremo que la altura.</li>
+<li>La altura es menos extrema que el peso.</li>
+</ol>
+<button onclick="f8()">
+Respuesta correcta
+</button>
+<p id="8">
+</p>
+<script>
+function f8() {
+  document.getElementById("8").innerHTML = "c";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p>En este caso debemos comparar valores en 2 variables normales (o gaussianas):</p>
+<ul>
+<li>Peso <span class="math inline">\(\equiv N(60, 6)\)</span> para un valor de 70 kg.</li>
+<li>Altura <span class="math inline">\(\equiv N(170, 6)\)</span> para un valor de 180 cm.</li>
+</ul>
+<p>Podemos hacerlo con una tabla (<a href="https://youtu.be/xCBUdpIUx18">ver vídeo</a>) o usando Excel@ o una app específica. (<a href="https://youtu.be/rxkPlU1Ud7c">ver vídeo</a>).</p>
+<p>Utilizando la aplicación <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Probability Distributions: Normal Distribution</a>, obtenemos la probabilidad de pesar menos de 70 kg:</p>
+<p><img src="img/3_1.png" width="748" /></p>
+<p>y la probabilidad de medir menos de 180 cm:</p>
+<p><img src="img/3_1.png" width="748" /></p>
+<p>En ambos casos, la probabilidad es <span class="math inline">\(0.95221\)</span></p>
+</div>
+<div id="pregunta-test-110" class="section level2" number="4.21">
+<h2><span class="header-section-number">4.21</span> Pregunta test</h2>
+<p>El nivel medio de glucemia en una población tiene un comportamiento gausiano con media 150mg/dl, y un coeficiente de variación del 10%. Entre qué valores se situa el 95% de los individuos de la población.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Entre 140 y 160.</li>
+<li>Entre 130 y 170.</li>
+<li>Entre 120 y 180.</li>
+<li>Entre 110 y 190.</li>
+<li>Entre 100 y 200.</li>
+</ol>
+<button onclick="f9()">
+Respuesta correcta
+</button>
+<p id="9">
+</p>
+<script>
+function f9() {
+  document.getElementById("9").innerHTML = "c";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p>En este caso, nos dan el coeficiente de variación, <span class="math inline">\(CV=\frac{\sigma}{\overline{x}}\)</span>. Entonces:</p>
+<p><span class="math inline">\(0.10 = \frac{\sigma}{150} \Rightarrow \sigma = 15\)</span></p>
+<p>Así la variable <span class="math inline">\(X\)</span> = nivel medio de glucemia <span class="math inline">\(\equiv N(150, 15)\)</span>.</p>
+<p>En una distribución normal, el 95% de los datos están en el intervalo <span class="math inline">\(\mu \pm 2 \sigma= 150 \pm 30 = (120,180)\)</span></p>
+</div>
+<div id="pregunta-test-111" class="section level2" number="4.22">
+<h2><span class="header-section-number">4.22</span> Pregunta test</h2>
+<p>La concentración de calcio se comporta en los mamíferos como una distribución normal de media 10 y desviación típica 2. ¿Con qué frecuencia se encuentran mamíferos con una concentración superior a 14?</p>
+<ol style="list-style-type: lower-alpha">
+<li>95%</li>
+<li>68%</li>
+<li>50%</li>
+<li>5%</li>
+<li>2,5%</li>
+</ol>
+<button onclick="f10()">
+Respuesta correcta
+</button>
+<p id="10">
+</p>
+<script>
+function f10() {
+  document.getElementById("10").innerHTML = "e";
+}
+</script>
+<p><strong>Explicación</strong></p>
+<p>Con <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Probability Distributions: Normal Distribution</a> tenemos:</p>
+<p><img src="img/3_3.png" width="748" /></p>
+</div>
+<div id="pregunta-test-112" class="section level2" number="4.23">
+<h2><span class="header-section-number">4.23</span> Pregunta test</h2>
+<p>Se realiza un estudio para saber si dos tratamientos de quimioterapia presentan diferencias en cuanto a la supervivencia de los pacientes. No se encontró diferencia estadísticamente significativa. ¿Cuál de las siguientes razones podrían ser causantes del resultado?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Los tratamientos ofrecen tiempos de supervivencia muy diferentes.</li>
+<li>El nivel de significación es demasiado alto.</li>
+<li>Las muestras son demasiado numerosas.</li>
+<li>Las muestras son demasiado pequeñas.</li>
+<li>Nada de lo anterior.</li>
+</ol>
+<button onclick="f10_1()">
+Respuesta correcta
+</button>
+<p id="10_1">
+</p>
+<script>
+function f10_1() {
+  document.getElementById("10_1").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-113" class="section level2" number="4.24">
+<h2><span class="header-section-number">4.24</span> Pregunta test</h2>
+<p>Se realiza un experimento donde nos basaremos en un contraste de hipótesis para tomar una decisión con un nivel de significación del 1%. De las siguientes cuál no es un resultado posible de un contraste de hipótesis:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El experimento no es concluyente.</li>
+<li>El experimento permite obtener conclusiones.</li>
+<li>Se rechaza la hipótesis nula.</li>
+<li>Se rechaza la hipótesis alternativa.</li>
+<li>Se acepta la hipótesis alternativa.</li>
+</ol>
+<button onclick="f10_2()">
+Respuesta correcta
+</button>
+<p id="10_2">
+</p>
+<script>
+function f10_2() {
+  document.getElementById("10_2").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="problema-16" class="section level2" number="4.25">
+<h2><span class="header-section-number">4.25</span> Problema</h2>
+<p>Hasta muy recientemente, p, la tasa de mortalidad causada por una infección vírica del cerebro altamente mortal, la encefalitis producida por el virus del herpes simple, ha sido del 70%. Se realiza un estudio para probar un nuevo fármaco, la vidarabina, para utilizarlo en el tratamiento de la enfermedad. Sabiendo que de 50 sujetos en los que se probó la vidarabina, 14 murieron, ¿qué puede decirse sobre la eficacia de este fármaco?</p>
+<div id="solución-13" class="section level3" number="4.25.1">
+<h3><span class="header-section-number">4.25.1</span> Solución</h3>
+<p>Sabemos que <span class="math inline">\(p=0.70\)</span> y, para la prueba, <span class="math inline">\(n=50\)</span> y <span class="math inline">\(\hat{p}=\frac{14}{50}=0.28\)</span> (proporcion muestral).</p>
+<p>Establecemos:</p>
+<ul>
+<li><span class="math inline">\(H_0:\)</span> el uso de vidarabina no es eficaz (no reduce la mortalidad, <span class="math inline">\(p \geq 0.70\)</span>)</li>
+<li><span class="math inline">\(H_1:\)</span> el uso de vidarabina es eficaz (reduce la mortalidad, <span class="math inline">\(p &lt; 0.70\)</span>)</li>
+</ul>
+<p>En este caso, el contraste de hipótesis es unilateral para la proporción. Así, con <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/p.html">Probability Distributions: Statistical Inference for p</a>, tenemos:</p>
+<p><img src="img/3_17.png" width="750" /></p>
+<p>por lo que <strong>el fármaco es efectivo</strong>.</p>
+</div>
+</div>
+<div id="pregunta-test-114" class="section level2" number="4.26">
+<h2><span class="header-section-number">4.26</span> Pregunta test</h2>
+<p>El IMC se distribuye en una población de forma normal. El 95% central de los individuos tiene un IMC comprendido entre 20 y 24. Entonces:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La media es 22.</li>
+<li>La desviación típica es 1.</li>
+<li>La curtosis es cero.</li>
+<li>Todas las anteriores son correctas.</li>
+<li>Sólo dos de las anteriores son correctas.</li>
+</ol>
+<button onclick="f11()">
+Respuesta correcta
+</button>
+<p id="11">
+</p>
+<script>
+function f11() {
+  document.getElementById("11").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/distribuciones-de-probabilidad.html#distribucio%CC%81n-normal">Explicación</a></p>
+</div>
+<div id="pregunta-test-115" class="section level2" number="4.27">
+<h2><span class="header-section-number">4.27</span> Pregunta test</h2>
+<p>Elija la afirmación <strong>falsa</strong>:</p>
+<ol style="list-style-type: lower-alpha">
+<li>El nivel de significación es normalmente un valor pequeño.</li>
+<li>La significación de un contraste es conocida tras analizar los datos.</li>
+<li>El nivel de significación de un contraste debe ser fijado antes de analizar los datos.</li>
+<li>Un contraste debe ser declarado significativo antes de recoger los datos.</li>
+<li>Un contraste es declarado significativo si se obtiene una muestra que discrepa mucho de la hipótesis nula.</li>
+</ol>
+<button onclick="f11_1()">
+Respuesta correcta
+</button>
+<p id="11_1">
+</p>
+<script>
+function f11_1() {
+  document.getElementById("11_1").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html">Explicación</a></p>
+</div>
+<div id="problema-17" class="section level2" number="4.28">
+<h2><span class="header-section-number">4.28</span> Problema</h2>
+<p>El tiempo que los empleados de una oficina tardan en completar una tarea específica sigue una distribución normal con una media de 45 minutos y una desviación típica de 5 minutos. ¿Cuál es el tiempo que separa aproximadamente al 16% más rápido de los empleados del resto?</p>
+<div id="explicación" class="section level3" number="4.28.1">
+<h3><span class="header-section-number">4.28.1</span> Explicación</h3>
+<p>Este es un problema de distribución normal inversa <a href="https://youtu.be/BqGHUqC4cdQ">Ver vídeo</a>.</p>
+<p>Si utilizamos la aplicación <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Probability Distributios: Normal Distribution</a> no tenemos más que introducir los valores <span class="math inline">\(\mu = 45\)</span>, <span class="math inline">\(\sigma = 5\)</span> y <span class="math inline">\(P(X &gt; x)= 0.16\)</span> para obtener un valor de <span class="math inline">\(x = 49.97229 \approx 50\)</span>.</p>
+<p>Entonces, <strong>l tiempo que separa aproximadamente al 16% más rápido de los empleados del resto es de 50 minutos</strong>.</p>
+</div>
+</div>
+<div id="pregunta-test-116" class="section level2" number="4.29">
+<h2><span class="header-section-number">4.29</span> Pregunta test</h2>
+<p>Los ingresos de un grupo de personas siguen una distribución normal con una media de 50,000 € y una desviación típica de 10,000 €. ¿Cuál es el rango aproximado de ingresos que abarca al 95% de las personas en este grupo?</p>
+<p>a Entre 30,000€ y 70,000€
+b Entre 20,000€ y 80,000€
+c Entre 40,000€ y 60,000€
+d Entre 10,000€ y 90,000€
+e Entre 50,000€ y 100,000€</p>
+<button onclick="f12()">
+Respuesta correcta
+</button>
+<p id="12">
+</p>
+<script>
+function f12() {
+  document.getElementById("12").innerHTML = "a";
+}
+</script>
+<p><a href="https://youtu.be/TjZvZVxItLc">Explicación</a></p>
+</div>
+<div id="pregunta-test-117" class="section level2" number="4.30">
+<h2><span class="header-section-number">4.30</span> Pregunta test</h2>
+<p>La cantidad de tiempo que los estudiantes tardan en completar un examen sigue una distribución normal con una media de 120 minutos y una desviación típica de 20 minutos. ¿Qué porcentaje de estudiantes termina el examen en menos de 100 minutos?</p>
+<ol style="list-style-type: lower-alpha">
+<li>2.5%</li>
+<li>5%</li>
+<li>16%</li>
+<li>34%</li>
+<li>50%</li>
+</ol>
+<button onclick="f13()">
+Respuesta correcta
+</button>
+<p id="13">
+</p>
+<script>
+function f13() {
+  document.getElementById("13").innerHTML = "c";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Explicación</a></p>
+</div>
+<div id="problema-18" class="section level2" number="4.31">
+<h2><span class="header-section-number">4.31</span> Problema</h2>
+<p>Se quieren comparar dos poblaciones de rana pipiens aisladas geográficamente. Para ello se toman dos muestras de ambas poblaciones y se les mide la longitud del cuerpo expresado en milímetros, obteniéndose los siguientes resultados:</p>
+<p><img src="img/3_18.png" width="434" /></p>
+<p>Contrastar la hipótesis de igualdad de medias con un nivel de significación del 5%.</p>
+<div id="solución-14" class="section level3" number="4.31.1">
+<h3><span class="header-section-number">4.31.1</span> Solución</h3>
+<p>En este caso, queremos ver si hay diferencias estadísticamente significativas entre las medias de 2 poblaciones, un <a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-inferencia-estadi%CC%81stica.html#test-de-student-para-muestras-independientes">Test de Student para muestras independientes</a>.</p>
+<p>Sabemos que:</p>
+<ul>
+<li><span class="math inline">\(n_x=42\)</span>, <span class="math inline">\(\overline{x}=74\)</span> y <span class="math inline">\(s_x=\sqrt{225}=15\)</span></li>
+<li><span class="math inline">\(n_y=52\)</span>, <span class="math inline">\(\overline{x}=78\)</span> y <span class="math inline">\(s_x=\sqrt{169}=13\)</span></li>
+</ul>
+<p>Con <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/mu1mu2.html">Probability Distributios: Statistical Inference for <span class="math inline">\(\mu_1-\mu_2\)</span></a> tenemos:</p>
+<p><img src="img/3_19.png" width="748" /></p>
+<p>por lo que el valor p &gt; 0.05 y concluimos que <strong>no hay diferencia entre las medias de las dos poblaciones</strong>.</p>
+<p><strong>Nota:</strong> poniéndonos exquisitos, con los datos del problema no sabemos si se cumple el <a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-inferencia-estadi%CC%81stica.html#test-de-student-para-muestras-independientes">supuesto de homocedasticidad</a> por lo que deberíamos utilizar un <a href="https://www.statskingdom.com/150MeanT2uneq.html">Welch Two Sample t-test</a>, que incorpora una corrección a través de los grados de libertad que compensa la diferencia de varianzas, con el inconveniente de que pierde poder estadístico y con el que obtenemos un valor p de 0.1765 que confirmaría el resultado anterior.</p>
+</div>
+</div>
+<div id="pregunta-test-118" class="section level2" number="4.32">
+<h2><span class="header-section-number">4.32</span> Pregunta test</h2>
+<p>Solamente una de las siguientes frases podría alguna vez encontrarse como conclusión de un estudio científico. ¿Cuál es?</p>
+<ol style="list-style-type: lower-alpha">
+<li>El tratamiento produjo un efecto significativamente mayor que el placebo (p=0.75)</li>
+<li>El tratamiento produjo un efecto significativamente menor que el placebo (p=0.25)</li>
+<li>El tratamiento no produjo un resultado diferente al placebo (p&lt;0.001)</li>
+<li>El tratamiento produjo un efecto significativamente menor que el placebo (p=0.99)</li>
+<li>Se apreciaban diferencias significativas entre el placebo y el tratamiento (p&lt;0.001)</li>
+</ol>
+<button onclick="f13_1()">
+Respuesta correcta
+</button>
+<p id="13_1">
+</p>
+<script>
+function f13_1() {
+  document.getElementById("13_1").innerHTML = "e";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html#contrastes-bilaterales-y-unilaterales">Explicación</a></p>
+</div>
+<div id="pregunta-test-119" class="section level2" number="4.33">
+<h2><span class="header-section-number">4.33</span> Pregunta test</h2>
+<p>En un estudio que investiga la eficacia de una nueva terapia de rehabilitación para pacientes que han sufrido un accidente cerebrovascular, solo una de las siguientes afirmaciones cumple con los criterios de significación estadística. ¿Cuál es?</p>
+<ol style="list-style-type: lower-alpha">
+<li>La nueva terapia no mostró diferencias significativas en la recuperación en comparación con la terapia estándar (p=0.90)</li>
+<li>La nueva terapia fue significativamente menos efectiva que la terapia estándar (p=0.14)</li>
+<li>La nueva terapia fue significativamente más efectiva que la terapia estándar (p&lt;0.001)</li>
+<li>La nueva terapia fue igual de efectiva que la terapia estándar (p=0.51)</li>
+<li>La terapia estándar fue significativamente más efectiva que la nueva terapia (p=0.68)</li>
+</ol>
+<button onclick="f13_2()">
+Respuesta correcta
+</button>
+<p id="13_2">
+</p>
+<script>
+function f13_2() {
+  document.getElementById("13_2").innerHTML = "c";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/contrastes-de-hipo%CC%81tesis.html#contrastes-bilaterales-y-unilaterales">Explicación</a></p>
+</div>
+<div id="pregunta-test-120" class="section level2" number="4.34">
+<h2><span class="header-section-number">4.34</span> Pregunta test</h2>
+<p>La duración de las llamadas en un centro de atención al cliente sigue una distribución normal con una media de 8 minutos y una desviación típica de 2 minutos. ¿Cuál es el tiempo que separa aproximadamente al 2.5% de las llamadas más cortas del resto?</p>
+<ol style="list-style-type: lower-alpha">
+<li>2 minutos</li>
+<li>4 minutos</li>
+<li>6 minutos</li>
+<li>10 minutos</li>
+<li>12 minutos</li>
+</ol>
+<button onclick="f14()">
+Respuesta correcta
+</button>
+<p id="14">
+</p>
+<script>
+function f14() {
+  document.getElementById("14").innerHTML = "b";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Explicación</a></p>
+</div>
+<div id="problema-19" class="section level2" number="4.35">
+<h2><span class="header-section-number">4.35</span> Problema</h2>
+<p>Puesto que un nivel de colesterol elevado es un factor de alto riesgo en el desarrollo de la aterosclerosis cardiaca y coronaria, es importante determinar los niveles a esperar en los diferentes grupos de edad. Se realizó un estudio para comparar el nivel de colesterol en varones de entre 20 y 29 años frente a mujeres del mismo grupo de edad. Se obtuvieron los siguientes resultados:</p>
+<p><img src="img/3_20.png" width="535" /></p>
+<p><strong>a)</strong> Comprobar si hay diferencias en las varianzas poblacionales</p>
+<p><strong>b)</strong> ¿Existen diferencias significativas en los niveles medios de colesterol para hombres y mujeres?</p>
+<p><strong>a)</strong> Se está pidiendo comprobar el <a href="https://es.wikipedia.org/wiki/Homocedasticidad">supuesto de homocedasticidad</a>. Para ello, usamos un <a href="https://es.wikipedia.org/wiki/Prueba_de_Levene">test de Levenne</a> que evalúa la igualdad de las varianzas para una variable calculada para dos o más grupos basado en el F-test.</p>
+<p>Con <a href="https://www.statskingdom.com/220VarF2.html">F-test calculator</a>, obtenemos para <span class="math inline">\(\alpha = 0.05\)</span> un valor p de <span class="math inline">\(0.7529\)</span> por lo que <strong>no hay diferencias en las varianzas poblacionales</strong></p>
+<p><strong>b)</strong> Con <a href="https://homepage.divms.uiowa.edu/~mbognar/">Probability Distributions: Statistical Inference for <span class="math inline">\(\mu_1-\mu_2\)</span></a> tenemos:</p>
+<p><img src="img/3_21.png" width="749" /></p>
+<p>por lo que, para <span class="math inline">\(\alpha = 0.05\)</span>, <strong>no existen diferencias significativas en los niveles medios de colesterol para hombres y mujeres</strong>.</p>
+</div>
+<div id="pregunta-test-121" class="section level2" number="4.36">
+<h2><span class="header-section-number">4.36</span> Pregunta test</h2>
+<p>En un estudio que evalúa la efectividad de la terapia cognitivo-conductual (TCC) en comparación con la terapia de apoyo en el tratamiento de la ansiedad, solo una de las siguientes afirmaciones es correcta según los criterios de significación estadística. ¿Cuál es?</p>
+<ol style="list-style-type: lower-alpha">
+<li>La TCC no mostró diferencias significativas en la reducción de la ansiedad en comparación con la terapia de apoyo (p=0.15)</li>
+<li>La TCC fue significativamente más efectiva que la terapia de apoyo en la reducción de la ansiedad (p&lt;0.001)</li>
+<li>La terapia de apoyo fue significativamente más efectiva que la TCC en la reducción de la ansiedad (p=0.91)</li>
+<li>Ambas terapias fueron igualmente efectivas en la reducción de la ansiedad (p=0.06)</li>
+<li>La TCC fue significativamente menos efectiva que la terapia de apoyo en la reducción de la ansiedad (p=0.56)</li>
+</ol>
+<button onclick="f14_1()">
+Respuesta correcta
+</button>
+<p id="14_1">
+</p>
+<script>
+function f14_1() {
+  document.getElementById("14_1").innerHTML = "b";
+}
+</script>
+</div>
+<div id="pregunta-test-122" class="section level2" number="4.37">
+<h2><span class="header-section-number">4.37</span> Pregunta test</h2>
+<p>En una población de estudiantes, las calificaciones en matemáticas tienen una media de 75 y una desviación típica de 10, mientras que las calificaciones en ciencias tienen una media de 80 y una desviación típica de 5. Un estudiante obtiene una calificación de 90 en matemáticas y 85 en ciencias. ¿Cuál de las siguientes afirmaciones es correcta?</p>
+<ol style="list-style-type: lower-alpha">
+<li>La calificación de matemáticas es más extrema que la de ciencias.</li>
+<li>La calificación de ciencias es más extrema que la de matemáticas.</li>
+<li>Las calificaciones de matemáticas y ciencias son igualmente extremas.</li>
+<li>La calificación de matemáticas es menos extrema que la de ciencias.</li>
+<li>No se pueden comparar ambas calificaciones.</li>
+</ol>
+<button onclick="f15()">
+Respuesta correcta
+</button>
+<p id="15">
+</p>
+<script>
+function f15() {
+  document.getElementById("15").innerHTML = "a";
+}
+</script>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-123" class="section level2" number="4.38">
+<h2><span class="header-section-number">4.38</span> Pregunta test</h2>
+<p>¿Cuál de los siguientes test estadísticos usarías si queremos relacionar una variable cuantitativa y otra variable cualitativa de dos categorías o muestras independientes, las cuales no siguen una distribución normal?</p>
+<p>a)Utilizaremos T de Studen.
+b) Utilizaremos U de Mann-Whitney.
+c) Utilizaremos Kruskall-Wallis.
+d) Utilizaremos Chi cuadrado.</p>
+<button onclick="f16()">
+Respuesta correcta
+</button>
+<p id="16">
+</p>
+<script>
+function f16() {
+  document.getElementById("16").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-inferencia-estadi%CC%81stica.html#prueba-de-mann-whitney">Explicación</a></p>
+</div>
+<div id="pregunta-test-124" class="section level2" number="4.39">
+<h2><span class="header-section-number">4.39</span> Pregunta test</h2>
+<p>Si quiero conocer las diferencias entre el peso medio entre chicos y chicas de una clase, ¿qué test estadístico podría usar?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Test Chi cuadrado.</li>
+<li>Test de T de Student.</li>
+<li>Correlación de Pearson.</li>
+<li>Test de Kruskall-Wallis.</li>
+</ol>
+<button onclick="f17()">
+Respuesta correcta
+</button>
+<p id="17">
+</p>
+<script>
+function f17() {
+  document.getElementById("17").innerHTML = "b";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/me%CC%81todos-de-inferencia-estadi%CC%81stica.html#test-de-student-para-muestras-independientes">Explicación</a></p>
+</div>
+<div id="pregunta-test-125" class="section level2" number="4.40">
+<h2><span class="header-section-number">4.40</span> Pregunta test</h2>
+<p>En una prueba estadística el valor de p indica :</p>
+<ol style="list-style-type: lower-alpha">
+<li>La proba bilidad de aceptar la hipótesis nula cua ndo es verdadera.</li>
+<li>La proba bilidad de rechazar la hipótesis alternativa cuando es verdadera</li>
+<li>La potencia estadística.</li>
+<li>La proba bilidad de rechazar la hipótesis nula cuando es verdadera.</li>
+</ol>
+<button onclick="f18()">
+Respuesta correcta
+</button>
+<p id="18">
+</p>
+<script>
+function f18() {
+  document.getElementById("18").innerHTML = "d";
+}
+</script>
+<p><a href="https://1fjmanzano.github.io/bioestadistica/valor-p.html">Explicación</a></p>
+</div>
+<div id="pregunta-test-126" class="section level2" number="4.41">
+<h2><span class="header-section-number">4.41</span> Pregunta test</h2>
+<p>Se dice que un cuestionario es fiable:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Cuando mide lo que quiere medir.</li>
+<li>Si contempla todos los a spectos rela ciona dos con el concepto de estudio.</li>
+<li>Se obtienen resulta dos consistentes cua ndo se a plica en diferentes ocasiones.</li>
+<li>Tiene validez de criterio.</li>
+</ol>
+<button onclick="f19()">
+Respuesta correcta
+</button>
+<p id="19">
+</p>
+<script>
+function f19() {
+  document.getElementById("19").innerHTML = "c";
+}
+</script>
+<p><a href="https://lafisioterapia.net/como-se-convalidan-cuestionarios/#:~:text=Para%20que%20un%20cuestionario%20sea,por%20participantes%2C%20usuarios%20e%20investigadores.">Explicación</a></p>
+</div>
+<div id="pregunta-test-127" class="section level2" number="4.42">
+<h2><span class="header-section-number">4.42</span> Pregunta test</h2>
+<p>Como enfermera de pediatría usted tra b ja con niños con divera s malforma ciones congénit s, enfermed des r r ,s etc. Muchos son los posibles factores de riesgo a los que las madres han podido estar expuestas durante el embarazo (biológicos, medioambientales, culturales, etc.) y desde su unidad querría explorar la relación de algunos de esos factores con determinadas enfermedades raras. ¿Qué diseño epidemiológico sería más útil y pertinente utilizar?:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudio de cohortes.</li>
+<li>Estudio de caso-control.</li>
+<li>Ensayo clínico aleatorizado.</li>
+<li>Revisión sistemática de ECAs con met- análisis.</li>
+</ol>
+<button onclick="f20()">
+Respuesta correcta
+</button>
+<p id="20">
+</p>
+<script>
+function f20() {
+  document.getElementById("20").innerHTML = "b";
+}
+</script>
+<p><a href="https://escuelitamedica.com/2019/02/03/tipos-de-estudios-epidemiologicos-preguntas/">Explicación</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="análisis-descriptivo-y-gráfico-de-datos-cuantitativos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regresión-y-correlación..html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03_inferencial.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
