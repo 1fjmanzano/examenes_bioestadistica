@@ -1,3 +1,5 @@
+@import "{{ site.theme }}";
+
 p.caption {
   color: #777;
   margin-top: 10px;
